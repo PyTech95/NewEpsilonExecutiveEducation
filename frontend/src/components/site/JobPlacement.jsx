@@ -33,7 +33,7 @@ export default function JobPlacement() {
         <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-gold/15 border border-gold/15">
           {[
             { Icon: TrendingUp, value: "94%", label: "Placement assistance success rate" },
-            { Icon: IndianRupee, value: "62%", label: "Average salary hike post-programme" },
+            { Icon: IndianRupee, value: "62%", label: "Average salary hike post-program" },
             { Icon: Briefcase, value: "₹28L", label: "Highest CTC offered to alumnus" },
             { Icon: Users, value: "240+", label: "Hiring partners across sectors" },
           ].map(({ Icon, value, label }, i) => (

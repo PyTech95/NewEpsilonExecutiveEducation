@@ -1,12 +1,12 @@
-import { Users2, Mic2, GraduationCap, Trophy, Briefcase, BadgeCheck } from "lucide-react";
+import { LineChart, ShieldQuestion, ScaleIcon, MessageSquareText, Mic2, Users2 } from "lucide-react";
 
 const EXPERIENCE = [
-  { Icon: Mic2, title: "Live Faculty Teaching", desc: "Real-time interaction with practitioner instructors. No pre-recorded lectures. Every class is a conversation, not a broadcast." },
-  { Icon: Users2, title: "Cohort-based Learning", desc: "Learn alongside 50 carefully selected peers — product leaders, analysts, founders. Your cohort becomes your professional network for life." },
-  { Icon: GraduationCap, title: "Industry Mentorship", desc: "Monthly 1:1 mentor calls with senior practitioners. Slack-based daily support. Office hours after every module." },
-  { Icon: Trophy, title: "Capstone Defence", desc: "A live, panel-graded final defence. Your work is reviewed by industry leaders and faculty — the same scrutiny applied at real boards." },
-  { Icon: Briefcase, title: "Career Acceleration", desc: "Placement assistance, alumni introductions, hiring-partner intros, interview prep — built into the programme, not an add-on." },
-  { Icon: BadgeCheck, title: "Verified Certificate", desc: "Digital + mailed physical certificate, backed by a transcript-style scorecard. Awarded only after capstone defence is cleared." },
+  { Icon: LineChart, title: "Analyse data more critically", desc: "Move beyond dashboards and surface metrics. Build the discipline to question, structure and interpret data with the rigour of an analyst — at the decision-making level." },
+  { Icon: ShieldQuestion, title: "Question AI outputs confidently", desc: "Understand what models actually do, where they break and how to evaluate their outputs. Develop the judgement to challenge AI work — not blindly trust or reject it." },
+  { Icon: ScaleIcon, title: "Make evidence-based decisions", desc: "Replace opinion and instinct with structured reasoning. Learn to weigh evidence, surface assumptions and arrive at decisions you can defend in front of a board." },
+  { Icon: MessageSquareText, title: "Translate technical work for executives", desc: "Turn complex analyses, AI workflows and model results into crisp business arguments. Communicate with the clarity senior leaders expect — and act on." },
+  { Icon: Mic2, title: "Live learning, real teaching", desc: "Learn through live sessions, guided discussion and direct interaction with faculty. No recorded lectures, no passive consumption — every class is taught, not played." },
+  { Icon: Users2, title: "A peer cohort that matters", desc: "Learn alongside working professionals from product, growth, finance, ops and analytics. Your cohort becomes a long-term professional network — not just a course list." },
 ];
 
 export default function EpsilonExperience() {

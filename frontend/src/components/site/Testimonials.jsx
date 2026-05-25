@@ -3,19 +3,19 @@ import ChapterDivider from "./ChapterDivider";
 
 const TESTIMONIALS = [
   {
-    text: "Before this program, AI felt abstract and intimidating. This course made AI feel less like a buzzword and more like a practical professional capability.",
-    name: "Siddharth B.",
-    role: "Senior Manager · Indian Bank",
+    text: "I started my program wanting to understand machine learning without getting lost in theory for its own sake. I needed the concepts to be immediately practical. Thanks to Prof. Bhupathi I could connect the stats to forecasting and campaign performance at work and make quicker decisions.",
+    name: "Priyam C.",
+    role: "Senior Marketing & Sales Analyst",
   },
   {
-    text: "Coding stopped being syntax. It became a way to think more clearly. Grateful to Professor Bhupathi for making statistical modelling rigorous yet accessible.",
-    name: "Srijan D.",
-    role: "Former Student",
+    text: "Before this, I understood AI mostly across a few features. Kent helped me understand what was actually happening underneath the models, what the outputs meant, and where the limits and biases were. That really changed how I now make product decisions.",
+    name: "Sanjay J.",
+    role: "Product Technical Manager",
   },
   {
-    text: "Professor Kent does an amazing job of blending complex disciplines of coding, statistics and relevant data into an engaging and interactive experience.",
-    name: "Cody M.",
-    role: "Director · Johnson & Johnson",
+    text: "I have used data software for years, but this was great to help me understand the reasoning behind the methods. The applied examples made more sense. I'm now more confident explaining the 'why' of analysis, and how to communicate technical material to my bosses.",
+    name: "Jeremy H.",
+    role: "Financial Planning & Analysis Manager",
   },
 ];
 

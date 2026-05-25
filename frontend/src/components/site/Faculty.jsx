@@ -27,7 +27,7 @@ const GUESTS = [
     domain: "Development Strategy",
     img: "/assets/alena-savera.jpeg",
     logos: ["The NRP Group", "UT Austin"],
-    bio: "Real estate development leader based in Dallas–Fort Worth. Originated multi-family projects totalling 2,350+ units. B.Arch from UT Austin. Brings strategic-decision craft and stakeholder-defence rigour into the programme.",
+    bio: "Real estate development leader based in Dallas–Fort Worth. Originated multi-family projects totalling 2,350+ units. B.Arch from UT Austin. Brings strategic-decision craft and stakeholder-defence rigour into the program.",
   },
   {
     name: "Mardoqueo Arteaga, Ph.D.",

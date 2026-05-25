@@ -19,7 +19,7 @@ export default function Certificate() {
 
           <ul className="mt-8 space-y-4">
             {[
-              "Live, assessed programme — not pre-recorded",
+              "Live, assessed program — not pre-recorded",
               "80% minimum grade across all modules",
               "Capstone defence required to certify",
               "Verifiable digital + mailed physical copy",
@@ -47,7 +47,7 @@ export default function Certificate() {
                   Applied AI &amp; Machine Learning <br /> for Decision-Makers
                 </p>
                 <div className="mt-10 flex items-center justify-between font-mono uppercase text-[10px] tracking-[0.25em] text-navy-deep/55">
-                  <span>12-Week Programme</span>
+                  <span>12-Week Program</span>
                   <span>Cohort · 2026</span>
                 </div>
                 <div className="mt-8 inline-flex h-12 w-12 items-center justify-center bg-gold text-navy-deep">

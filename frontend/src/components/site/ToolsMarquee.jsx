@@ -58,7 +58,10 @@ export default function ToolsMarquee() {
 
       <style>{`
         @keyframes toolsScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-        .tools-track { animation: toolsScroll 45s linear infinite; }
+        .tools-track { animation: toolsScroll 22s linear infinite; }
+        @media (min-width: 768px) {
+          .tools-track { animation-duration: 45s; }
+        }
         .tools-track:hover { animation-play-state: paused; }
         @media (prefers-reduced-motion: reduce) { .tools-track { animation: none; } }
       `}</style>

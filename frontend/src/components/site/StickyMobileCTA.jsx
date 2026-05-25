@@ -49,10 +49,10 @@ export default function StickyMobileCTA() {
               href={telUrl}
               data-testid="mobile-bar-call-btn"
               aria-label="Call Now"
-              className="group flex-1 inline-flex items-center justify-center gap-2 h-12 bg-gold text-navy-deep border border-gold hover:bg-cream hover:border-cream transition-colors duration-200 font-mono text-[10.5px] tracking-[0.22em] uppercase font-semibold active:scale-[0.98]"
+              className="group flex-1 inline-flex items-center justify-center gap-2 h-12 bg-gold text-navy-deep border border-gold hover:bg-cream hover:border-cream transition-colors duration-200 font-editorial text-[15px] font-medium active:scale-[0.98]"
             >
               <Phone size={15} className="group-hover:rotate-[-6deg] transition-transform" />
-              Call Now
+              Call now
             </a>
             <a
               href={waUrl}
@@ -60,7 +60,7 @@ export default function StickyMobileCTA() {
               rel="noreferrer"
               data-testid="mobile-bar-whatsapp-btn"
               aria-label="WhatsApp"
-              className="group flex-1 inline-flex items-center justify-center gap-2 h-12 bg-[#25D366] text-white border border-[#25D366] hover:bg-[#1ebd5b] hover:border-[#1ebd5b] transition-colors duration-200 font-mono text-[10.5px] tracking-[0.22em] uppercase font-semibold active:scale-[0.98]"
+              className="group flex-1 inline-flex items-center justify-center gap-2 h-12 bg-[#25D366] text-white border border-[#25D366] hover:bg-[#1ebd5b] hover:border-[#1ebd5b] transition-colors duration-200 font-editorial text-[15px] font-medium active:scale-[0.98]"
             >
               <WhatsAppIcon size={16} />
               WhatsApp

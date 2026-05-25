@@ -41,7 +41,7 @@ export default function Audience() {
       <div className="absolute inset-0 starfield opacity-40 pointer-events-none" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full glow-gold pointer-events-none" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-        <p className="eyebrow mb-3">Who is the programme for?</p>
+        <p className="eyebrow mb-3">Who is the program for?</p>
         <span className="gold-rule-lg block mb-6" />
         <h2 className="font-editorial text-cream text-[2.1rem] sm:text-[3rem] lg:text-[3.6rem] leading-[1.06] max-w-4xl">
           Built for professionals with <span className="italic text-gold">5 – 15 years</span> of experience.
@@ -83,7 +83,7 @@ export default function Audience() {
             data-testid="audience-apply-btn"
             className="btn-outline-gold mt-7"
           >
-            Apply for the programme <ArrowRight size={14} />
+            Apply for the program <ArrowRight size={14} />
           </a>
         </div>
       </div>

@@ -3,11 +3,11 @@ import { X } from "lucide-react";
 
 const ITEMS = [
   "Admissions closing soon — Spring 2026 cohort",
-  "Limited seats · 50 per cohort",
-  "Live online · 12-week programme",
-  "Fee · ₹89,000 · EMI available",
+  "Limited seats · Live cohort",
+  "Live online · 12-week program",
+  "Program fee · ₹89,000 · EMI available",
   "Faculty with experience at NYU · Columbia · JPMorgan · LinkedIn",
-  "94% placement assistance success rate",
+  "Professional Certificate in Applied AI & Machine Learning",
 ];
 
 export default function MarqueeBanner() {

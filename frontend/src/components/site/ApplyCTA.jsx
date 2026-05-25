@@ -67,10 +67,10 @@ export default function ApplyCTA() {
             type="submit"
             disabled={loading}
             data-testid="apply-submit-btn"
-            className="mt-6 w-full inline-flex items-center justify-center gap-2 bg-navy-deep text-cream hover:bg-gold hover:text-navy-deep py-4 font-mono text-[11px] tracking-[0.22em] uppercase font-semibold transition-colors duration-200 disabled:opacity-60"
+            className="mt-6 w-full inline-flex items-center justify-center gap-2 bg-navy-deep text-cream hover:bg-gold hover:text-navy-deep py-4 font-editorial text-[16px] font-medium transition-colors duration-200 disabled:opacity-60"
           >
             {loading ? <Loader2 size={14} className="animate-spin" /> : null}
-            {loading ? "Sending..." : "Schedule Call Back"} {!loading && <ArrowRight size={14} />}
+            {loading ? "Sending..." : "Schedule my call"} {!loading && <ArrowRight size={14} />}
           </button>
         </form>
 

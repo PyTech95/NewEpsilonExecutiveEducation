@@ -36,7 +36,7 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-2">
-            <p className="eyebrow mb-4">Programme</p>
+            <p className="eyebrow mb-4">Program</p>
             <ul className="space-y-2.5 font-mono text-[11px] uppercase tracking-[0.16em] text-cream/65">
               <li><a href="#overview" className="hover:text-gold transition-colors">Overview</a></li>
               <li><a href="#curriculum" className="hover:text-gold transition-colors">Curriculum</a></li>

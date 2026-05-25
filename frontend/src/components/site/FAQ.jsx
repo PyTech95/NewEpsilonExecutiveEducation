@@ -3,11 +3,11 @@ import { Plus, Minus } from "lucide-react";
 
 const FAQS = [
   {
-    q: "Who is this programme designed for?",
+    q: "Who is this program designed for?",
     a: "Working professionals with 5–15 years of experience who want to combine analytical and AI fluency with sharper business judgement — particularly product, marketing, growth, ops, analytics and research roles.",
   },
   {
-    q: "How is the programme delivered?",
+    q: "How is the program delivered?",
     a: "Live online, cohort-based. Three sessions per week on executive-friendly evenings, supplemented with graded assignments, faculty feedback and a final capstone defence.",
   },
   {
@@ -20,7 +20,7 @@ const FAQS = [
   },
   {
     q: "What is the fee, and are payment plans available?",
-    a: "Programme fee is ₹89,000. Flexible payment plans (2 or 3 instalments) and select scholarships are available. Speak with an advisor for details.",
+    a: "Program fee is ₹89,000. Flexible payment plans (2 or 3 instalments) and select scholarships are available. Speak with an advisor for details.",
   },
   {
     q: "What do I receive on completion?",

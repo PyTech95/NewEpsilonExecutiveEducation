@@ -330,7 +330,7 @@ function StepFit({ form, set, setRaw }) {
     <div className="grid gap-5 animate-fade-up">
       <FieldTextarea
         testid="apply-motivation"
-        label="Why this programme? *"
+        label="Why this program? *"
         hint="A few honest lines. We read every one."
         value={form.motivation}
         onChange={set("motivation")}

@@ -26,14 +26,19 @@ export default function Overview() {
 
           <div className="lg:col-span-5 space-y-5 font-editorial text-navy-deep/75 text-[1.05rem] leading-[1.8]">
             <p>
-              Artificial intelligence is changing how work gets done, how value is created, and how
-              professionals are judged. Indian employers are moving toward skills-first hiring —
-              putting greater weight on practical capability than formal credentials.
+              Artificial intelligence is changing how work gets done, how value is created and how
+              professionals are judged. In India, employers are moving toward skills-first hiring
+              and placing greater weight on practical capability — not simply formal credentials.
+              They increasingly want critical thinking, communication, adaptability and the ability
+              to work effectively with AI in real business settings.
             </p>
             <p>
-              <span className="italic text-navy-deep">Epsilon Executive Education</span> —
-              named for the difference between what is expected and what is actually achieved — is a
-              live executive school for decision-makers in the AI era.
+              <span className="italic text-navy-deep">Epsilon Executive Education</span> was built
+              precisely for that shift. Named for the difference between what is expected and what
+              is actually achieved — Epsilon is a live executive school for decision-makers in the
+              AI era. It is designed for working professionals who do not need more content, but
+              rather stronger judgement, sharper evidence discipline and greater confidence
+              translating technical possibility into credible business action.
             </p>
           </div>
         </div>

@@ -73,22 +73,21 @@ export default function PopupForm() {
           <div className="absolute inset-0 starfield opacity-50" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full glow-gold" />
           <div className="relative">
-            <p className="eyebrow mb-2">Limited Seats</p>
-            <h3 className="font-editorial text-cream text-[1.7rem] sm:text-[2rem] leading-tight pr-10">
-              Want a <span className="italic text-gold">15-min</span> call with admissions?
+            <h3 className="font-editorial text-cream text-[1.85rem] sm:text-[2.1rem] leading-[1.1] pr-10">
+              Want a <span className="italic text-gold">15-min</span> call with an advisor?
             </h3>
-            <p className="font-editorial text-cream/75 text-sm mt-2">
-              Curriculum, fees and programme fit — in a quick personal conversation.
+            <p className="font-editorial text-cream/75 text-[0.98rem] mt-3 leading-relaxed">
+              Get curriculum, fees and fit clarity in a quick personal conversation.
             </p>
           </div>
         </div>
 
         <form onSubmit={submit} className="p-6 sm:p-7 space-y-4 overflow-y-auto" data-testid="popup-form">
-          <Field testid="popup-name" label="Full Name" value={form.name} onChange={(v) => setForm({ ...form, name: v })} />
+          <Field testid="popup-name" label="Name" value={form.name} onChange={(v) => setForm({ ...form, name: v })} />
           <Field testid="popup-email" label="Email" value={form.email} onChange={(v) => setForm({ ...form, email: v })} type="email" />
-          <Field testid="popup-phone" label="Phone Number" value={form.phone} onChange={(v) => setForm({ ...form, phone: v })} type="tel" />
+          <Field testid="popup-phone" label="Phone number" value={form.phone} onChange={(v) => setForm({ ...form, phone: v })} type="tel" />
           <div>
-            <label className="fld-label">Course of Interest</label>
+            <label className="fld-label">Course</label>
             <select
               data-testid="popup-course"
               value={form.course}
@@ -102,12 +101,12 @@ export default function PopupForm() {
             type="submit"
             disabled={loading}
             data-testid="popup-submit-btn"
-            className="mt-2 w-full inline-flex items-center justify-center gap-2 bg-navy-deep text-cream hover:bg-gold hover:text-navy-deep py-3.5 font-mono text-[11px] tracking-[0.22em] uppercase font-semibold transition-colors duration-200 disabled:opacity-60"
+            className="mt-2 w-full inline-flex items-center justify-center gap-2 bg-navy-deep text-cream hover:bg-gold hover:text-navy-deep py-3.5 font-editorial text-[15px] tracking-normal font-medium transition-colors duration-200 disabled:opacity-60"
           >
             {loading ? <Loader2 size={14} className="animate-spin" /> : null}
-            {loading ? "Scheduling..." : "Schedule Call Back"} {!loading && <ArrowRight size={14} />}
+            {loading ? "Scheduling..." : "Schedule call back"} {!loading && <ArrowRight size={14} />}
           </button>
-          <p className="font-mono text-[9.5px] uppercase tracking-[0.18em] text-navy-deep/40 text-center">No spam · Unsubscribe anytime.</p>
+          <p className="font-editorial italic text-[12px] text-navy-deep/45 text-center">No spam · Unsubscribe anytime.</p>
         </form>
       </div>
     </div>

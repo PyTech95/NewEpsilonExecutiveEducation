@@ -61,9 +61,9 @@ const CAPSTONE_IMG =
 export default function Curriculum() {
   return (
     <section id="curriculum" data-testid="curriculum-section" className="bg-bone text-navy-deep">
-      {/* Programme header */}
+      {/* Program header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 md:pt-32 pb-10">
-        <p className="eyebrow mb-3">The Programme</p>
+        <p className="eyebrow mb-3">The Program</p>
         <span className="gold-rule-lg block mb-6" />
         <h2 className="font-editorial text-navy-deep text-[2.1rem] sm:text-[3rem] lg:text-[3.6rem] leading-[1.06] max-w-4xl">
           12 weeks. Live. Graded. <span className="italic text-gold">Professionally serious.</span>
@@ -82,7 +82,7 @@ export default function Curriculum() {
             ["Assessment", "Graded, capstone defence"],
             ["Final output", "Executive Decision Dossier"],
             ["Credential", "Certificate + scorecard"],
-            ["Programme fee", "₹89,000"],
+            ["Program fee", "₹89,000"],
             ["Experience", "High-touch, feedback-driven"],
           ].map(([k, v]) => (
             <div key={k}>
@@ -151,9 +151,14 @@ export default function Curriculum() {
               The Executive <br /><span className="italic text-gold">Decision Dossier.</span>
             </h2>
             <p className="mt-6 font-editorial text-cream/75 max-w-2xl text-[1.08rem] leading-relaxed">
-              The capstone is where the full programme comes together. Participants frame a real
-              business problem, evaluate evidence, design a practical AI-enabled solution and defend
-              it live to decision-makers.
+              The capstone is where participants bring the full program together. It is designed to
+              show they can do more than understand AI tools — they must use data, machine learning
+              and applied AI to frame a real business problem, evaluate evidence, design a practical
+              solution and explain it clearly to decision-makers.
+            </p>
+            <p className="mt-4 font-editorial text-cream/65 max-w-2xl text-[1rem] leading-relaxed italic">
+              The final project becomes part of your Executive Proof Pack — a credible output that
+              shows how you think, build and decide in an AI-enabled workplace.
             </p>
 
             <div className="flex flex-wrap gap-2 mt-6">

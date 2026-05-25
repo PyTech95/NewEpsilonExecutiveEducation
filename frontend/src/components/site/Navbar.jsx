@@ -30,10 +30,10 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20 md:h-24">
+        <div className="flex items-center justify-between h-24 md:h-28 lg:h-32">
           {/* Brand */}
           <a href="#top" data-testid="nav-brand" className="flex items-center group">
-            <img src="/assets/logo.png" alt="Epsilon Executive Education" className="h-16 md:h-20 w-auto object-contain" />
+            <img src="/assets/logo.png" alt="Epsilon Executive Education" className="h-16 md:h-24 lg:h-28 w-auto object-contain" />
           </a>
 
           {/* Center nav */}
@@ -43,7 +43,7 @@ export default function Navbar() {
                 key={n.label}
                 href={n.href}
                 data-testid={`nav-link-${n.label.toLowerCase()}`}
-                className="font-mono text-[11px] uppercase tracking-[0.2em] text-cream/75 hover:text-gold transition-colors"
+                className="font-editorial text-[16px] text-cream/80 hover:text-gold transition-colors"
               >
                 {n.label}
               </a>

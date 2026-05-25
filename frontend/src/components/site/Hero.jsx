@@ -39,7 +39,7 @@ export default function Hero() {
     <section
       id="top"
       data-testid="hero-section"
-      className="relative isolate overflow-hidden bg-navy-deep text-cream pt-36 pb-16 md:pt-44 md:pb-28 min-h-[100vh]"
+      className="relative isolate overflow-hidden bg-navy-deep text-cream pt-44 pb-16 md:pt-52 md:pb-28 min-h-[100vh]"
     >
       {/* Background image with deep navy overlay */}
       <div className="absolute inset-0 -z-10">
@@ -62,15 +62,15 @@ export default function Hero() {
               <Sparkles size={12} className="text-gold" /> The AI Era of Executive Education
             </p>
 
-            <h1 className="font-display uppercase text-cream text-[2.1rem] sm:text-[2.9rem] md:text-[4.3rem] lg:text-[5rem] leading-[1.02] tracking-tight max-w-5xl fade-up">
+            <h1 className="font-editorial text-cream text-[2.6rem] sm:text-[3.4rem] md:text-[4.6rem] lg:text-[5.4rem] leading-[1.04] tracking-[-0.01em] max-w-5xl fade-up">
               Turning technical fluency
             </h1>
-            <h2 className="font-editorial italic text-gold text-[2.2rem] md:text-[4rem] lg:text-[4.6rem] leading-[1.05] mt-2 fade-up-delay-1">
+            <h2 className="font-editorial italic text-gold text-[2.4rem] md:text-[4rem] lg:text-[4.8rem] leading-[1.05] mt-1 fade-up-delay-1">
               into strategic value.
             </h2>
 
             <p className="font-editorial text-[1.15rem] md:text-[1.4rem] leading-relaxed text-cream/85 mt-5 md:mt-8 max-w-2xl fade-up-delay-2">
-              Applied AI &amp; Machine Learning for working professionals in India. Learn live from a former NYU professor in a rigorous 12-week online cohort built around AI workflows, model evaluation, LLM systems and a defended capstone portfolio.
+              The Professional Certificate in Applied AI &amp; Machine Learning — a live, 12-week executive program for professionals who want stronger judgement, sharper evidence discipline and the confidence to translate technical possibility into credible business action.
             </p>
 
             <div className="mt-7 md:mt-10 flex flex-wrap items-center gap-4 fade-up-delay-3">
@@ -92,7 +92,7 @@ export default function Hero() {
               ].map(([primary, secondary]) => (
                 <div key={primary} className="border-l border-gold/40 pl-4">
                   <p className="font-editorial text-cream text-xl md:text-2xl leading-tight">{primary}</p>
-                  <p className="font-mono uppercase text-[10px] tracking-[0.18em] text-cream/55 mt-1.5">{secondary}</p>
+                  <p className="font-editorial text-[12.5px] text-cream/60 mt-1.5 italic">{secondary}</p>
                 </div>
               ))}
             </div>
@@ -133,12 +133,12 @@ export default function Hero() {
                   type="submit"
                   disabled={loading}
                   data-testid="brochure-submit-btn"
-                  className="w-full mt-2 inline-flex items-center justify-center gap-2 bg-navy-deep text-cream hover:bg-gold hover:text-navy-deep py-4 font-mono text-[11px] tracking-[0.22em] uppercase font-semibold transition-colors duration-200 disabled:opacity-60"
+                  className="w-full mt-2 inline-flex items-center justify-center gap-2 bg-navy-deep text-cream hover:bg-gold hover:text-navy-deep py-4 font-editorial text-[16px] font-medium transition-colors duration-200 disabled:opacity-60"
                 >
                   {loading ? <Loader2 size={14} className="animate-spin" /> : null}
-                  {loading ? "Sending..." : "Download Brochure"}
+                  {loading ? "Sending..." : "Download brochure"}
                 </button>
-                <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-navy-deep/45 text-center pt-1">
+                <p className="font-editorial italic text-[13px] text-navy-deep/55 text-center pt-1">
                   No spam · We respect your time.
                 </p>
               </form>

@@ -11,7 +11,7 @@ export default function VideoShowcase() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-5">
-            <p className="eyebrow mb-3">Programme Preview</p>
+            <p className="eyebrow mb-3">Program Preview</p>
             <span className="gold-rule-lg block mb-6" />
             <h2 className="font-editorial text-navy-deep text-[2.1rem] sm:text-[3rem] lg:text-[3.4rem] leading-[1.06]">
               See what a <span className="italic text-gold">live session</span> feels like.
@@ -33,7 +33,7 @@ export default function VideoShowcase() {
               onClick={() => setOpen(true)}
               className="group relative w-full aspect-video overflow-hidden shadow-2xl shadow-navy-deep/30 block"
             >
-              <img src={THUMB} alt="Programme preview" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <img src={THUMB} alt="Program preview" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-tr from-navy-deep/80 via-navy-deep/30 to-transparent" />
               <span className="absolute inset-0 flex items-center justify-center">
                 <span className="relative">
@@ -72,7 +72,7 @@ export default function VideoShowcase() {
             <iframe
               className="w-full h-full"
               src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
-              title="Programme preview"
+              title="Program preview"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
