@@ -1,142 +1,127 @@
 {
-  "theme": "dark_and_light_hybrid",
-  "archetype": "5_Luxury",
+  "theme_and_archetype": {
+    "theme": "Hybrid (Dark Navy Hero & Chapters / Cream Sections)",
+    "archetype": "Archetype 5: Luxury (Premium, Depth, Mystery)",
+    "rationale": "For an Ivy-tier executive education program, the design must exude authority, exclusivity, and prestige. We avoid standard SaaS gradients and instead use deep navy, bone cream, and metallic gold accents with editorial typography to create a bespoke, cinematic narrative rhythm."
+  },
   "typography": {
-    "heading_font": "Cormorant Garamond",
-    "body_font": "Manrope",
-    "font_weights": {
-      "headings": "font-medium, font-semibold",
-      "body": "font-light, font-normal"
+    "fonts": {
+      "serif_italic": {
+        "family": "'Cormorant Garamond', serif",
+        "usage": "Editorial emphasis, second half of headlines, quotes. MUST use italic weight."
+      },
+      "display_sans": {
+        "family": "'Manrope', sans-serif",
+        "usage": "Primary headings, clean uppercase layout elements."
+      },
+      "mono_accent": {
+        "family": "'DM Mono', monospace",
+        "usage": "Eyebrows, small-caps, data points, 'Chapter I' markers. Highly tracked (letter-spacing)."
+      }
     },
     "scale": {
-      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.1]",
-      "h2": "text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight",
-      "h3": "text-xl sm:text-2xl leading-snug",
-      "body": "text-base leading-relaxed",
-      "overline": "text-xs tracking-[0.2em] uppercase font-semibold"
+      "h1": "text-5xl md:text-6xl lg:text-7xl tracking-tighter leading-[1.1]",
+      "h2": "text-4xl md:text-5xl tracking-tight",
+      "h3": "text-2xl md:text-3xl",
+      "body": "text-base md:text-lg leading-relaxed text-opacity-80",
+      "eyebrow": "text-xs md:text-sm uppercase tracking-[0.2em] font-mono"
+    },
+    "rules": {
+      "anti_default": "Never use Inter or Roboto for headings. Use high-contrast font pairings (e.g. Manrope uppercase mixed with Cormorant Garamond italic).",
+      "typesetting": "Eyebrows MUST be uppercase and wide tracked. H1 must be tight tracked."
     }
   },
   "colors": {
-    "background_dark": "#0A0F1C",
-    "background_light": "#F8F9FA",
-    "background_surface_dark": "#121826",
-    "background_surface_light": "#FFFFFF",
-    "primary_gold": "#C5A059",
-    "primary_gold_hover": "#B38F4D",
-    "text_on_dark": "#FFFFFF",
-    "text_muted_on_dark": "#94A3B8",
-    "text_on_light": "#0F172A",
-    "text_muted_on_light": "#475569",
-    "border_dark": "rgba(255,255,255,0.1)",
-    "border_light": "rgba(0,0,0,0.1)"
+    "backgrounds": {
+      "dark": "#040914",
+      "light_cream": "#F9F6F0",
+      "card_dark": "#0A1128"
+    },
+    "text": {
+      "on_dark": "#FFFFFF",
+      "on_dark_muted": "rgba(255,255,255,0.7)",
+      "on_light": "#040914",
+      "on_light_muted": "rgba(4,9,20,0.7)"
+    },
+    "accents": {
+      "gold_primary": "#D4AF37",
+      "gold_dark": "#AA8627",
+      "gold_glow": "rgba(212,175,55,0.15)",
+      "border_gold_faint": "rgba(212,175,55,0.2)"
+    }
   },
-  "layout_spacing": {
-    "section_padding": "py-20 md:py-32",
-    "container_max_width": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
-    "gap_standard": "gap-8 md:gap-12",
-    "grid_bento": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+  "spacing_and_layout": {
+    "philosophy": "Generous Spacing (p-24, py-32). The design should breathe. Asymmetric layouts are preferred over centered Bootstrap-style grids.",
+    "section_padding": "py-24 md:py-32",
+    "container_max": "max-w-7xl mx-auto px-6 md:px-12",
+    "ornamental_corners": "Use 1px gold right-angle borders (e.g., top-left, bottom-right) on key image containers and stat blocks to give an 'architectural/blueprint' feel."
   },
-  "components": {
+  "components_specifications": {
+    "marquee_banner": {
+      "style": "Sticky top (z-50). Background: #D4AF37 (Gold) or Dark Navy with Gold text. Must include a 'LIVE pulsing dot' next to 'Admissions Closing Soon'.",
+      "typography": "DM Mono, uppercase, text-xs."
+    },
+    "navbar": {
+      "style": "Glassmorphism transitioning to solid #040914 on scroll. Epsilon 'E' logo in gold.",
+      "links": "Manrope text-sm, subtle gold hover.",
+      "cta": "Solid cream background, dark text, sharp corners. No border-radius."
+    },
     "hero": {
-      "layout": "2-column grid. Left: Value prop text. Right: Large Light Form.",
-      "background": "Dark background with heavy overlay image (opacity 20-30%)",
-      "form": "White background, black text, increased padding (p-8), solid white core for absolute legibility. CTA Button is primary gold."
+      "background": "Cinematic. Deep Navy (#040914) with an SVG radial gold glow in the center-top. Layer the generated 'premium_navy_gold_bg' subtly if needed.",
+      "layout": "Center-aligned narrative. Eyebrow in gold mono. Headline: 'Turning technical fluency' (Manrope) / 'into strategic value.' (Cormorant Garamond italic gold).",
+      "ctas": "Dual CTAs. Primary: Solid cream. Secondary: Outline gold.",
+      "stat_blocks": "4 bento-style blocks at the bottom of the hero with 1px faint gold borders, acting as a structural anchor."
     },
-    "faculty_grid": {
-      "layout": "Static grid (grid-cols-1 md:grid-cols-2 lg:grid-cols-4 or 5). NO carousels.",
-      "style": "Clean cards. Profile image, name, title, and organization logos using react-icons/si or text."
+    "chapter_dividers": {
+      "style": "Editorial rhythm. Before major sections, add a block: 'CHAPTER I', 'CHAPTER II'.",
+      "visuals": "DM Mono, widely tracked, flanked by 1px horizontal gold rules."
     },
-    "cta_buttons": {
-      "primary": "bg-[#C5A059] text-white hover:bg-[#B38F4D] transition-all rounded-md px-6 py-3 font-medium",
-      "curriculum": "Must be the exact primary gold color.",
-      "mobile_sticky": "Fixed bottom-right, z-50. Two circular buttons (Call & WhatsApp) stacked vertically."
+    "faculty_section": {
+      "background": "Navy with starfield SVG (absolute positioned white/gold dots of varying opacity).",
+      "layout": "Lead instructor (Kent) featured prominently on the left (large portrait, gold caption tab 'Lead Faculty').",
+      "guest_grid": "4 round circular avatars in a 2x2 or 1x4 grid.",
+      "interactions": "Guest avatars start grayscale. On hover: transition to full color + subtle scale + gold border glow. Click opens a sleek bio drawer/modal."
     },
-    "who_is_this_for": {
-      "layout": "Bento grid (6 items).",
-      "icons": "Use Lucide React icons instead of 01, 02, etc."
+    "usp_cards": {
+      "style": "Dark cards (#0A1128) on a light cream background section to create high contrast. Sharp edges. Ornamental gold brackets on the corners.",
+      "typography": "Manrope headings, Cormorant Garamond quotes inside."
     },
-    "job_placement_infographic": {
-      "layout": "Visual data section. 3 main stats block. Use a minimalist CSS bar chart or prominent typography for numbers (e.g., 91%, ₹XX L Salary Hike)."
+    "popup_form": {
+      "trigger": "15-second delay.",
+      "style": "Centered modal, dark glass overlay (backdrop-blur-xl bg-black/60). Modal itself is light cream with dark navy typography. Sharp, no rounded corners."
     },
-    "pop_up_form": {
-      "timing": "Trigger after 15 seconds.",
-      "fields": ["Name", "Email", "Phone", "Course"],
-      "cta": "Schedule Call Back",
-      "style": "Shadcn Dialog. Light theme form inside to maintain contrast."
+    "mobile_sticky_cta": {
+      "style": "Visible only on mobile. Fixed to bottom. Two split buttons: 'Call Now' and 'WhatsApp'. High contrast."
     },
-    "social_media": {
-      "locations": ["Desktop Nav Bar", "Footer"],
-      "icons": ["Instagram", "Facebook", "LinkedIn", "YouTube"]
-    },
-    "video_showcase": {
-      "layout": "Centered section with large 16:9 thumbnail, a gold play button overlay. Clicking can open a Shadcn Dialog with an iframe/video player."
+    "apply_wizard": {
+      "layout": "Multi-step form (4 steps). Progress indicator at the top using a gold timeline bar.",
+      "form_elements": "Shadcn UI inputs customized to have square corners, 1px dark navy borders, and cream backgrounds. Minimalist, high-end editorial feel."
     }
   },
-  "image_urls": [
-    {
-      "url": "https://images.unsplash.com/photo-1497366412874-3415097a27e7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2ODh8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBwcmVtaXVtJTIwb2ZmaWNlJTIwYXJjaGl0ZWN0dXJlfGVufDB8fHx8MTc3OTcwMzE3NXww&ixlib=rb-4.1.0&q=85",
-      "category": "hero_background",
-      "description": "Dark premium office background for hero section"
-    },
-    {
-      "url": "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwxfHxleGVjdXRpdmUlMjBwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3Nzk3MDMxNzV8MA&ixlib=rb-4.1.0&q=85",
-      "category": "faculty_kent",
-      "description": "Kent Oliver Bhupathi portrait"
-    },
-    {
-      "url": "https://images.unsplash.com/photo-1553642618-de0381320ff3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHw0fHxleGVjdXRpdmUlMjBwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3Nzk3MDMxNzV8MA&ixlib=rb-4.1.0&q=85",
-      "category": "faculty_philip",
-      "description": "Philip Wiseman portrait"
-    },
-    {
-      "url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwyfHxleGVjdXRpdmUlMjBwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3Nzk3MDMxNzV8MA&ixlib=rb-4.1.0&q=85",
-      "category": "faculty_alena",
-      "description": "Alena Savera portrait"
-    },
-    {
-      "url": "https://images.pexels.com/photos/4687550/pexels-photo-4687550.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "category": "faculty_jayprakash",
-      "description": "Jayprakash Mistry portrait"
-    },
-    {
-      "url": "https://images.pexels.com/photos/13188831/pexels-photo-13188831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "category": "faculty_mardoqueo",
-      "description": "Mardoqueo Arteaga portrait"
-    },
-    {
-      "url": "https://images.pexels.com/photos/577210/pexels-photo-577210.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "category": "video_showcase_thumbnail",
-      "description": "Thumbnail for video showcase section"
-    },
-    {
-      "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHRlY2hub2xvZ3klMjBhbmFseXRpY3MlMjBkYXNoYm9hcmR8ZW58MHx8fHwxNzc5NzAzMTc1fDA&ixlib=rb-4.1.0&q=85",
-      "category": "capstone_background",
-      "description": "Capstone project / dashboard background"
-    },
-    {
-      "url": "https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMHRlY2hub2xvZ3klMjBhbmFseXRpY3MlMjBkYXNoYm9hcmR8ZW58MHx8fHwxNzc5NzAzMTc1fDA&ixlib=rb-4.1.0&q=85",
-      "category": "audience_background",
-      "description": "Background for who is this for section if needed"
-    }
-  ],
-  "iconography": {
-    "library": "lucide-react, react-icons/si, react-icons/fa",
-    "instructions": "Use standard Lucide icons for the 'Who is this for' audience section (Briefcase, LineChart, Users, Database, etc.). Use react-icons/si for tools: SiPython, SiR, SiOpenai, SiAnthropic, SiZapier. Use react-icons for companies (SiLinkedin, SiJpmorganchase) and generic Building/University icons for NYU/Columbia if SVGs are unavailable."
+  "motion_and_interactions": {
+    "scrolling": "MUST use Lenis for smooth momentum scrolling.",
+    "entrances": "Framer Motion fade-up and subtle Y-axis translate (`y: 20, opacity: 0`) triggered on scroll (`whileInView`).",
+    "hover_states": "Text color shifts (White to Gold), image grayscale to color, and crisp 1px borders glowing on hover."
   },
-  "instructions_to_main_agent": [
-    "Install required fonts from Google Fonts: Cormorant Garamond (headings) and Manrope (body). Map them in tailwind.config.js.",
-    "Do NOT use Inter font anywhere.",
-    "Follow the theme of 'Old Money Tech' - serious, executive, intellectual.",
-    "Remove all references and text containing 'Cohort 01'.",
-    "Hero section: Apply `#0A0F1C` dark background with `opacity-20` image overlay. Render a large prominent LIGHT-colored lead form on the right side.",
-    "Faculty section: Render as a static CSS grid. DO NOT use moving carousels or marquee logic. Include the provided image URLs for faculty members.",
-    "Curriculum CTA: The 'See detailed curriculum...' button MUST use the Gold Background (`bg-[#C5A059]`).",
-    "Audience section ('Who is the programme for'): Use Lucide React icons instead of numbers for the 6 cards. Format as a bento grid.",
-    "Job placement infographic: Build a visually appealing stats/infographic section representing placement stats, salary hike, role placements.",
-    "Video showcase: Add a new section featuring a video layout (prominent thumbnail with play icon).",
-    "Mobile sticky buttons: Create two fixed circular buttons (z-50) at the bottom right for Mobile screens only (`sm:hidden`). One for Call (Phone), one for WhatsApp. Use appropriate styling.",
-    "Social media: Add social icons (Instagram, Facebook, LinkedIn, YouTube) to both the desktop top nav bar and footer.",
-    "15-second pop-up form: Implement using Shadcn Dialog and React's useEffect timer. Fields: Name, Email, Phone, Course. CTA: 'Schedule Call Back'.",
-    "Ensure every interactive element and key informational section has a `data-testid` attribute."
-  ]
+  "assets": {
+    "local_provided": [
+      "/app/frontend/public/assets/kent.png",
+      "/app/frontend/public/assets/jayprakash-mistry.jpeg",
+      "/app/frontend/public/assets/philip-wiseman.jpeg",
+      "/app/frontend/public/assets/alena-savera.jpeg",
+      "/app/frontend/public/assets/mardoqueo-arteaga.jpeg",
+      "/app/frontend/public/assets/favicon.png"
+    ],
+    "ai_generated": {
+      "hero_texture": "https://static.prod-images.emergentagent.com/jobs/e23815bd-dddd-4dba-8a89-1ea973e37dd9/images/b98069a271c86a18b58e9d637cbc5818bd32992adcb90c07e57950ef0ad88be9.png",
+      "architecture_night_1": "https://images.unsplash.com/photo-1668513912223-8046cce96bdb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODd8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjB1bml2ZXJzaXR5JTIwYXJjaGl0ZWN0dXJlJTIwbmlnaHR8ZW58MHx8fHwxNzc5NzA2MDQ0fDA&ixlib=rb-4.1.0&q=85",
+      "architecture_night_2": "https://images.pexels.com/photos/12570418/pexels-photo-12570418.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    }
+  },
+  "instructions_to_main_agent": {
+    "enforcement_1": "You MUST implement the exact color hex codes and font families detailed here. Ensure Google Fonts (Cormorant Garamond, Manrope, DM Mono) are imported in index.css.",
+    "enforcement_2": "Do NOT use rounded corners on primary structural elements. The aesthetic relies on sharp geometry (rounded-none) and 1px borders, except for the Guest Faculty avatars which MUST be perfectly circular (rounded-full).",
+    "enforcement_3": "Do not skip the starfield SVG background for the Faculty section; implement it using radial gradients or absolute positioned elements.",
+    "testing_rule": "ALL interactive elements (buttons, links, form inputs) MUST include a kebab-case data-testid attribute based on their role (e.g., data-testid='apply-submit-button')."
+  }
 }
