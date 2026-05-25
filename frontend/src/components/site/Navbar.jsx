@@ -20,14 +20,10 @@ export default function Navbar() {
       className="fixed top-0 left-0 right-0 z-40 bg-ink/85 backdrop-blur-md border-b hairline"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-24 md:h-28">
           {/* Brand */}
-          <a href="#top" data-testid="nav-brand" className="flex items-center gap-3 group">
-            <img src="/assets/logo.png" alt="Epsilon Executive Education" className="h-9 md:h-11 w-auto object-contain" />
-            <span className="hidden sm:flex flex-col leading-none">
-              <span className="font-serif text-xl tracking-wide text-white">Epsilon</span>
-              <span className="text-[9px] uppercase tracking-[0.28em] text-white/45 mt-0.5">Executive Education</span>
-            </span>
+          <a href="#top" data-testid="nav-brand" className="flex items-center group">
+            <img src="/assets/logo.png" alt="Epsilon Executive Education" className="h-20 md:h-24 w-auto object-contain" />
           </a>
 
           {/* Center nav */}

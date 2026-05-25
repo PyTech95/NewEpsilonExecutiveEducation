@@ -7,13 +7,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
         <div className="grid lg:grid-cols-12 gap-10">
           <div className="lg:col-span-5">
-            <div className="flex items-center gap-3">
-              <img src="/assets/logo.png" alt="Epsilon Executive Education" className="h-10 w-auto object-contain" />
-              <div className="flex flex-col leading-none">
-                <span className="font-serif text-2xl tracking-wide">Epsilon</span>
-                <span className="text-[10px] uppercase tracking-[0.25em] text-white/40 mt-1">Executive Education</span>
-              </div>
-            </div>
+            <img src="/assets/logo.png" alt="Epsilon Executive Education" className="h-20 w-auto object-contain" />
             <p className="mt-5 text-white/55 max-w-md leading-relaxed">
               A live executive school for decision-makers in the AI era — turning technical fluency
               into strategic value.

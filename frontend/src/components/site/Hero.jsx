@@ -39,7 +39,7 @@ export default function Hero() {
     <section
       id="top"
       data-testid="hero-section"
-      className="relative isolate overflow-hidden bg-ink text-white pt-28 pb-20 md:pt-36 md:pb-28"
+      className="relative isolate overflow-hidden bg-ink text-white pt-32 pb-20 md:pt-40 md:pb-28"
     >
       {/* Dark image overlay */}
       <div className="absolute inset-0 -z-10">
