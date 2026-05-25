@@ -22,13 +22,11 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Brand */}
-          <a href="#top" data-testid="nav-brand" className="flex items-center gap-2 group">
-            <span className="inline-block h-2 w-2 rounded-full bg-gold animate-pulse-gold" />
-            <span className="font-serif text-xl md:text-2xl tracking-wide text-white">
-              {BRAND.name}
-            </span>
-            <span className="hidden sm:inline text-[10px] uppercase tracking-[0.25em] text-white/50 ml-2">
-              Executive Education
+          <a href="#top" data-testid="nav-brand" className="flex items-center gap-3 group">
+            <img src="/assets/logo.png" alt="Epsilon Executive Education" className="h-9 md:h-11 w-auto object-contain" />
+            <span className="hidden sm:flex flex-col leading-none">
+              <span className="font-serif text-xl tracking-wide text-white">Epsilon</span>
+              <span className="text-[9px] uppercase tracking-[0.28em] text-white/45 mt-0.5">Executive Education</span>
             </span>
           </a>
 

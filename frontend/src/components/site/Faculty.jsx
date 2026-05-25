@@ -1,38 +1,37 @@
 import { Linkedin } from "lucide-react";
 
-const KENT_IMG =
-  "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwxfHxleGVjdXRpdmUlMjBwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3Nzk3MDMxNzV8MA&ixlib=rb-4.1.0&q=85";
+const KENT_IMG = "/assets/kent.png";
 
 const GUESTS = [
   {
     name: "Jayprakash Mistry",
     title: "Founder, Remarkables Capital & UnnichedHQ",
-    domain: "Venture Capital · Deeptech",
-    img: "https://images.pexels.com/photos/4687550/pexels-photo-4687550.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    domain: "Capital & AI",
+    img: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=900&q=80",
     logos: ["Remarkables Capital", "UnnichedHQ"],
     bio: "A decade across venture capital, private equity and credit between the US, UK and India. Focused on AI, deeptech, life sciences, fintech and defence-adjacent sectors.",
   },
   {
     name: "Philip Wiseman, J.D.",
     title: "VP Legal Affairs, JPMorgan Chase",
-    domain: "Securities · Cross-border",
-    img: "https://images.unsplash.com/photo-1553642618-de0381320ff3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHw0fHxleGVjdXRpdmUlMjBwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3Nzk3MDMxNzV8MA&ixlib=rb-4.1.0&q=85",
+    domain: "Legal & Compliance",
+    img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=900&q=80",
     logos: ["JPMorgan Chase", "UC Berkeley"],
     bio: "Business attorney with experience across banking, private equity, fund formation and cross-border transactions. Earlier at Winston & Strawn and Simpson Thacher.",
   },
   {
     name: "Alena Savera",
     title: "VP of Development, The NRP Group",
-    domain: "Real Estate · Development",
-    img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwyfHxleGVjdXRpdmUlMjBwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3Nzk3MDMxNzV8MA&ixlib=rb-4.1.0&q=85",
+    domain: "Development Strategy",
+    img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=900&q=80",
     logos: ["The NRP Group", "UT Austin"],
     bio: "Real estate development leader based in Dallas–Fort Worth. Originated multi-family projects totalling 2,350+ units. B.Arch from UT Austin.",
   },
   {
     name: "Mardoqueo Arteaga, Ph.D.",
     title: "Marketing Science Strategist, LinkedIn",
-    domain: "Marketing Science · Causal Inference",
-    img: "https://images.pexels.com/photos/13188831/pexels-photo-13188831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    domain: "Marketing Science",
+    img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=80",
     logos: ["LinkedIn", "KPMG", "Fordham"],
     bio: "Economist working at the intersection of marketing science, technology and applied research. Earlier at KPMG and Banco Central de Chile.",
   },
