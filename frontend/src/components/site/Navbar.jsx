@@ -49,7 +49,7 @@ export default function Navbar() {
               <a data-testid="nav-social-youtube" href={SOCIAL.youtube} target="_blank" rel="noreferrer" className="text-white/60 hover:text-gold transition-colors"><FaYoutube size={14}/></a>
             </div>
             <a
-              href="#apply"
+              href="/apply"
               data-testid="nav-apply-btn"
               className="text-sm bg-gold hover:bg-gold-hover text-white px-5 py-2.5 rounded-sm font-medium tracking-wide transition-colors"
             >
@@ -59,7 +59,7 @@ export default function Navbar() {
 
           {/* Tablet-only condensed: just Apply CTA */}
           <a
-            href="#apply"
+            href="/apply"
             className="hidden md:inline-flex lg:hidden text-sm bg-gold hover:bg-gold-hover text-white px-5 py-2.5 rounded-sm font-medium tracking-wide transition-colors"
             data-testid="nav-apply-btn-tablet"
           >
@@ -91,7 +91,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="#apply"
+              href="/apply"
               onClick={() => setOpen(false)}
               className="block bg-gold text-white text-center px-5 py-3 rounded-sm font-medium"
             >

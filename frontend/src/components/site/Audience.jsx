@@ -77,7 +77,7 @@ export default function Audience() {
             in an AI-enabled workplace.
           </p>
           <a
-            href="#apply"
+            href="/apply"
             data-testid="audience-apply-btn"
             className="inline-flex items-center gap-2 mt-6 text-gold hover:text-gold-light transition-colors"
           >

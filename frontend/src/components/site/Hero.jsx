@@ -90,7 +90,7 @@ export default function Hero() {
 
             <div className="mt-10 flex flex-col sm:flex-row gap-3">
               <a
-                href="#apply"
+                href="/apply"
                 data-testid="hero-apply-btn"
                 className="inline-flex justify-center items-center bg-gold hover:bg-gold-hover text-white px-7 py-4 rounded-sm text-sm font-semibold tracking-wide transition-colors"
               >

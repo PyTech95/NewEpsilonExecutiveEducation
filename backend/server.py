@@ -75,6 +75,56 @@ class CallbackLeadCreate(BaseModel):
     course: str
 
 
+class Application(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    # Personal
+    first_name: str
+    last_name: str
+    email: EmailStr
+    phone: str
+    city: str
+    country: str = "India"
+    linkedin: Optional[str] = None
+    # Professional
+    current_role: str
+    company: str
+    experience_years: str
+    industry: str
+    # Education
+    highest_qualification: str
+    # Programme
+    course: str
+    cohort_preference: Optional[str] = None
+    # Fit
+    motivation: str
+    goals: Optional[str] = None
+    referral_source: Optional[str] = None
+    # Meta
+    status: str = "submitted"
+    created_at: str = Field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
+
+
+class ApplicationCreate(BaseModel):
+    first_name: str
+    last_name: str
+    email: EmailStr
+    phone: str
+    city: str
+    country: Optional[str] = "India"
+    linkedin: Optional[str] = None
+    current_role: str
+    company: str
+    experience_years: str
+    industry: str
+    highest_qualification: str
+    course: str
+    cohort_preference: Optional[str] = None
+    motivation: str
+    goals: Optional[str] = None
+    referral_source: Optional[str] = None
+
+
 # ---------- Routes ----------
 @api_router.get("/")
 async def root():
@@ -123,6 +173,23 @@ async def create_callback_lead(payload: CallbackLeadCreate):
 async def list_callback_leads():
     leads = await db.callback_leads.find({}, {"_id": 0}).sort("created_at", -1).to_list(500)
     return leads
+
+
+@api_router.post("/applications")
+async def create_application(payload: ApplicationCreate):
+    app_doc = Application(**payload.model_dump())
+    await db.applications.insert_one(app_doc.model_dump())
+    return {
+        "success": True,
+        "id": app_doc.id,
+        "message": "Application received. Our admissions team will reach out within 48 working hours."
+    }
+
+
+@api_router.get("/applications")
+async def list_applications():
+    apps = await db.applications.find({}, {"_id": 0}).sort("created_at", -1).to_list(500)
+    return apps
 
 
 app.include_router(api_router)

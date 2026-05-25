@@ -49,7 +49,7 @@ export default function Footer() {
             <p className="text-[10px] uppercase tracking-[0.25em] text-gold mb-4">Resources</p>
             <ul className="space-y-2.5 text-sm text-white/65">
               <li><a href="#" className="hover:text-gold">Download brochure</a></li>
-              <li><a href="#apply" className="hover:text-gold">Apply now</a></li>
+              <li><a href="/apply" className="hover:text-gold">Apply now</a></li>
               <li><a href="#advisor" className="hover:text-gold">Speak with advisor</a></li>
               <li><a href="#" className="hover:text-gold">Scholarships</a></li>
             </ul>
