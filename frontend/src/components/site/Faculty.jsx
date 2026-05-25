@@ -1,4 +1,6 @@
-import { Linkedin } from "lucide-react";
+import { useEffect, useState } from "react";
+import { ArrowRight, X, Linkedin } from "lucide-react";
+import ChapterDivider from "./ChapterDivider";
 
 const KENT_IMG = "/assets/kent.png";
 
@@ -9,7 +11,7 @@ const GUESTS = [
     domain: "Capital & AI",
     img: "/assets/jayprakash-mistry.jpeg",
     logos: ["Remarkables Capital", "UnnichedHQ"],
-    bio: "A decade across venture capital, private equity and credit between the US, UK and India. Focused on AI, deeptech, life sciences, fintech and defence-adjacent sectors.",
+    bio: "A decade across venture capital, private equity and credit between the US, UK and India. Focused on AI, deeptech, life sciences, fintech and defence-adjacent sectors. Brings live deal-evaluation rigour into the cohort.",
   },
   {
     name: "Philip Wiseman, J.D.",
@@ -17,7 +19,7 @@ const GUESTS = [
     domain: "Legal & Compliance",
     img: "/assets/philip-wiseman.jpeg",
     logos: ["JPMorgan Chase", "UC Berkeley"],
-    bio: "Business attorney with experience across banking, private equity, fund formation and cross-border transactions. Earlier at Winston & Strawn and Simpson Thacher.",
+    bio: "Business attorney with experience across banking, private equity, fund formation and cross-border transactions. Earlier at Winston & Strawn and Simpson Thacher. Brings AI-governance and compliance frameworks to the cohort.",
   },
   {
     name: "Alena Savera",
@@ -25,7 +27,7 @@ const GUESTS = [
     domain: "Development Strategy",
     img: "/assets/alena-savera.jpeg",
     logos: ["The NRP Group", "UT Austin"],
-    bio: "Real estate development leader based in Dallas–Fort Worth. Originated multi-family projects totalling 2,350+ units. B.Arch from UT Austin.",
+    bio: "Real estate development leader based in Dallas–Fort Worth. Originated multi-family projects totalling 2,350+ units. B.Arch from UT Austin. Brings strategic-decision craft and stakeholder-defence rigour into the programme.",
   },
   {
     name: "Mardoqueo Arteaga, Ph.D.",
@@ -33,90 +35,147 @@ const GUESTS = [
     domain: "Marketing Science",
     img: "/assets/mardoqueo-arteaga.jpeg",
     logos: ["LinkedIn", "KPMG", "Fordham"],
-    bio: "Economist working at the intersection of marketing science, technology and applied research. Earlier at KPMG and Banco Central de Chile.",
+    bio: "Economist working at the intersection of marketing science, technology and applied research. Earlier at KPMG and Banco Central de Chile. Leads sessions on causal inference, A/B testing and applied ML for growth.",
   },
 ];
 
 export default function Faculty() {
+  const [active, setActive] = useState(null);
+
+  useEffect(() => {
+    if (active !== null) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [active]);
+
   return (
-    <section id="faculty" data-testid="faculty-section" className="bg-[#F8F6F1] text-ink">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-        <p className="text-[11px] uppercase tracking-[0.3em] text-gold-dark mb-4">Faculty & Guest Lecturers</p>
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-14">
-          <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl leading-tight">
-            Taught by <em className="text-gold-dark">practitioners</em>,<br className="hidden sm:block" /> not theorists.
-          </h2>
-        </div>
+    <section
+      id="faculty"
+      data-testid="faculty-section"
+      className="relative bg-navy-deep text-cream pt-20 pb-24 md:pt-28 md:pb-32 overflow-hidden"
+    >
+      {/* Starfield + glow */}
+      <div className="absolute inset-0 starfield opacity-50 pointer-events-none" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full glow-gold pointer-events-none" />
 
-        {/* Lead faculty (Kent) */}
-        <div data-testid="faculty-lead-card" className="bg-white border border-ink/10 rounded-sm overflow-hidden grid lg:grid-cols-12 gap-0 mb-16">
-          <div className="lg:col-span-5 aspect-[4/5] lg:aspect-auto relative">
-            <img src={KENT_IMG} alt="Kent Oliver Bhupathi" className="w-full h-full object-cover" />
-            <div className="absolute top-4 left-4 bg-gold text-white text-[10px] uppercase tracking-[0.2em] px-3 py-1.5 font-semibold">
-              Lead Faculty
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <ChapterDivider
+          chapter="III"
+          eyebrow="Faculty"
+          title="Faculty built for applied learning,"
+          accent="not passive content."
+          inverted
+        />
+
+        {/* Lead instructor — Kent */}
+        <div data-testid="faculty-lead-card" className="mt-14 md:mt-20 grid grid-cols-1 lg:grid-cols-[minmax(0,440px)_1fr] gap-12 lg:gap-20 items-center">
+          <div className="relative mx-auto lg:mx-0 w-full max-w-[440px] corner-brackets">
+            <div className="aspect-[4/5] overflow-hidden bg-navy">
+              <img src={KENT_IMG} alt="Kent Oliver Bhupathi" className="w-full h-full object-cover object-top" />
+            </div>
+            <div className="absolute right-[-10px] bottom-[-10px] md:right-[-14px] md:bottom-[-14px] bg-gold text-navy-deep px-6 py-4 md:px-8 md:py-5 max-w-[80%]">
+              <p className="font-mono uppercase text-[10px] tracking-[0.22em] text-navy-deep/80 mb-1">Lead Instructor</p>
+              <p className="font-editorial text-navy-deep text-[1.15rem] md:text-[1.35rem] leading-tight">Kent Oliver Bhupathi</p>
             </div>
           </div>
-          <div className="lg:col-span-7 p-8 md:p-12">
-            <div className="flex flex-wrap gap-2 mb-5">
-              {["NYU", "Columbia", "Market Theory AI", "ex-Interpublic"].map((l) => (
-                <span key={l} className="text-[10px] uppercase tracking-wider border border-ink/15 px-2.5 py-1 text-ink/70">
-                  {l}
-                </span>
-              ))}
-            </div>
-            <h3 className="font-serif text-4xl md:text-5xl mb-2">Kent Oliver Bhupathi</h3>
-            <p className="text-ink/60 mb-6 italic">Founder & Lead Instructor · Epsilon Executive Education</p>
-            <div className="space-y-4 text-ink/75 leading-relaxed text-sm md:text-base">
-              <p>
-                Economist, data science leader and educator with 15+ years across applied research
-                and analytics — spanning marketing sciences, healthcare analytics, supply chain,
-                business intelligence and professional services.
-              </p>
-              <p>
-                He holds a dual degree in Economics and Architecture from UT Austin and a Master's
-                in Applied Econometrics from NYU. Prior teaching appointments include NYU, Columbia
-                University and the Indian School of Public Policy (ISPP).
-              </p>
-            </div>
-            <div className="mt-6 inline-flex items-center gap-2 text-gold-dark text-sm">
-              <Linkedin size={14} /> View profile
-            </div>
-          </div>
-        </div>
 
-        {/* Guest lecturers - STATIC GRID (no carousel) */}
-        <p className="text-[11px] uppercase tracking-[0.3em] text-gold-dark mb-6">Guest Lecturers</p>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {GUESTS.map((g, i) => (
-            <article
-              key={g.name}
-              data-testid={`guest-faculty-${i}`}
-              className="group bg-white border border-ink/10 rounded-sm overflow-hidden hover:border-gold/60 transition-colors"
-            >
-              <div className="aspect-[4/5] overflow-hidden">
-                <img
-                  src={g.img}
-                  alt={g.name}
-                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
-                />
+          <div>
+            <p className="font-editorial italic text-gold text-[1.5rem] md:text-[1.9rem] leading-tight mb-5">Academic Excellence</p>
+            <p className="text-cream/85 text-[1rem] md:text-[1.08rem] leading-[1.8] max-w-2xl">
+              Learn live from Kent Oliver Bhupathi, former NYU professor and lead instructor at Epsilon Executive Education. Professor Kent brings academic rigour and applied AI judgment into a live cohort format designed for professionals who need to understand, evaluate and lead AI work.
+            </p>
+
+            <div className="mt-9 grid grid-cols-2 gap-8 max-w-xl border-t border-b border-gold/25 py-6">
+              <div>
+                <p className="font-editorial italic text-gold text-[1.2rem] md:text-[1.4rem] leading-tight">New York University</p>
+                <p className="font-mono uppercase text-[10px] tracking-[0.22em] text-cream/65 mt-2">Former Masters Faculty</p>
               </div>
-              <div className="p-5">
-                <p className="text-[10px] uppercase tracking-[0.18em] text-gold-dark mb-1">{g.domain}</p>
-                <h4 className="font-serif text-xl leading-tight">{g.name}</h4>
-                <p className="text-xs text-ink/55 mt-1.5">{g.title}</p>
-                <p className="mt-3 text-xs text-ink/70 leading-relaxed line-clamp-3">{g.bio}</p>
-                <div className="mt-3 flex flex-wrap gap-1.5">
-                  {g.logos.map((l) => (
-                    <span key={l} className="text-[10px] border border-ink/15 px-2 py-0.5 text-ink/60">
-                      {l}
-                    </span>
+              <div>
+                <p className="font-editorial italic text-gold text-[1.2rem] md:text-[1.4rem] leading-tight">Columbia University</p>
+                <p className="font-mono uppercase text-[10px] tracking-[0.22em] text-cream/65 mt-2">Former Faculty</p>
+              </div>
+            </div>
+
+            <a data-testid="lead-faculty-linkedin" href="#" className="btn-outline-gold mt-8 !text-cream hover:!text-gold inline-flex">
+              <Linkedin size={14} /> View Profile <ArrowRight size={14} />
+            </a>
+          </div>
+        </div>
+
+        {/* Guest faculty - circular avatars */}
+        <div className="mt-24 md:mt-28">
+          <p className="font-mono uppercase text-[11px] tracking-[0.28em] text-cream/65 text-center">Visiting Faculty &amp; Industry Experts</p>
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-12">
+            {GUESTS.map((g, i) => (
+              <button
+                key={g.name}
+                type="button"
+                data-testid={`guest-faculty-card-${g.name.toLowerCase().split(",")[0].replace(/[. ]+/g, "-")}`}
+                onClick={() => setActive(i)}
+                className="flex flex-col items-center text-center group focus:outline-none cursor-pointer"
+              >
+                <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border border-gold/20 group-hover:border-gold/60 group-focus:border-gold/80 transition-colors">
+                  <img
+                    src={g.img}
+                    alt={g.name}
+                    className="w-full h-full object-cover object-top grayscale-[30%] group-hover:grayscale-0 transition-all duration-500"
+                  />
+                </div>
+                <p className="font-editorial italic text-cream text-[1.05rem] md:text-[1.2rem] mt-5 leading-tight group-hover:text-gold transition-colors">
+                  {g.name}
+                </p>
+                <p className="font-mono uppercase text-[10px] tracking-[0.25em] text-cream/60 mt-2.5">{g.domain}</p>
+                <span className="font-mono uppercase text-[9px] tracking-[0.22em] text-gold/0 group-hover:text-gold/80 transition-colors mt-2.5">View Bio →</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Bio modal */}
+      {active !== null && (
+        <div
+          data-testid="guest-bio-modal-overlay"
+          className="fixed inset-0 z-[80] bg-black/80 backdrop-blur-md flex items-center justify-center p-4 fade-up"
+          onClick={() => setActive(null)}
+        >
+          <div
+            data-testid="guest-bio-modal"
+            onClick={(e) => e.stopPropagation()}
+            className="relative w-full max-w-3xl bg-cream text-navy-deep max-h-[90vh] overflow-y-auto corner-brackets"
+            style={{ boxShadow: "0 30px 80px rgba(0,0,0,0.7)" }}
+          >
+            <button
+              data-testid="guest-bio-close-btn"
+              onClick={() => setActive(null)}
+              aria-label="Close"
+              className="absolute top-4 right-4 z-10 h-10 w-10 bg-navy-deep text-cream hover:bg-gold hover:text-navy-deep flex items-center justify-center transition-colors"
+            >
+              <X size={18} />
+            </button>
+            <div className="grid grid-cols-1 md:grid-cols-[260px_1fr] gap-0">
+              <div className="aspect-square md:aspect-auto overflow-hidden bg-navy">
+                <img src={GUESTS[active].img} alt={GUESTS[active].name} className="w-full h-full object-cover object-top" />
+              </div>
+              <div className="p-7 md:p-10">
+                <p className="eyebrow !text-gold-dark mb-3">{GUESTS[active].domain}</p>
+                <h3 className="font-editorial text-navy-deep text-[2rem] md:text-[2.6rem] leading-[1.05]">{GUESTS[active].name}</h3>
+                <p className="font-editorial italic text-navy-deep/65 mt-2 text-[1.05rem]">{GUESTS[active].title}</p>
+                <div className="w-12 h-px bg-gold/60 my-5" />
+                <p className="font-editorial text-navy-deep/85 text-[1.05rem] leading-[1.75]">{GUESTS[active].bio}</p>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {GUESTS[active].logos.map((l) => (
+                    <span key={l} className="font-mono uppercase text-[10px] tracking-[0.18em] border border-navy-deep/15 px-2.5 py-1 text-navy-deep/65">{l}</span>
                   ))}
                 </div>
               </div>
-            </article>
-          ))}
+            </div>
+          </div>
         </div>
-      </div>
+      )}
     </section>
   );
 }

@@ -11,14 +11,13 @@ const BRANDS = [
 
 export default function FacultyLogos() {
   return (
-    <section data-testid="faculty-experience-strip" className="bg-ink text-white pt-12 pb-12 md:pt-16 md:pb-16 border-t hairline">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section data-testid="faculty-experience-strip" className="bg-navy-deep text-cream pt-12 pb-14 md:pt-16 md:pb-20 border-t border-gold/15 relative overflow-hidden">
+      <div className="absolute inset-0 starfield opacity-25 pointer-events-none" />
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-4 mb-10">
-          <div className="h-px flex-1 bg-white/10" />
-          <p className="text-[10px] sm:text-[11px] uppercase tracking-[0.25em] sm:tracking-[0.3em] text-white/50 text-center px-2">
-            Faculty & advisors with experience at
-          </p>
-          <div className="h-px flex-1 bg-white/10" />
+          <div className="h-px flex-1 bg-gold/20" />
+          <p className="eyebrow text-center px-2 whitespace-nowrap !text-gold">Faculty &amp; Advisors with Experience At</p>
+          <div className="h-px flex-1 bg-gold/20" />
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-3 sm:gap-4">
@@ -26,7 +25,7 @@ export default function FacultyLogos() {
             <div
               key={b.name}
               data-testid={`faculty-logo-${b.name.toLowerCase().replace(/\s+/g, "-")}`}
-              className="group bg-white hover:bg-gold/95 border border-white/10 hover:border-gold transition-all rounded-sm aspect-[5/3] flex flex-col items-center justify-center p-4 gap-2"
+              className="group bg-cream hover:bg-gold transition-all border border-gold/20 hover:border-gold aspect-[5/3] flex flex-col items-center justify-center p-4 gap-2"
             >
               <div className="h-9 sm:h-10 w-full flex items-center justify-center">
                 <img
@@ -36,13 +35,13 @@ export default function FacultyLogos() {
                   className="max-h-full max-w-full object-contain"
                   onError={(e) => {
                     const fallback = document.createElement('span');
-                    fallback.className = 'font-serif text-base text-ink/80';
+                    fallback.className = 'font-editorial text-base text-navy-deep/80';
                     fallback.textContent = b.name;
                     e.currentTarget.replaceWith(fallback);
                   }}
                 />
               </div>
-              <span className="text-[10px] sm:text-xs text-ink/60 group-hover:text-ink text-center leading-tight transition-colors uppercase tracking-wider font-medium">
+              <span className="font-mono text-[9px] sm:text-[10px] text-navy-deep/65 group-hover:text-navy-deep text-center leading-tight transition-colors uppercase tracking-[0.18em] font-medium">
                 {b.name}
               </span>
             </div>

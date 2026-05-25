@@ -37,51 +37,53 @@ const AUDIENCE = [
 
 export default function Audience() {
   return (
-    <section data-testid="audience-section" className="bg-ink text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(197,160,89,0.12),transparent_60%)]" />
+    <section data-testid="audience-section" className="bg-navy-deep text-cream relative overflow-hidden">
+      <div className="absolute inset-0 starfield opacity-40 pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full glow-gold pointer-events-none" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-        <p className="text-[11px] uppercase tracking-[0.3em] text-gold mb-4">Who is the programme for?</p>
-        <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl leading-tight max-w-4xl">
-          Built for professionals with <em className="text-gold">5 – 15 years</em> of experience.
+        <p className="eyebrow mb-3">Who is the programme for?</p>
+        <span className="gold-rule-lg block mb-6" />
+        <h2 className="font-editorial text-cream text-[2.1rem] sm:text-[3rem] lg:text-[3.6rem] leading-[1.06] max-w-4xl">
+          Built for professionals with <span className="italic text-gold">5 – 15 years</span> of experience.
         </h2>
-        <p className="mt-6 text-white/65 max-w-2xl font-light text-lg leading-relaxed">
+        <p className="mt-6 font-editorial text-cream/75 max-w-2xl text-[1.1rem] leading-relaxed">
           The strongest fit is professionals eager for promotion, working across functions, engaging
           with data or technical teams, or expected to influence decisions beyond their formal title.
         </p>
 
-        <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10 border hairline">
+        <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-gold/15 border border-gold/15">
           {AUDIENCE.map(({ Icon, title, desc }, i) => (
             <div
               key={title}
               data-testid={`audience-card-${i}`}
-              className="group relative bg-ink hover:bg-ink-light transition-colors p-8 md:p-10"
+              className="group relative bg-navy-deep hover:bg-navy transition-colors p-8 md:p-10"
             >
               <div className="absolute top-0 left-0 h-px w-0 bg-gold group-hover:w-full transition-all duration-500" />
-              <div className="flex items-center justify-center h-14 w-14 rounded-full bg-gold/10 border border-gold/30 mb-7 group-hover:bg-gold/20 transition-colors">
-                <Icon size={26} className="text-gold" strokeWidth={1.5} />
+              <div className="flex items-center justify-center h-14 w-14 bg-gold/10 border border-gold/40 mb-6 group-hover:bg-gold group-hover:text-navy-deep transition-colors">
+                <Icon size={24} className="text-gold group-hover:text-navy-deep transition-colors" strokeWidth={1.4} />
               </div>
-              <h3 className="font-serif text-2xl text-white mb-3 leading-snug">{title}</h3>
-              <p className="text-white/65 text-sm leading-relaxed font-light">{desc}</p>
+              <h3 className="font-editorial text-[1.55rem] text-cream mb-3 leading-snug">{title}</h3>
+              <p className="font-editorial text-cream/70 text-[0.98rem] leading-relaxed">{desc}</p>
             </div>
           ))}
         </div>
 
         <div className="mt-16 border-l-2 border-gold pl-6">
-          <p className="text-[11px] uppercase tracking-[0.3em] text-gold mb-2">Outcome</p>
-          <p className="font-serif text-2xl md:text-3xl text-white max-w-3xl leading-snug">
-            Move into the next role with proof of work.
+          <p className="eyebrow mb-2">Outcome</p>
+          <p className="font-editorial text-[1.7rem] md:text-[2.1rem] text-cream max-w-3xl leading-snug">
+            Move into the next role with <span className="italic text-gold">proof of work.</span>
           </p>
-          <p className="mt-3 text-white/70 max-w-3xl leading-relaxed">
-            Graduates step into Product Manager, Growth Manager, RevOps, FP&A, Director of Analytics
+          <p className="mt-3 font-editorial text-cream/75 max-w-3xl text-[1.05rem] leading-relaxed">
+            Graduates step into Product Manager, Growth Manager, RevOps, FP&amp;A, Director of Analytics
             and AI Support roles — carrying a body of work that shows they can think, build and decide
             in an AI-enabled workplace.
           </p>
           <a
             href="/apply"
             data-testid="audience-apply-btn"
-            className="inline-flex items-center gap-2 mt-6 text-gold hover:text-gold-light transition-colors"
+            className="btn-outline-gold mt-7"
           >
-            Apply for the programme <ArrowRight size={16} />
+            Apply for the programme <ArrowRight size={14} />
           </a>
         </div>
       </div>

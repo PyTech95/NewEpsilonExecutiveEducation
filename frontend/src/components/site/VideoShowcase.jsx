@@ -7,47 +7,48 @@ const THUMB =
 export default function VideoShowcase() {
   const [open, setOpen] = useState(false);
   return (
-    <section data-testid="video-showcase-section" className="bg-[#F8F6F1] text-ink">
+    <section data-testid="video-showcase-section" className="bg-bone text-navy-deep">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-5">
-            <p className="text-[11px] uppercase tracking-[0.3em] text-gold-dark mb-4">Programme Preview</p>
-            <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl leading-tight">
-              See what a <em className="text-gold-dark">live session</em> feels like.
+            <p className="eyebrow mb-3">Programme Preview</p>
+            <span className="gold-rule-lg block mb-6" />
+            <h2 className="font-editorial text-navy-deep text-[2.1rem] sm:text-[3rem] lg:text-[3.4rem] leading-[1.06]">
+              See what a <span className="italic text-gold">live session</span> feels like.
             </h2>
-            <p className="mt-6 text-ink/70 max-w-md font-light text-lg">
+            <p className="mt-6 font-editorial text-navy-deep/75 max-w-md text-[1.05rem] leading-relaxed">
               A 90-second look inside the Epsilon classroom — live teaching, structured critique
               and the rhythm of an executive cohort.
             </p>
-            <ul className="mt-8 space-y-3 text-sm text-ink/75">
+            <ul className="mt-7 space-y-3 font-editorial text-[1rem] text-navy-deep/75">
               <li>· Live faculty interaction</li>
               <li>· Real graded submissions and feedback</li>
               <li>· Capstone defence walkthrough</li>
             </ul>
           </div>
 
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7 relative corner-brackets">
             <button
               data-testid="video-play-btn"
               onClick={() => setOpen(true)}
-              className="group relative w-full aspect-video overflow-hidden rounded-sm shadow-2xl shadow-ink/30 block"
+              className="group relative w-full aspect-video overflow-hidden shadow-2xl shadow-navy-deep/30 block"
             >
               <img src={THUMB} alt="Programme preview" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-              <div className="absolute inset-0 bg-gradient-to-tr from-ink/70 via-ink/30 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-navy-deep/80 via-navy-deep/30 to-transparent" />
               <span className="absolute inset-0 flex items-center justify-center">
                 <span className="relative">
                   <span className="absolute inset-0 rounded-full bg-gold/30 animate-ping" />
-                  <span className="relative inline-flex h-20 w-20 md:h-24 md:w-24 items-center justify-center rounded-full bg-gold text-white group-hover:bg-gold-hover transition-colors">
-                    <Play size={32} className="ml-1" fill="white" />
+                  <span className="relative inline-flex h-20 w-20 md:h-24 md:w-24 items-center justify-center rounded-full bg-gold text-navy-deep group-hover:bg-cream transition-colors">
+                    <Play size={32} className="ml-1" fill="currentColor" />
                   </span>
                 </span>
               </span>
-              <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between text-white">
+              <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between text-cream">
                 <div>
-                  <p className="text-[10px] uppercase tracking-[0.25em] text-gold-light mb-1">90 sec</p>
-                  <p className="font-serif text-xl md:text-2xl">Inside the Epsilon classroom</p>
+                  <p className="font-mono uppercase text-[10px] tracking-[0.25em] text-gold mb-2">90 sec</p>
+                  <p className="font-editorial italic text-xl md:text-2xl">Inside the Epsilon classroom</p>
                 </div>
-                <span className="text-xs text-white/70 hidden sm:block">Watch preview</span>
+                <span className="font-mono uppercase text-[10px] tracking-[0.2em] text-cream/70 hidden sm:block">Watch preview</span>
               </div>
             </button>
           </div>

@@ -1,51 +1,57 @@
 import { Quote } from "lucide-react";
+import ChapterDivider from "./ChapterDivider";
 
 const TESTIMONIALS = [
   {
-    text: "I started the programme wanting to understand machine learning without getting lost in theory. The concepts needed to be immediately practical — Prof. Bhupathi helped me connect statistics to forecasting and campaign performance at work, and make quicker decisions.",
-    name: "Priyam C.",
-    role: "Senior Marketing & Sales Analyst",
+    text: "Before this program, AI felt abstract and intimidating. This course made AI feel less like a buzzword and more like a practical professional capability.",
+    name: "Siddharth B.",
+    role: "Senior Manager · Indian Bank",
   },
   {
-    text: "Before this, I understood AI mostly through a handful of features. Kent helped me understand what was actually happening underneath the models, what the outputs meant, and where the limits and biases were. That has changed how I make product decisions.",
-    name: "Sanjay J.",
-    role: "Product & Technical Manager",
+    text: "Coding stopped being syntax. It became a way to think more clearly. Grateful to Professor Bhupathi for making statistical modelling rigorous yet accessible.",
+    name: "Srijan D.",
+    role: "Former Student",
   },
   {
-    text: "I've used data software for years, but this programme helped me understand the reasoning behind the methods. I'm now far more confident explaining the why of an analysis, and communicating technical material to my leadership.",
-    name: "Jeremy H.",
-    role: "Financial Planning & Analysis Manager",
-  },
-  {
-    text: "Classes with Professor Bhupathi were something I looked forward to every week. Engaging, rigorous, and full of skills I'll carry into every part of my career. He's also remarkably approachable. Highly recommend.",
-    name: "Akriti J.",
-    role: "Senior Data Scientist",
+    text: "Professor Kent does an amazing job of blending complex disciplines of coding, statistics and relevant data into an engaging and interactive experience.",
+    name: "Cody M.",
+    role: "Director · Johnson & Johnson",
   },
 ];
 
 export default function Testimonials() {
   return (
-    <section data-testid="testimonials-section" className="bg-ink text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-        <p className="text-[11px] uppercase tracking-[0.3em] text-gold mb-4">In their own words</p>
-        <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl leading-tight max-w-3xl">
-          What past participants <em className="text-gold">say.</em>
-        </h2>
+    <section
+      data-testid="testimonials-section"
+      className="relative bg-navy-deep text-cream py-20 md:py-28 overflow-hidden"
+    >
+      <div className="absolute inset-0 starfield opacity-50" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full glow-gold pointer-events-none" />
 
-        <div className="mt-14 grid md:grid-cols-2 gap-6">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <ChapterDivider
+          chapter="VI"
+          eyebrow="In Their Words"
+          title="The experience,"
+          accent="in their own words."
+          inverted
+          align="center"
+        />
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mt-14 md:mt-16">
           {TESTIMONIALS.map((t, i) => (
             <figure
               key={i}
               data-testid={`testimonial-${i}`}
-              className="bg-ink-light/70 border hairline p-8 md:p-10 hover:border-gold/40 transition-colors"
+              className="border border-gold/20 p-7 md:p-9 bg-navy/40 lift-card hover:border-gold/60"
             >
-              <Quote size={28} className="text-gold mb-6" />
-              <blockquote className="text-white/85 font-light leading-relaxed text-base md:text-lg">
+              <Quote size={22} className="text-gold mb-4" />
+              <blockquote className="font-editorial italic text-cream/90 text-[1.1rem] md:text-[1.2rem] leading-[1.7]">
                 "{t.text}"
               </blockquote>
-              <figcaption className="mt-7 pt-5 border-t hairline">
-                <div className="font-serif text-lg text-white">{t.name}</div>
-                <div className="text-xs text-white/55 uppercase tracking-wider mt-1">{t.role}</div>
+              <figcaption className="mt-6">
+                <p className="font-display text-cream text-[1.05rem]">{t.name}</p>
+                <p className="font-mono uppercase text-[10px] tracking-[0.22em] text-gold mt-1.5">{t.role}</p>
               </figcaption>
             </figure>
           ))}

@@ -3,14 +3,15 @@ import { BRAND, SOCIAL } from "@/lib/constants";
 
 export default function Footer() {
   return (
-    <footer data-testid="site-footer" className="bg-black text-white border-t hairline">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+    <footer data-testid="site-footer" className="bg-navy-deep text-cream border-t border-gold/15 relative overflow-hidden">
+      <div className="absolute inset-0 starfield opacity-25" />
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
         <div className="grid lg:grid-cols-12 gap-10">
           <div className="lg:col-span-5">
-            <img src="/assets/logo.png" alt="Epsilon Executive Education" className="h-20 w-auto object-contain" />
-            <p className="mt-5 text-white/55 max-w-md leading-relaxed">
-              A live executive school for decision-makers in the AI era — turning technical fluency
-              into strategic value.
+            <img src="/assets/logo.png" alt="Epsilon Executive Education" className="h-16 md:h-20 w-auto object-contain" />
+            <p className="font-editorial mt-5 text-cream/65 max-w-md text-[1.05rem] leading-[1.7]">
+              A live executive school for decision-makers in the AI era —
+              <span className="italic text-gold"> turning technical fluency into strategic value.</span>
             </p>
 
             <div className="mt-7 flex items-center gap-3" data-testid="footer-social">
@@ -26,51 +27,51 @@ export default function Footer() {
                   href={href}
                   target="_blank"
                   rel="noreferrer"
-                  className="h-10 w-10 rounded-full border border-white/15 flex items-center justify-center text-white/70 hover:text-ink hover:bg-gold hover:border-gold transition-all"
+                  className="h-10 w-10 border border-gold/30 flex items-center justify-center text-cream/70 hover:text-navy-deep hover:bg-gold hover:border-gold transition-all"
                 >
-                  <Icon size={14} />
+                  <Icon size={13} />
                 </a>
               ))}
             </div>
           </div>
 
           <div className="lg:col-span-2">
-            <p className="text-[10px] uppercase tracking-[0.25em] text-gold mb-4">Programme</p>
-            <ul className="space-y-2.5 text-sm text-white/65">
-              <li><a href="#overview" className="hover:text-gold">Overview</a></li>
-              <li><a href="#curriculum" className="hover:text-gold">Curriculum</a></li>
-              <li><a href="#faculty" className="hover:text-gold">Faculty</a></li>
-              <li><a href="#placements" className="hover:text-gold">Placements</a></li>
-              <li><a href="#faq" className="hover:text-gold">FAQ</a></li>
+            <p className="eyebrow mb-4">Programme</p>
+            <ul className="space-y-2.5 font-mono text-[11px] uppercase tracking-[0.16em] text-cream/65">
+              <li><a href="#overview" className="hover:text-gold transition-colors">Overview</a></li>
+              <li><a href="#curriculum" className="hover:text-gold transition-colors">Curriculum</a></li>
+              <li><a href="#faculty" className="hover:text-gold transition-colors">Faculty</a></li>
+              <li><a href="#placements" className="hover:text-gold transition-colors">Placements</a></li>
+              <li><a href="#faq" className="hover:text-gold transition-colors">FAQ</a></li>
             </ul>
           </div>
 
           <div className="lg:col-span-2">
-            <p className="text-[10px] uppercase tracking-[0.25em] text-gold mb-4">Resources</p>
-            <ul className="space-y-2.5 text-sm text-white/65">
-              <li><a href="#" className="hover:text-gold">Download brochure</a></li>
-              <li><a href="/apply" className="hover:text-gold">Apply now</a></li>
-              <li><a href="#advisor" className="hover:text-gold">Speak with advisor</a></li>
-              <li><a href="#" className="hover:text-gold">Scholarships</a></li>
+            <p className="eyebrow mb-4">Resources</p>
+            <ul className="space-y-2.5 font-mono text-[11px] uppercase tracking-[0.16em] text-cream/65">
+              <li><a href="#" className="hover:text-gold transition-colors">Brochure</a></li>
+              <li><a href="/apply" className="hover:text-gold transition-colors">Apply Now</a></li>
+              <li><a href="#advisor" className="hover:text-gold transition-colors">Advisor Call</a></li>
+              <li><a href="#" className="hover:text-gold transition-colors">Scholarships</a></li>
             </ul>
           </div>
 
           <div className="lg:col-span-3">
-            <p className="text-[10px] uppercase tracking-[0.25em] text-gold mb-4">Contact</p>
-            <ul className="space-y-2.5 text-sm text-white/65">
+            <p className="eyebrow mb-4">Contact</p>
+            <ul className="space-y-2.5 font-editorial text-[0.95rem] text-cream/75">
               <li>{BRAND.email}</li>
               <li>{BRAND.phone}</li>
-              <li>Mon – Sat · 10am to 8pm IST</li>
+              <li className="font-mono uppercase text-[10.5px] tracking-[0.18em] text-cream/55">Mon – Sat · 10am – 8pm IST</li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-14 pt-8 border-t hairline flex flex-col md:flex-row gap-3 justify-between text-xs text-white/40">
+        <div className="mt-14 pt-8 border-t border-cream/10 flex flex-col md:flex-row gap-3 justify-between font-mono text-[10.5px] uppercase tracking-[0.18em] text-cream/45">
           <span>© {new Date().getFullYear()} Epsilon Executive Education. All rights reserved.</span>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-gold">Privacy</a>
-            <a href="#" className="hover:text-gold">Terms</a>
-            <a href="#" className="hover:text-gold">Refund Policy</a>
+            <a href="#" className="hover:text-gold transition-colors">Privacy</a>
+            <a href="#" className="hover:text-gold transition-colors">Terms</a>
+            <a href="#" className="hover:text-gold transition-colors">Refund Policy</a>
           </div>
         </div>
       </div>

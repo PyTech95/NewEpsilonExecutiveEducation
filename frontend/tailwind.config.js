@@ -10,6 +10,9 @@ module.exports = {
             fontFamily: {
                 serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
                 sans: ['"Manrope"', 'system-ui', 'sans-serif'],
+                mono: ['"DM Mono"', '"JetBrains Mono"', 'monospace'],
+                display: ['"Manrope"', 'system-ui', 'sans-serif'],
+                editorial: ['"Cormorant Garamond"', 'Georgia', 'serif'],
             },
             borderRadius: {
                 lg: 'var(--radius)',
@@ -20,14 +23,24 @@ module.exports = {
                 background: 'hsl(var(--background))',
                 foreground: 'hsl(var(--foreground))',
                 gold: {
-                    DEFAULT: '#C5A059',
-                    hover: '#B38F4D',
-                    light: '#E1C99B',
-                    dark: '#8C6F35',
+                    DEFAULT: '#D4AF37',
+                    hover: '#BF9C2F',
+                    light: '#E7C97A',
+                    dark: '#AA8627',
                 },
+                navy: {
+                    DEFAULT: '#0A1128',
+                    deep: '#040914',
+                    light: '#162038',
+                },
+                cream: {
+                    DEFAULT: '#F9F6F0',
+                    dark: '#EFE9DC',
+                },
+                bone: '#F4EFE3',
                 ink: {
-                    DEFAULT: '#0A0F1C',
-                    light: '#121826',
+                    DEFAULT: '#040914',
+                    light: '#0A1128',
                 },
                 card: {
                     DEFAULT: 'hsl(var(--card))',

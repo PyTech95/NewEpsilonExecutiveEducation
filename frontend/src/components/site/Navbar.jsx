@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { FaInstagram, FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa";
-import { BRAND, SOCIAL } from "@/lib/constants";
+import { SOCIAL } from "@/lib/constants";
 
 const NAV = [
   { label: "Overview", href: "#overview" },
@@ -13,27 +13,37 @@ const NAV = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <nav
       data-testid="site-navbar"
-      className="fixed top-9 left-0 right-0 z-40 bg-ink/85 backdrop-blur-md border-b hairline"
+      className={`fixed top-[34px] left-0 right-0 z-40 transition-all duration-300 ${
+        scrolled ? "bg-navy-deep/95 backdrop-blur-md border-b border-gold/15" : "bg-transparent"
+      }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-24 md:h-28">
+        <div className="flex items-center justify-between h-20 md:h-24">
           {/* Brand */}
           <a href="#top" data-testid="nav-brand" className="flex items-center group">
-            <img src="/assets/logo.png" alt="Epsilon Executive Education" className="h-20 md:h-24 w-auto object-contain" />
+            <img src="/assets/logo.png" alt="Epsilon Executive Education" className="h-16 md:h-20 w-auto object-contain" />
           </a>
 
           {/* Center nav */}
-          <div className="hidden lg:flex items-center gap-7">
+          <div className="hidden lg:flex items-center gap-8">
             {NAV.map((n) => (
               <a
                 key={n.label}
                 href={n.href}
                 data-testid={`nav-link-${n.label.toLowerCase()}`}
-                className="text-sm text-white/70 hover:text-gold transition-colors"
+                className="font-mono text-[11px] uppercase tracking-[0.2em] text-cream/75 hover:text-gold transition-colors"
               >
                 {n.label}
               </a>
@@ -42,66 +52,54 @@ export default function Navbar() {
 
           {/* Right - social + CTA */}
           <div className="hidden lg:flex items-center gap-5">
-            <div className="flex items-center gap-3 pr-4 border-r hairline">
-              <a data-testid="nav-social-instagram" href={SOCIAL.instagram} target="_blank" rel="noreferrer" className="text-white/60 hover:text-gold transition-colors"><FaInstagram size={14}/></a>
-              <a data-testid="nav-social-facebook" href={SOCIAL.facebook} target="_blank" rel="noreferrer" className="text-white/60 hover:text-gold transition-colors"><FaFacebookF size={14}/></a>
-              <a data-testid="nav-social-linkedin" href={SOCIAL.linkedin} target="_blank" rel="noreferrer" className="text-white/60 hover:text-gold transition-colors"><FaLinkedinIn size={14}/></a>
-              <a data-testid="nav-social-youtube" href={SOCIAL.youtube} target="_blank" rel="noreferrer" className="text-white/60 hover:text-gold transition-colors"><FaYoutube size={14}/></a>
+            <div className="flex items-center gap-3 pr-4 border-r border-cream/15">
+              <a data-testid="nav-social-instagram" href={SOCIAL.instagram} target="_blank" rel="noreferrer" className="text-cream/55 hover:text-gold transition-colors"><FaInstagram size={13}/></a>
+              <a data-testid="nav-social-facebook" href={SOCIAL.facebook} target="_blank" rel="noreferrer" className="text-cream/55 hover:text-gold transition-colors"><FaFacebookF size={13}/></a>
+              <a data-testid="nav-social-linkedin" href={SOCIAL.linkedin} target="_blank" rel="noreferrer" className="text-cream/55 hover:text-gold transition-colors"><FaLinkedinIn size={13}/></a>
+              <a data-testid="nav-social-youtube" href={SOCIAL.youtube} target="_blank" rel="noreferrer" className="text-cream/55 hover:text-gold transition-colors"><FaYoutube size={13}/></a>
             </div>
-            <a
-              href="/apply"
-              data-testid="nav-apply-btn"
-              className="text-sm bg-gold hover:bg-gold-hover text-white px-5 py-2.5 rounded-sm font-medium tracking-wide transition-colors"
-            >
-              Apply now
+            <a href="/apply" data-testid="nav-apply-btn" className="btn-gold !py-3 !px-5 !text-[10.5px]">
+              Apply Now
             </a>
           </div>
 
-          {/* Tablet-only condensed: just Apply CTA */}
-          <a
-            href="/apply"
-            className="hidden md:inline-flex lg:hidden text-sm bg-gold hover:bg-gold-hover text-white px-5 py-2.5 rounded-sm font-medium tracking-wide transition-colors"
-            data-testid="nav-apply-btn-tablet"
-          >
-            Apply now
+          {/* Tablet condensed */}
+          <a href="/apply" className="hidden md:inline-flex lg:hidden btn-gold !py-3 !px-5 !text-[10.5px]" data-testid="nav-apply-btn-tablet">
+            Apply Now
           </a>
 
-          {/* Mobile/tablet toggle */}
+          {/* Mobile toggle */}
           <button
             data-testid="mobile-menu-toggle"
             onClick={() => setOpen(!open)}
-            className="lg:hidden text-white p-2 -mr-2"
+            className="lg:hidden text-cream p-2 -mr-2"
             aria-label="Toggle menu"
           >
             {open ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
 
-        {/* Mobile / tablet menu */}
+        {/* Mobile menu */}
         {open && (
-          <div data-testid="mobile-menu" className="lg:hidden pb-6 pt-2 space-y-4 border-t hairline animate-fade-in">
+          <div data-testid="mobile-menu" className="lg:hidden pb-6 pt-2 space-y-4 border-t border-cream/10 bg-navy-deep/95 backdrop-blur-md -mx-4 px-4 sm:-mx-6 sm:px-6 fade-up">
             {NAV.map((n) => (
               <a
                 key={n.label}
                 href={n.href}
                 onClick={() => setOpen(false)}
-                className="block text-white/80 hover:text-gold text-base"
+                className="block font-mono text-[12px] uppercase tracking-[0.2em] text-cream/80 hover:text-gold py-2"
               >
                 {n.label}
               </a>
             ))}
-            <a
-              href="/apply"
-              onClick={() => setOpen(false)}
-              className="block bg-gold text-white text-center px-5 py-3 rounded-sm font-medium"
-            >
-              Apply now
+            <a href="/apply" onClick={() => setOpen(false)} className="btn-gold w-full justify-center !text-[11px]">
+              Apply Now
             </a>
             <div className="flex items-center gap-5 pt-2">
-              <a href={SOCIAL.instagram} target="_blank" rel="noreferrer" className="text-white/70"><FaInstagram size={18}/></a>
-              <a href={SOCIAL.facebook} target="_blank" rel="noreferrer" className="text-white/70"><FaFacebookF size={18}/></a>
-              <a href={SOCIAL.linkedin} target="_blank" rel="noreferrer" className="text-white/70"><FaLinkedinIn size={18}/></a>
-              <a href={SOCIAL.youtube} target="_blank" rel="noreferrer" className="text-white/70"><FaYoutube size={18}/></a>
+              <a href={SOCIAL.instagram} target="_blank" rel="noreferrer" className="text-cream/70"><FaInstagram size={16}/></a>
+              <a href={SOCIAL.facebook} target="_blank" rel="noreferrer" className="text-cream/70"><FaFacebookF size={16}/></a>
+              <a href={SOCIAL.linkedin} target="_blank" rel="noreferrer" className="text-cream/70"><FaLinkedinIn size={16}/></a>
+              <a href={SOCIAL.youtube} target="_blank" rel="noreferrer" className="text-cream/70"><FaYoutube size={16}/></a>
             </div>
           </div>
         )}

@@ -12,24 +12,24 @@ export default function Stats() {
     },
   ];
   return (
-    <section data-testid="stats-section" className="bg-ink text-white border-t hairline">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2">
+    <section data-testid="stats-section" className="relative bg-navy-deep text-cream border-t border-gold/15 overflow-hidden">
+      <div className="absolute inset-0 starfield opacity-40 pointer-events-none" />
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2">
         {stats.map((s, i) => (
           <div
             key={i}
             data-testid={`stat-card-${i}`}
-            className={`py-16 md:py-24 ${i === 0 ? "md:border-r hairline md:pr-12" : "md:pl-12"} ${i === 1 ? "border-t md:border-t-0 hairline" : ""}`}
+            className={`py-16 md:py-24 ${i === 0 ? "md:border-r md:border-gold/15 md:pr-12" : "md:pl-12"} ${i === 1 ? "border-t border-gold/15 md:border-t-0" : ""}`}
           >
-            <p className="text-[11px] uppercase tracking-[0.3em] text-gold/80 mb-6">
-              The shift, in numbers
-            </p>
-            <div className="font-serif text-7xl md:text-8xl leading-none text-white">
+            <p className="eyebrow mb-6">The shift, in numbers</p>
+            <span className="gold-rule-lg block mb-6" />
+            <div className="font-editorial text-6xl md:text-8xl leading-none text-cream">
               {s.figure}
             </div>
-            <p className="mt-6 text-lg md:text-xl text-white/75 font-light leading-relaxed max-w-md">
+            <p className="mt-6 font-editorial text-lg md:text-xl text-cream/80 leading-relaxed max-w-md">
               {s.text}
             </p>
-            <p className="mt-6 text-xs text-white/40 uppercase tracking-widest">
+            <p className="mt-6 font-mono uppercase text-[10px] tracking-[0.22em] text-cream/45">
               Source · {s.source}
             </p>
           </div>

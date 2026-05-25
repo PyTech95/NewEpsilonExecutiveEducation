@@ -16,20 +16,21 @@ const ROLE_DISTRIBUTION = [
 
 export default function JobPlacement() {
   return (
-    <section id="placements" data-testid="placement-section" className="bg-ink text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(197,160,89,0.15),transparent_55%)]" />
+    <section id="placements" data-testid="placement-section" className="bg-navy-deep text-cream relative overflow-hidden">
+      <div className="absolute inset-0 starfield opacity-40 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[700px] h-[700px] rounded-full glow-gold pointer-events-none" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-        <p className="text-[11px] uppercase tracking-[0.3em] text-gold mb-4">Placement Outcomes</p>
-        <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl leading-tight max-w-4xl">
-          Where graduates <em className="text-gold">go next.</em>
+        <p className="eyebrow mb-3">Placement Outcomes</p>
+        <span className="gold-rule-lg block mb-6" />
+        <h2 className="font-editorial text-cream text-[2.1rem] sm:text-[3rem] lg:text-[3.6rem] leading-[1.06] max-w-4xl">
+          Where graduates <span className="italic text-gold">go next.</span>
         </h2>
-        <p className="mt-6 text-white/65 max-w-2xl text-lg font-light">
+        <p className="mt-6 font-editorial text-cream/75 max-w-2xl text-[1.1rem] leading-relaxed">
           A body of work that proves real professional growth — and opens the door to roles that sit
           closer to the decisions. Verified outcomes from past learners.
         </p>
 
-        {/* Headline stats */}
-        <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 border hairline">
+        <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-gold/15 border border-gold/15">
           {[
             { Icon: TrendingUp, value: "94%", label: "Placement assistance success rate" },
             { Icon: IndianRupee, value: "62%", label: "Average salary hike post-programme" },
@@ -39,34 +40,32 @@ export default function JobPlacement() {
             <div
               key={i}
               data-testid={`placement-stat-${i}`}
-              className="bg-ink hover:bg-ink-light transition-colors p-7 md:p-9"
+              className="bg-navy-deep hover:bg-navy transition-colors p-7 md:p-9"
             >
-              <Icon size={22} className="text-gold mb-5" strokeWidth={1.5} />
-              <div className="font-serif text-5xl md:text-6xl leading-none">{value}</div>
-              <p className="mt-3 text-sm text-white/65 leading-relaxed">{label}</p>
+              <Icon size={20} className="text-gold mb-5" strokeWidth={1.4} />
+              <div className="font-editorial text-[3rem] md:text-[4rem] leading-none text-cream">{value}</div>
+              <p className="mt-3 font-mono uppercase text-[10px] tracking-[0.18em] text-cream/65 leading-relaxed">{label}</p>
             </div>
           ))}
         </div>
 
-        {/* Role distribution + Hiring partners */}
-        <div className="mt-16 grid lg:grid-cols-12 gap-10">
-          {/* Role distribution bar chart */}
-          <div data-testid="role-distribution" className="lg:col-span-7 bg-ink-light/60 border hairline p-8 md:p-10">
+        <div className="mt-16 grid lg:grid-cols-12 gap-6">
+          <div data-testid="role-distribution" className="lg:col-span-7 bg-navy/60 border border-gold/15 p-8 md:p-10">
             <div className="flex items-center gap-3 mb-2">
               <Award size={16} className="text-gold" />
-              <p className="text-[11px] uppercase tracking-[0.25em] text-white/55">Role Distribution</p>
+              <p className="eyebrow">Role Distribution</p>
             </div>
-            <h3 className="font-serif text-3xl mb-8">Roles our alumni step into.</h3>
+            <h3 className="font-editorial text-[1.85rem] mb-8 text-cream">Roles our alumni step into.</h3>
             <div className="space-y-5">
               {ROLE_DISTRIBUTION.map((r) => (
                 <div key={r.role} data-testid={`role-bar-${r.role.toLowerCase().replace(/[^a-z]+/g, "-")}`}>
                   <div className="flex items-center justify-between mb-2 text-sm">
-                    <span className="text-white/85">{r.role}</span>
-                    <span className="font-serif text-gold text-base">{r.pct}%</span>
+                    <span className="text-cream/85 font-editorial">{r.role}</span>
+                    <span className="font-editorial italic text-gold">{r.pct}%</span>
                   </div>
-                  <div className="h-1.5 bg-white/10 rounded-full overflow-hidden">
+                  <div className="h-1 bg-cream/10 overflow-hidden">
                     <div
-                      className="h-full bg-gradient-to-r from-gold-dark to-gold rounded-full transition-all duration-1000"
+                      className="h-full bg-gradient-to-r from-gold-dark to-gold transition-all duration-1000"
                       style={{ width: `${r.pct * 2.8}%` }}
                     />
                   </div>
@@ -75,40 +74,38 @@ export default function JobPlacement() {
             </div>
           </div>
 
-          {/* Hiring partners */}
-          <div data-testid="hiring-partners" className="lg:col-span-5 bg-ink-light/60 border hairline p-8 md:p-10">
+          <div data-testid="hiring-partners" className="lg:col-span-5 bg-navy/60 border border-gold/15 p-8 md:p-10">
             <div className="flex items-center gap-3 mb-2">
               <Building size={16} className="text-gold" />
-              <p className="text-[11px] uppercase tracking-[0.25em] text-white/55">Hiring Partners</p>
+              <p className="eyebrow">Hiring Partners</p>
             </div>
-            <h3 className="font-serif text-3xl mb-8">
-              Where they're <em className="text-gold">working.</em>
+            <h3 className="font-editorial text-[1.85rem] mb-8 text-cream">
+              Where they're <span className="italic text-gold">working.</span>
             </h3>
-            <div className="grid grid-cols-3 gap-px bg-white/10">
+            <div className="grid grid-cols-3 gap-px bg-gold/15">
               {HIRING_PARTNERS.map((p) => (
-                <div key={p} className="bg-ink-light/80 hover:bg-ink transition-colors aspect-[3/2] flex items-center justify-center px-2">
-                  <span className="text-xs text-white/70 text-center font-medium">{p}</span>
+                <div key={p} className="bg-navy hover:bg-navy-deep transition-colors aspect-[3/2] flex items-center justify-center px-2">
+                  <span className="font-mono uppercase text-[9px] tracking-[0.15em] text-cream/70 text-center">{p}</span>
                 </div>
               ))}
             </div>
-            <p className="mt-6 text-xs text-white/40 italic">
+            <p className="mt-6 font-editorial italic text-xs text-cream/50">
               & 220+ partner organisations across product, growth, fintech, analytics and consulting.
             </p>
           </div>
         </div>
 
-        {/* Bottom CTA strip */}
-        <div className="mt-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border-t hairline pt-10">
+        <div className="mt-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border-t border-gold/15 pt-10">
           <div>
-            <p className="font-serif text-2xl md:text-3xl text-white">
-              Career outcomes you can <em className="text-gold">show</em>, not just claim.
+            <p className="font-editorial text-[1.7rem] md:text-[2.1rem] text-cream leading-tight">
+              Career outcomes you can <span className="italic text-gold">show</span>, not just claim.
             </p>
-            <p className="text-white/55 text-sm mt-2">Verified placements · Real CTC data · Cohort transparency</p>
+            <p className="font-mono uppercase text-[10px] tracking-[0.18em] text-cream/55 mt-3">Verified placements · Real CTC data · Cohort transparency</p>
           </div>
           <a
             href="#advisor"
             data-testid="placement-talk-btn"
-            className="inline-flex items-center bg-gold hover:bg-gold-hover text-white px-7 py-4 rounded-sm text-sm font-semibold tracking-wider uppercase transition-colors"
+            className="btn-gold flex-shrink-0"
           >
             Talk to placement team
           </a>

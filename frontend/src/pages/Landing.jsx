@@ -21,7 +21,7 @@ import PopupForm from "@/components/site/PopupForm";
 
 export default function Landing() {
   return (
-    <main data-testid="landing-page" className="bg-ink">
+    <main data-testid="landing-page" className="bg-navy-deep">
       <MarqueeBanner />
       <Navbar />
       <Hero />
