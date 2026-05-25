@@ -50,27 +50,27 @@ export default function PopupForm() {
   return (
     <div
       data-testid="popup-form-overlay"
-      className="fixed inset-0 z-[70] bg-black/75 backdrop-blur-sm flex items-end sm:items-center justify-center p-0 sm:p-4 animate-fade-in"
+      className="fixed inset-0 z-[70] bg-black/75 backdrop-blur-sm flex items-center justify-center p-4 animate-fade-in overflow-y-auto"
       onClick={() => setOpen(false)}
     >
       <div
         data-testid="popup-form-dialog"
         onClick={(e) => e.stopPropagation()}
-        className="relative w-full sm:max-w-md bg-white text-ink rounded-t-2xl sm:rounded-sm shadow-2xl overflow-hidden animate-fade-up"
+        className="relative w-full max-w-md my-auto bg-white text-ink rounded-md shadow-2xl overflow-hidden animate-fade-up max-h-[92vh] flex flex-col"
       >
         <button
           data-testid="popup-close-btn"
           onClick={() => setOpen(false)}
           aria-label="Close"
-          className="absolute top-3 right-3 h-8 w-8 rounded-full bg-ink/5 hover:bg-ink/10 flex items-center justify-center text-ink/60"
+          className="absolute top-3 right-3 z-10 h-9 w-9 rounded-full bg-white/95 hover:bg-white text-ink shadow-md flex items-center justify-center transition-colors"
         >
-          <X size={16} />
+          <X size={18} strokeWidth={2.2} />
         </button>
 
         {/* Header band */}
-        <div className="bg-ink text-white p-6 sm:p-7">
+        <div className="bg-ink text-white p-6 sm:p-7 flex-shrink-0">
           <p className="text-[10px] uppercase tracking-[0.25em] text-gold mb-2">Limited Seats</p>
-          <h3 className="font-serif text-2xl sm:text-3xl leading-tight">
+          <h3 className="font-serif text-2xl sm:text-3xl leading-tight pr-10">
             Want a <em className="text-gold">15-min</em> call with an advisor?
           </h3>
           <p className="text-white/65 text-sm mt-2">
@@ -78,8 +78,8 @@ export default function PopupForm() {
           </p>
         </div>
 
-        {/* Form */}
-        <form onSubmit={submit} className="p-6 sm:p-7 space-y-3.5" data-testid="popup-form">
+        {/* Form (scrollable if needed) */}
+        <form onSubmit={submit} className="p-6 sm:p-7 space-y-3.5 overflow-y-auto" data-testid="popup-form">
           <Field testid="popup-name" label="Name" value={form.name} onChange={(v) => setForm({ ...form, name: v })} />
           <Field testid="popup-email" label="Email" value={form.email} onChange={(v) => setForm({ ...form, email: v })} type="email" />
           <Field testid="popup-phone" label="Phone Number" value={form.phone} onChange={(v) => setForm({ ...form, phone: v })} type="tel" />
