@@ -7,7 +7,7 @@ const GUESTS = [
     name: "Jayprakash Mistry",
     title: "Founder, Remarkables Capital & UnnichedHQ",
     domain: "Capital & AI",
-    img: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=900&q=80",
+    img: "/assets/jayprakash-mistry.jpeg",
     logos: ["Remarkables Capital", "UnnichedHQ"],
     bio: "A decade across venture capital, private equity and credit between the US, UK and India. Focused on AI, deeptech, life sciences, fintech and defence-adjacent sectors.",
   },
@@ -15,7 +15,7 @@ const GUESTS = [
     name: "Philip Wiseman, J.D.",
     title: "VP Legal Affairs, JPMorgan Chase",
     domain: "Legal & Compliance",
-    img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=900&q=80",
+    img: "/assets/philip-wiseman.jpeg",
     logos: ["JPMorgan Chase", "UC Berkeley"],
     bio: "Business attorney with experience across banking, private equity, fund formation and cross-border transactions. Earlier at Winston & Strawn and Simpson Thacher.",
   },
@@ -23,7 +23,7 @@ const GUESTS = [
     name: "Alena Savera",
     title: "VP of Development, The NRP Group",
     domain: "Development Strategy",
-    img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=900&q=80",
+    img: "/assets/alena-savera.jpeg",
     logos: ["The NRP Group", "UT Austin"],
     bio: "Real estate development leader based in Dallas–Fort Worth. Originated multi-family projects totalling 2,350+ units. B.Arch from UT Austin.",
   },
@@ -31,7 +31,7 @@ const GUESTS = [
     name: "Mardoqueo Arteaga, Ph.D.",
     title: "Marketing Science Strategist, LinkedIn",
     domain: "Marketing Science",
-    img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=80",
+    img: "/assets/mardoqueo-arteaga.jpeg",
     logos: ["LinkedIn", "KPMG", "Fordham"],
     bio: "Economist working at the intersection of marketing science, technology and applied research. Earlier at KPMG and Banco Central de Chile.",
   },
@@ -97,7 +97,7 @@ export default function Faculty() {
                 <img
                   src={g.img}
                   alt={g.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
               <div className="p-5">
