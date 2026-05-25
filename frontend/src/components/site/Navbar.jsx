@@ -63,11 +63,6 @@ export default function Navbar() {
             </a>
           </div>
 
-          {/* Tablet condensed */}
-          <a href="/apply" className="hidden md:inline-flex lg:hidden btn-gold !py-3 !px-5 !text-[10.5px]" data-testid="nav-apply-btn-tablet">
-            Apply Now
-          </a>
-
           {/* Mobile toggle */}
           <button
             data-testid="mobile-menu-toggle"
