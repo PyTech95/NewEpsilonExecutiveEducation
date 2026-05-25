@@ -17,7 +17,7 @@ export default function Navbar() {
   return (
     <nav
       data-testid="site-navbar"
-      className="fixed top-0 left-0 right-0 z-40 bg-ink/85 backdrop-blur-md border-b hairline"
+      className="fixed top-9 left-0 right-0 z-40 bg-ink/85 backdrop-blur-md border-b hairline"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-24 md:h-28">

@@ -1,15 +1,18 @@
 import Navbar from "@/components/site/Navbar";
+import MarqueeBanner from "@/components/site/MarqueeBanner";
 import Hero from "@/components/site/Hero";
-import LogoStrips from "@/components/site/LogoStrips";
+import FacultyLogos from "@/components/site/FacultyLogos";
 import Stats from "@/components/site/Stats";
+import ToolsMarquee from "@/components/site/ToolsMarquee";
 import Overview from "@/components/site/Overview";
 import Audience from "@/components/site/Audience";
 import Curriculum from "@/components/site/Curriculum";
-import Faculty from "@/components/site/Faculty";
 import VideoShowcase from "@/components/site/VideoShowcase";
+import Faculty from "@/components/site/Faculty";
 import JobPlacement from "@/components/site/JobPlacement";
 import Testimonials from "@/components/site/Testimonials";
 import Certificate from "@/components/site/Certificate";
+import EpsilonExperience from "@/components/site/EpsilonExperience";
 import FAQ from "@/components/site/FAQ";
 import ApplyCTA from "@/components/site/ApplyCTA";
 import Footer from "@/components/site/Footer";
@@ -19,10 +22,12 @@ import PopupForm from "@/components/site/PopupForm";
 export default function Landing() {
   return (
     <main data-testid="landing-page" className="bg-ink">
+      <MarqueeBanner />
       <Navbar />
       <Hero />
-      <LogoStrips />
+      <FacultyLogos />
       <Stats />
+      <ToolsMarquee />
       <Overview />
       <Audience />
       <Curriculum />
@@ -31,6 +36,7 @@ export default function Landing() {
       <JobPlacement />
       <Testimonials />
       <Certificate />
+      <EpsilonExperience />
       <FAQ />
       <ApplyCTA />
       <Footer />

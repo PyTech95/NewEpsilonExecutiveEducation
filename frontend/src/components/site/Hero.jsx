@@ -39,7 +39,7 @@ export default function Hero() {
     <section
       id="top"
       data-testid="hero-section"
-      className="relative isolate overflow-hidden bg-ink text-white pt-32 pb-20 md:pt-40 md:pb-28"
+      className="relative isolate overflow-hidden bg-ink text-white pt-40 pb-16 md:pt-44 md:pb-28"
     >
       {/* Dark image overlay */}
       <div className="absolute inset-0 -z-10">
@@ -61,20 +61,20 @@ export default function Hero() {
               Professional Certificate · Live
             </div>
 
-            <h1 className="mt-6 font-serif font-medium text-[2.5rem] sm:text-6xl lg:text-7xl leading-[1.02] tracking-tight">
+            <h1 className="mt-6 font-serif font-medium text-[2rem] sm:text-5xl lg:text-7xl leading-[1.05] sm:leading-[1.02] tracking-tight">
               Applied AI & <br className="hidden sm:block" />
               Machine Learning,
               <span className="block italic font-light text-gold">for decision-makers.</span>
             </h1>
 
-            <p className="mt-8 text-base md:text-lg text-white/70 max-w-xl leading-relaxed font-light">
+            <p className="mt-6 sm:mt-8 text-sm sm:text-base md:text-lg text-white/70 max-w-xl leading-relaxed font-light">
               A 12-week live executive programme that turns technical fluency into{" "}
               <span className="text-white italic">strategic value</span>. Stronger judgement.
               Sharper evidence discipline. Confident, credible business action.
             </p>
 
             {/* Pills */}
-            <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-2xl">
+            <div className="mt-8 sm:mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-2xl">
               {[
                 ["Duration", COURSE.duration],
                 ["Format", COURSE.format],
@@ -83,12 +83,12 @@ export default function Hero() {
               ].map(([k, v]) => (
                 <div key={k} className="border-l-2 border-gold/60 pl-3 py-1">
                   <div className="text-[10px] uppercase tracking-[0.2em] text-white/50">{k}</div>
-                  <div className="font-serif text-lg text-white mt-1">{v}</div>
+                  <div className="font-serif text-base sm:text-lg text-white mt-1">{v}</div>
                 </div>
               ))}
             </div>
 
-            <div className="mt-10 flex flex-col sm:flex-row gap-3">
+            <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3">
               <a
                 href="/apply"
                 data-testid="hero-apply-btn"
@@ -110,7 +110,7 @@ export default function Hero() {
           <div className="lg:col-span-5 animate-fade-up" style={{ animationDelay: "120ms" }}>
             <div
               data-testid="hero-brochure-form-card"
-              className="bg-white text-ink rounded-md shadow-2xl shadow-black/60 ring-1 ring-black/5 p-7 md:p-9"
+              className="bg-white text-ink rounded-md shadow-2xl shadow-black/60 ring-1 ring-black/5 p-6 sm:p-7 md:p-9"
             >
               <div className="flex items-center justify-between">
                 <div className="text-[10px] uppercase tracking-[0.25em] text-gold-dark font-semibold">
