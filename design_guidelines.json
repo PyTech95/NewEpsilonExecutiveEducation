@@ -1,0 +1,142 @@
+{
+  "theme": "dark_and_light_hybrid",
+  "archetype": "5_Luxury",
+  "typography": {
+    "heading_font": "Cormorant Garamond",
+    "body_font": "Manrope",
+    "font_weights": {
+      "headings": "font-medium, font-semibold",
+      "body": "font-light, font-normal"
+    },
+    "scale": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.1]",
+      "h2": "text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight",
+      "h3": "text-xl sm:text-2xl leading-snug",
+      "body": "text-base leading-relaxed",
+      "overline": "text-xs tracking-[0.2em] uppercase font-semibold"
+    }
+  },
+  "colors": {
+    "background_dark": "#0A0F1C",
+    "background_light": "#F8F9FA",
+    "background_surface_dark": "#121826",
+    "background_surface_light": "#FFFFFF",
+    "primary_gold": "#C5A059",
+    "primary_gold_hover": "#B38F4D",
+    "text_on_dark": "#FFFFFF",
+    "text_muted_on_dark": "#94A3B8",
+    "text_on_light": "#0F172A",
+    "text_muted_on_light": "#475569",
+    "border_dark": "rgba(255,255,255,0.1)",
+    "border_light": "rgba(0,0,0,0.1)"
+  },
+  "layout_spacing": {
+    "section_padding": "py-20 md:py-32",
+    "container_max_width": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "gap_standard": "gap-8 md:gap-12",
+    "grid_bento": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+  },
+  "components": {
+    "hero": {
+      "layout": "2-column grid. Left: Value prop text. Right: Large Light Form.",
+      "background": "Dark background with heavy overlay image (opacity 20-30%)",
+      "form": "White background, black text, increased padding (p-8), solid white core for absolute legibility. CTA Button is primary gold."
+    },
+    "faculty_grid": {
+      "layout": "Static grid (grid-cols-1 md:grid-cols-2 lg:grid-cols-4 or 5). NO carousels.",
+      "style": "Clean cards. Profile image, name, title, and organization logos using react-icons/si or text."
+    },
+    "cta_buttons": {
+      "primary": "bg-[#C5A059] text-white hover:bg-[#B38F4D] transition-all rounded-md px-6 py-3 font-medium",
+      "curriculum": "Must be the exact primary gold color.",
+      "mobile_sticky": "Fixed bottom-right, z-50. Two circular buttons (Call & WhatsApp) stacked vertically."
+    },
+    "who_is_this_for": {
+      "layout": "Bento grid (6 items).",
+      "icons": "Use Lucide React icons instead of 01, 02, etc."
+    },
+    "job_placement_infographic": {
+      "layout": "Visual data section. 3 main stats block. Use a minimalist CSS bar chart or prominent typography for numbers (e.g., 91%, ₹XX L Salary Hike)."
+    },
+    "pop_up_form": {
+      "timing": "Trigger after 15 seconds.",
+      "fields": ["Name", "Email", "Phone", "Course"],
+      "cta": "Schedule Call Back",
+      "style": "Shadcn Dialog. Light theme form inside to maintain contrast."
+    },
+    "social_media": {
+      "locations": ["Desktop Nav Bar", "Footer"],
+      "icons": ["Instagram", "Facebook", "LinkedIn", "YouTube"]
+    },
+    "video_showcase": {
+      "layout": "Centered section with large 16:9 thumbnail, a gold play button overlay. Clicking can open a Shadcn Dialog with an iframe/video player."
+    }
+  },
+  "image_urls": [
+    {
+      "url": "https://images.unsplash.com/photo-1497366412874-3415097a27e7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2ODh8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBwcmVtaXVtJTIwb2ZmaWNlJTIwYXJjaGl0ZWN0dXJlfGVufDB8fHx8MTc3OTcwMzE3NXww&ixlib=rb-4.1.0&q=85",
+      "category": "hero_background",
+      "description": "Dark premium office background for hero section"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwxfHxleGVjdXRpdmUlMjBwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3Nzk3MDMxNzV8MA&ixlib=rb-4.1.0&q=85",
+      "category": "faculty_kent",
+      "description": "Kent Oliver Bhupathi portrait"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1553642618-de0381320ff3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHw0fHxleGVjdXRpdmUlMjBwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3Nzk3MDMxNzV8MA&ixlib=rb-4.1.0&q=85",
+      "category": "faculty_philip",
+      "description": "Philip Wiseman portrait"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwyfHxleGVjdXRpdmUlMjBwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3Nzk3MDMxNzV8MA&ixlib=rb-4.1.0&q=85",
+      "category": "faculty_alena",
+      "description": "Alena Savera portrait"
+    },
+    {
+      "url": "https://images.pexels.com/photos/4687550/pexels-photo-4687550.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "category": "faculty_jayprakash",
+      "description": "Jayprakash Mistry portrait"
+    },
+    {
+      "url": "https://images.pexels.com/photos/13188831/pexels-photo-13188831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "category": "faculty_mardoqueo",
+      "description": "Mardoqueo Arteaga portrait"
+    },
+    {
+      "url": "https://images.pexels.com/photos/577210/pexels-photo-577210.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "category": "video_showcase_thumbnail",
+      "description": "Thumbnail for video showcase section"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHRlY2hub2xvZ3klMjBhbmFseXRpY3MlMjBkYXNoYm9hcmR8ZW58MHx8fHwxNzc5NzAzMTc1fDA&ixlib=rb-4.1.0&q=85",
+      "category": "capstone_background",
+      "description": "Capstone project / dashboard background"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMHRlY2hub2xvZ3klMjBhbmFseXRpY3MlMjBkYXNoYm9hcmR8ZW58MHx8fHwxNzc5NzAzMTc1fDA&ixlib=rb-4.1.0&q=85",
+      "category": "audience_background",
+      "description": "Background for who is this for section if needed"
+    }
+  ],
+  "iconography": {
+    "library": "lucide-react, react-icons/si, react-icons/fa",
+    "instructions": "Use standard Lucide icons for the 'Who is this for' audience section (Briefcase, LineChart, Users, Database, etc.). Use react-icons/si for tools: SiPython, SiR, SiOpenai, SiAnthropic, SiZapier. Use react-icons for companies (SiLinkedin, SiJpmorganchase) and generic Building/University icons for NYU/Columbia if SVGs are unavailable."
+  },
+  "instructions_to_main_agent": [
+    "Install required fonts from Google Fonts: Cormorant Garamond (headings) and Manrope (body). Map them in tailwind.config.js.",
+    "Do NOT use Inter font anywhere.",
+    "Follow the theme of 'Old Money Tech' - serious, executive, intellectual.",
+    "Remove all references and text containing 'Cohort 01'.",
+    "Hero section: Apply `#0A0F1C` dark background with `opacity-20` image overlay. Render a large prominent LIGHT-colored lead form on the right side.",
+    "Faculty section: Render as a static CSS grid. DO NOT use moving carousels or marquee logic. Include the provided image URLs for faculty members.",
+    "Curriculum CTA: The 'See detailed curriculum...' button MUST use the Gold Background (`bg-[#C5A059]`).",
+    "Audience section ('Who is the programme for'): Use Lucide React icons instead of numbers for the 6 cards. Format as a bento grid.",
+    "Job placement infographic: Build a visually appealing stats/infographic section representing placement stats, salary hike, role placements.",
+    "Video showcase: Add a new section featuring a video layout (prominent thumbnail with play icon).",
+    "Mobile sticky buttons: Create two fixed circular buttons (z-50) at the bottom right for Mobile screens only (`sm:hidden`). One for Call (Phone), one for WhatsApp. Use appropriate styling.",
+    "Social media: Add social icons (Instagram, Facebook, LinkedIn, YouTube) to both the desktop top nav bar and footer.",
+    "15-second pop-up form: Implement using Shadcn Dialog and React's useEffect timer. Fields: Name, Email, Phone, Course. CTA: 'Schedule Call Back'.",
+    "Ensure every interactive element and key informational section has a `data-testid` attribute."
+  ]
+}
