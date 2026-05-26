@@ -7,6 +7,7 @@ import ToolsMarquee from "@/components/site/ToolsMarquee";
 import Overview from "@/components/site/Overview";
 import Audience from "@/components/site/Audience";
 import Curriculum from "@/components/site/Curriculum";
+import Placement from "@/components/site/Placement";
 import VideoShowcase from "@/components/site/VideoShowcase";
 import Faculty from "@/components/site/Faculty";
 import Testimonials from "@/components/site/Testimonials";
@@ -34,6 +35,7 @@ export default function Landing() {
       <Overview />
       <Audience />
       <Curriculum />
+      <Placement />
       <VideoShowcase />
       <Faculty />
       <Testimonials />

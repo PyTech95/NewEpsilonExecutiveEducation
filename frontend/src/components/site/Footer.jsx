@@ -27,6 +27,7 @@ export default function Footer() {
             <ul className="space-y-2.5 font-mono text-[11px] uppercase tracking-[0.16em] text-cream/65">
               <li><a href="#overview" className="hover:text-gold transition-colors">Overview</a></li>
               <li><a href="#curriculum" className="hover:text-gold transition-colors">Curriculum</a></li>
+              <li><a href="#placements" className="hover:text-gold transition-colors">Placements</a></li>
               <li><a href="#faculty" className="hover:text-gold transition-colors">Faculty</a></li>
               <li><a href="#faq" className="hover:text-gold transition-colors">FAQ</a></li>
             </ul>
