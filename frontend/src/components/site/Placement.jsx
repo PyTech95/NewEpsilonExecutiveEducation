@@ -44,24 +44,53 @@ export default function Placement() {
       <div className="absolute top-0 right-0 w-[420px] h-[420px] rounded-full bg-gold/[0.06] blur-3xl pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="max-w-3xl" data-reveal="up">
-          <p className="eyebrow">— Career Outcomes —</p>
-          <span className="block w-12 h-px bg-gold mt-3 mb-5" />
-          <h2 className="font-editorial text-navy-deep text-[2.2rem] sm:text-[2.8rem] md:text-[3.4rem] leading-[1.05] font-semibold">
-            Job placement services,
-            <span className="block italic text-gold-dark font-normal">structured for serious professionals.</span>
-          </h2>
-          <p className="font-editorial text-navy-deep/85 text-[1.1rem] md:text-[1.22rem] leading-[1.65] font-medium mt-5">
-            Epsilon provides structured career and placement support to help participants translate
-            their new capabilities into stronger professional opportunities. Our team — experienced
-            corporate outreach and HR professionals — positions applied AI, machine learning and
-            business decision-making skills in front of the right employers.
-          </p>
+        {/* Header — split: copy left, editorial image right */}
+        <div className="grid lg:grid-cols-[1.15fr_1fr] gap-10 lg:gap-14 items-center">
+          <div data-reveal="up">
+            <p className="eyebrow">— Career Outcomes —</p>
+            <span className="block w-12 h-px bg-gold mt-3 mb-5" />
+            <h2 className="font-editorial text-navy-deep text-[2.2rem] sm:text-[2.8rem] md:text-[3.4rem] leading-[1.05] font-semibold">
+              Job placement services,
+              <span className="block italic text-gold-dark font-normal">structured for serious professionals.</span>
+            </h2>
+            <p className="font-editorial text-navy-deep/85 text-[1.1rem] md:text-[1.22rem] leading-[1.65] font-medium mt-5">
+              Epsilon provides structured career and placement support to help participants translate
+              their new capabilities into stronger professional opportunities. Our team — experienced
+              corporate outreach and HR professionals — positions applied AI, machine learning and
+              business decision-making skills in front of the right employers.
+            </p>
+          </div>
+
+          {/* Editorial image with gold uplift badge */}
+          <div className="relative" data-reveal="left" data-reveal-delay="120">
+            <div className="absolute -inset-[10px] border border-gold/30 pointer-events-none -z-0 hidden md:block" />
+            <div className="relative overflow-hidden bg-navy-deep/5">
+              <img
+                src="/assets/placement.jpg"
+                alt="Senior professionals collaborating in a strategy session"
+                className="w-full h-[340px] md:h-[420px] lg:h-[460px] object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-tr from-navy-deep/40 via-transparent to-transparent" />
+
+              {/* Floating uplift badge */}
+              <div className="absolute bottom-5 left-5 right-5 md:bottom-7 md:left-7 md:right-auto bg-cream/95 backdrop-blur-sm border-l-2 border-gold px-5 py-4 max-w-[300px]">
+                <p className="font-mono uppercase text-[10.5px] tracking-[0.22em] text-gold-dark font-semibold">
+                  Avg. Salary Uplift
+                </p>
+                <p className="font-editorial text-[2.1rem] md:text-[2.4rem] leading-none font-semibold text-navy-deep mt-1.5">
+                  108<span className="text-gold-dark">%</span>
+                </p>
+                <p className="font-editorial italic text-[12.5px] text-navy-deep/65 mt-1.5">
+                  across reported career transitions
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Career Pathways — Current → Future */}
-        <div className="mt-14 md:mt-20" data-reveal="up">
+        <div className="mt-12 md:mt-16" data-reveal="up">
           <div className="grid md:grid-cols-[1fr_auto_1fr] gap-3 md:gap-4 items-center mb-6">
             <p className="font-mono uppercase text-[11px] tracking-[0.22em] text-navy-deep/55 font-semibold">Current Role</p>
             <p className="font-mono uppercase text-[11px] tracking-[0.22em] text-gold-dark font-semibold text-center hidden md:block">Avg. salary uplift</p>
