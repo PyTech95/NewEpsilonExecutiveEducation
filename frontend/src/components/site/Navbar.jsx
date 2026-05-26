@@ -73,7 +73,7 @@ export default function Navbar() {
               <a data-testid="nav-social-linkedin" href={SOCIAL.linkedin} target="_blank" rel="noreferrer" className="text-cream/55 hover:text-gold transition-colors"><FaLinkedinIn size={13}/></a>
               <a data-testid="nav-social-youtube" href={SOCIAL.youtube} target="_blank" rel="noreferrer" className="text-cream/55 hover:text-gold transition-colors"><FaYoutube size={13}/></a>
             </div>
-            <a href="/apply" data-testid="nav-apply-btn" className="btn-gold !py-3 !px-5 !text-[10.5px]">
+            <a href="/apply" data-testid="nav-apply-btn" className="btn-gold !py-2.5 !px-5 !text-[11px] !tracking-[0.18em]">
               Apply Now
             </a>
           </div>
