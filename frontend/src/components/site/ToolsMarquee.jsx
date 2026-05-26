@@ -8,7 +8,7 @@ const TOOLS = [
   { name: "R",             slug: "r",            color: "276DC3" },
   { name: "ChatGPT",       local: "/assets/tools/openai.svg", color: "10A37F" },
   { name: "Claude",        slug: "anthropic",    color: "D97757" },
-  { name: "OpenAI Codex",  local: "/assets/tools/openai.svg", color: "412991" },
+  { name: "OpenAI Codex",  local: "/assets/tools/codex.png", color: "000000", wide: true },
   { name: "Zapier",        slug: "zapier",       color: "FF4A00" },
   { name: "Shiny",         slug: "rstudioide",   color: "75AADB" },
   { name: "Positron",      slug: "posit",        color: "447099" },
@@ -54,13 +54,13 @@ export default function ToolsMarquee() {
               data-testid={`tool-${t.slug}-${i}`}
               className="group flex items-center gap-3 flex-shrink-0 px-2"
             >
-              <span className="h-11 w-11 md:h-12 md:w-12 flex items-center justify-center flex-shrink-0">
+              <span className={`${t.wide ? "h-9 md:h-10 w-auto" : "h-11 w-11 md:h-12 md:w-12"} flex items-center justify-center flex-shrink-0`}>
                 <img
                   src={iconUrl(t)}
                   alt={t.name}
                   loading="lazy"
-                  className={`h-7 w-7 md:h-8 md:w-8 object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300 ${t.local ? "openai-mark" : ""}`}
-                  style={t.local ? { filter: `brightness(0) saturate(100%)` } : undefined}
+                  className={`${t.wide ? "h-7 md:h-8 w-auto" : "h-7 w-7 md:h-8 md:w-8"} object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300`}
+                  style={t.local && t.local.endsWith('.svg') ? { filter: `brightness(0) saturate(100%)` } : undefined}
                 />
               </span>
               <span className="font-editorial text-[1.18rem] md:text-[1.32rem] text-navy-deep font-medium leading-none whitespace-nowrap">
