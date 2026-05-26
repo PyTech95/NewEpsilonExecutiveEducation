@@ -2,18 +2,19 @@
 import { useEffect } from "react";
 
 // Coloured brand icons via simpleicons.org CDN — matches reference site
+// Note: OpenAI slug returns 404 on simpleicons.org, so we self-host that SVG.
 const TOOLS = [
   { name: "Python",        slug: "python",       color: "3776AB" },
   { name: "R",             slug: "r",            color: "276DC3" },
-  { name: "ChatGPT",       slug: "openai",       color: "412991" },
+  { name: "ChatGPT",       local: "/assets/tools/openai.svg", color: "10A37F" },
   { name: "Claude",        slug: "anthropic",    color: "D97757" },
-  { name: "OpenAI Codex",  slug: "openai",       color: "412991" },
+  { name: "OpenAI Codex",  local: "/assets/tools/openai.svg", color: "412991" },
   { name: "Zapier",        slug: "zapier",       color: "FF4A00" },
   { name: "Shiny",         slug: "rstudioide",   color: "75AADB" },
   { name: "Positron",      slug: "posit",        color: "447099" },
 ];
 
-const iconUrl = (t) => `https://cdn.simpleicons.org/${t.slug}/${t.color}`;
+const iconUrl = (t) => t.local ? t.local : `https://cdn.simpleicons.org/${t.slug}/${t.color}`;
 
 export default function ToolsMarquee() {
   // Pause marquee on hover (vanilla, no extra state)
@@ -26,11 +27,11 @@ export default function ToolsMarquee() {
     <section
       id="tools"
       data-testid="tools-section"
-      className="bg-cream text-navy-deep py-14 md:py-20 border-t border-navy-deep/8"
+      className="bg-cream text-navy-deep py-8 md:py-12 border-t border-navy-deep/8"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header — minimal, matches reference */}
-        <div className="flex items-baseline gap-3 mb-8 md:mb-10" data-reveal="up">
+        <div className="flex items-baseline gap-3 mb-5 md:mb-7" data-reveal="up">
           <p className="font-mono uppercase text-[11.5px] md:text-[12.5px] tracking-[0.26em] text-navy-deep/55 font-semibold">
             Tools you'll work with
           </p>
@@ -58,7 +59,8 @@ export default function ToolsMarquee() {
                   src={iconUrl(t)}
                   alt={t.name}
                   loading="lazy"
-                  className="h-7 w-7 md:h-8 md:w-8 object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300"
+                  className={`h-7 w-7 md:h-8 md:w-8 object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300 ${t.local ? "openai-mark" : ""}`}
+                  style={t.local ? { filter: `brightness(0) saturate(100%)` } : undefined}
                 />
               </span>
               <span className="font-editorial text-[1.18rem] md:text-[1.32rem] text-navy-deep font-medium leading-none whitespace-nowrap">
