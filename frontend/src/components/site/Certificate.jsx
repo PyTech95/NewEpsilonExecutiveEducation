@@ -5,7 +5,7 @@ export default function Certificate() {
     <section data-testid="certificate-section" className="bg-navy-deep text-cream relative overflow-hidden">
       <div className="absolute inset-0 starfield opacity-30 pointer-events-none" />
       <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] rounded-full glow-gold pointer-events-none" />
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20 grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
         <div className="lg:col-span-6">
           <p className="eyebrow mb-3">The Certificate</p>
           <span className="gold-rule-lg block mb-6" />
@@ -34,7 +34,7 @@ export default function Certificate() {
 
         <div className="lg:col-span-6">
           <div className="relative bg-gradient-to-br from-navy to-navy-deep p-1 shadow-2xl shadow-black/40">
-            <div className="bg-bone text-navy-deep p-10 md:p-14 relative overflow-hidden">
+            <div className="bg-bone text-navy-deep p-8 md:p-12 relative overflow-hidden">
               <div className="absolute inset-3 border-2 border-gold/60 pointer-events-none" />
               <div className="absolute inset-5 border border-gold/30 pointer-events-none" />
               <div className="relative text-center">

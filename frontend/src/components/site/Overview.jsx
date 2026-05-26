@@ -13,11 +13,11 @@ export default function Overview() {
 
   return (
     <section id="overview" data-testid="overview-section" className="bg-bone text-navy-deep relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
         <p className="eyebrow mb-3">Overview</p>
         <span className="gold-rule-lg block mb-6" />
 
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           <div className="lg:col-span-7">
             <h2 className="font-editorial text-navy-deep text-[2.1rem] sm:text-[3rem] lg:text-[3.6rem] leading-[1.05]">
               The professionals who win in the AI era are <span className="italic text-gold">decision-fluent</span>, not just tool-fluent.
@@ -43,7 +43,7 @@ export default function Overview() {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-stretch mt-16">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-stretch mt-12">
           <div className="lg:col-span-6 order-2 lg:order-1 relative corner-brackets">
             <div className="relative aspect-[4/3] overflow-hidden">
               <img src={OVERVIEW_IMG} alt="Working professional learning applied AI" className="w-full h-full object-cover" />

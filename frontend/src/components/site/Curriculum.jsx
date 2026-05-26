@@ -62,7 +62,7 @@ export default function Curriculum() {
   return (
     <section id="curriculum" data-testid="curriculum-section" className="bg-bone text-navy-deep">
       {/* Program header */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 md:pt-32 pb-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 md:pt-20 pb-8">
         <p className="eyebrow mb-3">The Program</p>
         <span className="gold-rule-lg block mb-6" />
         <h2 className="font-editorial text-navy-deep text-[2.1rem] sm:text-[3rem] lg:text-[3.6rem] leading-[1.06] max-w-4xl">
@@ -74,7 +74,7 @@ export default function Curriculum() {
           real body of work, not just course completion.
         </p>
 
-        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-y-8 gap-x-12 border-t border-navy-deep/10 pt-10">
+        <div className="mt-10 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-y-6 gap-x-6 sm:gap-x-12 border-t border-navy-deep/10 pt-8">
           {[
             ["Duration", "12 weeks · 3 classes / wk"],
             ["Format", "Live online, cohort-based"],
@@ -94,10 +94,10 @@ export default function Curriculum() {
       </div>
 
       {/* Curriculum modules */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-12 md:pb-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-12 md:pb-16">
         <p className="eyebrow mb-3">The Curriculum</p>
         <span className="gold-rule-lg block mb-6" />
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
           <h2 className="font-editorial text-navy-deep text-[2rem] sm:text-[3rem] leading-[1.08]">
             Four modules. <span className="italic text-gold">One trajectory.</span>
           </h2>
@@ -112,7 +112,7 @@ export default function Curriculum() {
             <article
               key={m.title}
               data-testid={`module-card-${i}`}
-              className="bg-bone p-8 md:p-10 relative hover:bg-cream transition-colors"
+              className="bg-bone p-6 md:p-9 relative hover:bg-cream transition-colors"
             >
               <div className="flex items-baseline justify-between mb-5">
                 <span className="font-editorial italic text-[3.4rem] text-gold/40 leading-none">0{i + 1}</span>
@@ -143,7 +143,7 @@ export default function Curriculum() {
       <div className="bg-navy-deep text-cream relative overflow-hidden">
         <div className="absolute inset-0 starfield opacity-40 pointer-events-none" />
         <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[700px] h-[700px] rounded-full glow-gold pointer-events-none" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20 grid lg:grid-cols-12 gap-8 lg:gap-14 items-center">
           <div className="lg:col-span-7">
             <p className="eyebrow mb-3">Capstone</p>
             <span className="gold-rule-lg block mb-6" />

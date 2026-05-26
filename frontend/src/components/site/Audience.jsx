@@ -40,7 +40,7 @@ export default function Audience() {
     <section data-testid="audience-section" className="bg-navy-deep text-cream relative overflow-hidden">
       <div className="absolute inset-0 starfield opacity-40 pointer-events-none" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full glow-gold pointer-events-none" />
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
         <p className="eyebrow mb-3">Who is the program for?</p>
         <span className="gold-rule-lg block mb-6" />
         <h2 className="font-editorial text-cream text-[2.1rem] sm:text-[3rem] lg:text-[3.6rem] leading-[1.06] max-w-4xl">
@@ -51,12 +51,12 @@ export default function Audience() {
           with data or technical teams, or expected to influence decisions beyond their formal title.
         </p>
 
-        <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-gold/15 border border-gold/15">
+        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-gold/15 border border-gold/15">
           {AUDIENCE.map(({ Icon, title, desc }, i) => (
             <div
               key={title}
               data-testid={`audience-card-${i}`}
-              className="group relative bg-navy-deep hover:bg-navy transition-colors p-8 md:p-10"
+              className="group relative bg-navy-deep hover:bg-navy transition-colors p-7 md:p-9"
             >
               <div className="absolute top-0 left-0 h-px w-0 bg-gold group-hover:w-full transition-all duration-500" />
               <div className="flex items-center justify-center h-14 w-14 bg-gold/10 border border-gold/40 mb-6 group-hover:bg-gold group-hover:text-navy-deep transition-colors">
@@ -68,7 +68,7 @@ export default function Audience() {
           ))}
         </div>
 
-        <div className="mt-16 border-l-2 border-gold pl-6">
+        <div className="mt-12 border-l-2 border-gold pl-6">
           <p className="eyebrow mb-2">Outcome</p>
           <p className="font-editorial text-[1.7rem] md:text-[2.1rem] text-cream max-w-3xl leading-snug">
             Move into the next role with <span className="italic text-gold">proof of work.</span>

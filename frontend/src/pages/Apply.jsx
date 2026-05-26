@@ -127,23 +127,23 @@ export default function Apply() {
     <main data-testid="apply-page" className="min-h-screen bg-ink text-white">
       <ApplyNav />
 
-      <div className="relative isolate pt-28 md:pt-36 pb-20">
+      <div className="relative isolate pt-20 md:pt-28 pb-14 md:pb-20">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,rgba(197,160,89,0.12),transparent_55%)]" />
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Heading */}
-          <div className="max-w-3xl mb-12 animate-fade-up">
-            <p className="text-[11px] uppercase tracking-[0.3em] text-gold mb-4">Applications · Spring 2026</p>
-            <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl leading-[1.05] tracking-tight">
+          <div className="max-w-3xl mb-8 md:mb-10 animate-fade-up">
+            <p className="text-[11px] uppercase tracking-[0.3em] text-gold mb-3">Applications · Spring 2026</p>
+            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight">
               Apply to <em className="text-gold">Epsilon.</em>
             </h1>
-            <p className="mt-5 text-white/65 text-lg font-light max-w-2xl">
+            <p className="mt-4 text-white/65 text-base md:text-lg font-light max-w-2xl">
               A personal conversation. Not a funnel. Every applicant speaks with an admissions lead
               before a seat is offered — and we read every line you write.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-12 gap-10">
+          <div className="grid lg:grid-cols-12 gap-8">
             {/* Left: stepper / context */}
             <aside className="lg:col-span-4">
               <div className="lg:sticky lg:top-32">
@@ -456,7 +456,7 @@ function ThankYou({ applicationId }) {
   return (
     <main data-testid="apply-thankyou" className="min-h-screen bg-ink text-white">
       <ApplyNav />
-      <div className="relative isolate pt-36 pb-20">
+      <div className="relative isolate pt-24 md:pt-32 pb-14 md:pb-20">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,rgba(197,160,89,0.18),transparent_55%)]" />
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-up">
           <div className="inline-flex h-20 w-20 items-center justify-center rounded-full bg-gold/15 border border-gold mb-8">

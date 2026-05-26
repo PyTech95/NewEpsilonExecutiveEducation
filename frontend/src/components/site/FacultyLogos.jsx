@@ -20,26 +20,26 @@ export default function FacultyLogos() {
   return (
     <section
       data-testid="faculty-experience-strip"
-      className="bg-navy-deep text-cream pt-12 pb-14 md:pt-16 md:pb-20 border-t border-gold/15 relative overflow-hidden"
+      className="bg-navy-deep text-cream pt-10 pb-10 md:pt-12 md:pb-14 border-t border-gold/15 relative overflow-hidden"
     >
       <div className="absolute inset-0 starfield opacity-25 pointer-events-none" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center gap-4 mb-10">
+        <div className="flex items-center gap-4 mb-8">
           <div className="h-px flex-1 bg-gold/20" />
-          <p className="font-editorial italic text-gold text-center px-2 whitespace-nowrap text-base md:text-lg">
+          <p className="font-editorial italic text-gold text-center px-2 whitespace-nowrap text-sm md:text-base">
             Faculty &amp; advisors with experience at
           </p>
           <div className="h-px flex-1 bg-gold/20" />
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2.5 sm:gap-3">
           {BRANDS.map((b) => (
             <div
               key={b.name}
               data-testid={`faculty-logo-${b.name.toLowerCase().replace(/\s+/g, "-")}`}
-              className="group bg-cream hover:bg-gold transition-all border border-gold/20 hover:border-gold h-[120px] flex flex-col items-center justify-center px-3 py-4 gap-2"
+              className="group bg-cream hover:bg-gold transition-all border border-gold/20 hover:border-gold h-[96px] sm:h-[110px] flex flex-col items-center justify-center px-3 py-3 gap-1.5"
             >
-              <div className="h-10 w-full flex items-center justify-center">
+              <div className="h-8 sm:h-10 w-full flex items-center justify-center">
                 {b.icon ? (
                   <img
                     src={b.icon}

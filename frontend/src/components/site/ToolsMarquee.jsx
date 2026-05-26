@@ -18,10 +18,10 @@ const TOOLS = [
 export default function ToolsMarquee() {
   const loop = [...TOOLS, ...TOOLS];
   return (
-    <section data-testid="tools-marquee" className="bg-navy-deep text-cream py-14 md:py-20 border-t border-gold/15 overflow-hidden relative">
+    <section data-testid="tools-marquee" className="bg-navy-deep text-cream py-10 md:py-14 border-t border-gold/15 overflow-hidden relative">
       <div className="absolute inset-0 starfield opacity-25 pointer-events-none" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center gap-4 mb-10">
+        <div className="flex items-center gap-4 mb-8">
           <div className="h-px flex-1 bg-gold/20" />
           <p className="eyebrow text-center px-2 whitespace-nowrap !text-gold">Tools you'll work with</p>
           <div className="h-px flex-1 bg-gold/20" />

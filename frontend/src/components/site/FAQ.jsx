@@ -32,10 +32,10 @@ export default function FAQ() {
   const [open, setOpen] = useState(0);
   return (
     <section id="faq" data-testid="faq-section" className="bg-bone text-navy-deep">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
         <p className="eyebrow mb-3">Questions</p>
         <span className="gold-rule-lg block mb-6" />
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
           <h2 className="font-editorial text-navy-deep text-[2.1rem] sm:text-[3rem] lg:text-[3.6rem] leading-[1.06]">
             Things candidates often <span className="italic text-gold">ask.</span>
           </h2>
@@ -56,7 +56,7 @@ export default function FAQ() {
                 <button
                   data-testid={`faq-toggle-${i}`}
                   onClick={() => setOpen(isOpen ? -1 : i)}
-                  className="w-full flex items-center justify-between py-6 md:py-7 text-left group"
+                  className="w-full flex items-center justify-between py-5 md:py-6 text-left group"
                 >
                   <span className="font-editorial text-[1.25rem] md:text-[1.55rem] pr-6 group-hover:text-gold-dark transition-colors">
                     {f.q}
@@ -66,7 +66,7 @@ export default function FAQ() {
                   </span>
                 </button>
                 <div
-                  className={`grid transition-all duration-500 ${isOpen ? "grid-rows-[1fr] opacity-100 pb-7" : "grid-rows-[0fr] opacity-0"}`}
+                  className={`grid transition-all duration-500 ${isOpen ? "grid-rows-[1fr] opacity-100 pb-5" : "grid-rows-[0fr] opacity-0"}`}
                 >
                   <div className="overflow-hidden">
                     <p className="font-editorial text-navy-deep/75 text-[1.05rem] leading-[1.75] max-w-3xl">{f.a}</p>

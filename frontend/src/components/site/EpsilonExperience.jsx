@@ -11,10 +11,10 @@ const EXPERIENCE = [
 
 export default function EpsilonExperience() {
   return (
-    <section id="experience" data-testid="epsilon-experience-section" className="bg-bone py-16 md:py-24 relative overflow-hidden">
+    <section id="experience" data-testid="epsilon-experience-section" className="bg-bone py-12 md:py-20 relative overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-px bg-gold/40" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
           <div>
             <p className="eyebrow mb-3">Why Epsilon</p>
             <span className="gold-rule-lg" />

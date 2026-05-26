@@ -31,18 +31,18 @@ export default function ApplyCTA() {
     <section
       id="apply"
       data-testid="apply-section"
-      className="relative bg-navy-deep text-cream py-20 md:py-28 overflow-hidden border-t border-gold/10"
+      className="relative bg-navy-deep text-cream py-14 md:py-20 overflow-hidden border-t border-gold/10"
     >
       <div className="absolute inset-0 starfield opacity-60" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1100px] h-[1100px] rounded-full glow-gold" />
 
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <img alt="Epsilon Executive Education" data-testid="cta-square-logo" src="/assets/logo.png" className="mx-auto mb-8 h-[120px] md:h-[150px] w-auto object-contain" />
+        <img alt="Epsilon Executive Education" data-testid="cta-square-logo" src="/assets/logo.png" className="mx-auto mb-6 md:mb-8 h-[80px] md:h-[120px] w-auto object-contain" />
         <p className="eyebrow">Take the next step</p>
-        <h2 className="font-display uppercase text-cream text-[2rem] md:text-[3.2rem] leading-[1.05] max-w-4xl mx-auto mt-4">
+        <h2 className="font-display uppercase text-cream text-[1.85rem] sm:text-[2.4rem] md:text-[3rem] leading-[1.06] max-w-4xl mx-auto mt-4">
           Build the judgement <span className="italic font-editorial text-gold">your next decade demands.</span>
         </h2>
-        <p className="font-editorial text-cream/80 text-[1.1rem] md:text-[1.25rem] leading-relaxed mt-5 md:mt-7 max-w-xl mx-auto">
+        <p className="font-editorial text-cream/80 text-[1.02rem] md:text-[1.2rem] leading-relaxed mt-4 md:mt-6 max-w-xl mx-auto">
           Apply, talk to admissions, or schedule a 15-minute conversation with our team.
         </p>
 
@@ -50,7 +50,7 @@ export default function ApplyCTA() {
           id="advisor"
           onSubmit={submit}
           data-testid="apply-form"
-          className="mt-10 md:mt-14 mx-auto max-w-2xl bg-cream text-navy-deep p-7 md:p-10 text-left corner-brackets relative"
+          className="mt-8 md:mt-10 mx-auto max-w-2xl bg-cream text-navy-deep p-6 md:p-9 text-left corner-brackets relative"
           style={{ boxShadow: "0 30px 80px rgba(0,0,0,0.5)" }}
         >
           <p className="eyebrow !text-gold-dark mb-2">Talk to Admissions</p>

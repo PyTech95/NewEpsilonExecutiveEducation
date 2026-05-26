@@ -55,7 +55,7 @@ export default function Faculty() {
     <section
       id="faculty"
       data-testid="faculty-section"
-      className="relative bg-navy-deep text-cream pt-20 pb-24 md:pt-28 md:pb-32 overflow-hidden"
+      className="relative bg-navy-deep text-cream pt-14 pb-16 md:pt-20 md:pb-24 overflow-hidden"
     >
       {/* Starfield + glow */}
       <div className="absolute inset-0 starfield opacity-50 pointer-events-none" />
@@ -71,7 +71,7 @@ export default function Faculty() {
         />
 
         {/* Lead instructor — Kent */}
-        <div data-testid="faculty-lead-card" className="mt-14 md:mt-20 grid grid-cols-1 lg:grid-cols-[minmax(0,440px)_1fr] gap-12 lg:gap-20 items-center">
+        <div data-testid="faculty-lead-card" className="mt-10 md:mt-14 grid grid-cols-1 lg:grid-cols-[minmax(0,440px)_1fr] gap-10 lg:gap-16 items-center">
           <div className="relative mx-auto lg:mx-0 w-full max-w-[440px] corner-brackets">
             <div className="aspect-[4/5] overflow-hidden bg-navy">
               <img src={KENT_IMG} alt="Kent Oliver Bhupathi" className="w-full h-full object-cover object-top" />
@@ -106,9 +106,9 @@ export default function Faculty() {
         </div>
 
         {/* Guest faculty - circular avatars */}
-        <div className="mt-24 md:mt-28">
+        <div className="mt-16 md:mt-20">
           <p className="font-mono uppercase text-[11px] tracking-[0.28em] text-cream/65 text-center">Visiting Faculty &amp; Industry Experts</p>
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-12">
+          <div className="mt-8 md:mt-10 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-10">
             {GUESTS.map((g, i) => (
               <button
                 key={g.name}

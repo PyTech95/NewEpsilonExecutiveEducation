@@ -19,7 +19,7 @@ export default function JobPlacement() {
     <section id="placements" data-testid="placement-section" className="bg-navy-deep text-cream relative overflow-hidden">
       <div className="absolute inset-0 starfield opacity-40 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[700px] h-[700px] rounded-full glow-gold pointer-events-none" />
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
         <p className="eyebrow mb-3">Placement Outcomes</p>
         <span className="gold-rule-lg block mb-6" />
         <h2 className="font-editorial text-cream text-[2.1rem] sm:text-[3rem] lg:text-[3.6rem] leading-[1.06] max-w-4xl">
@@ -30,7 +30,7 @@ export default function JobPlacement() {
           closer to the decisions. Verified outcomes from past learners.
         </p>
 
-        <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-gold/15 border border-gold/15">
+        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-gold/15 border border-gold/15">
           {[
             { Icon: TrendingUp, value: "94%", label: "Placement assistance success rate" },
             { Icon: IndianRupee, value: "62%", label: "Average salary hike post-program" },
@@ -40,17 +40,17 @@ export default function JobPlacement() {
             <div
               key={i}
               data-testid={`placement-stat-${i}`}
-              className="bg-navy-deep hover:bg-navy transition-colors p-7 md:p-9"
+              className="bg-navy-deep hover:bg-navy transition-colors p-6 md:p-8"
             >
-              <Icon size={20} className="text-gold mb-5" strokeWidth={1.4} />
-              <div className="font-editorial text-[3rem] md:text-[4rem] leading-none text-cream">{value}</div>
+              <Icon size={20} className="text-gold mb-4" strokeWidth={1.4} />
+              <div className="font-editorial text-[2.5rem] md:text-[3.4rem] leading-none text-cream">{value}</div>
               <p className="mt-3 font-mono uppercase text-[10px] tracking-[0.18em] text-cream/65 leading-relaxed">{label}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-16 grid lg:grid-cols-12 gap-6">
-          <div data-testid="role-distribution" className="lg:col-span-7 bg-navy/60 border border-gold/15 p-8 md:p-10">
+        <div className="mt-12 grid lg:grid-cols-12 gap-6">
+          <div data-testid="role-distribution" className="lg:col-span-7 bg-navy/60 border border-gold/15 p-6 md:p-9">
             <div className="flex items-center gap-3 mb-2">
               <Award size={16} className="text-gold" />
               <p className="eyebrow">Role Distribution</p>
@@ -74,7 +74,7 @@ export default function JobPlacement() {
             </div>
           </div>
 
-          <div data-testid="hiring-partners" className="lg:col-span-5 bg-navy/60 border border-gold/15 p-8 md:p-10">
+          <div data-testid="hiring-partners" className="lg:col-span-5 bg-navy/60 border border-gold/15 p-6 md:p-9">
             <div className="flex items-center gap-3 mb-2">
               <Building size={16} className="text-gold" />
               <p className="eyebrow">Hiring Partners</p>
@@ -95,7 +95,7 @@ export default function JobPlacement() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border-t border-gold/15 pt-10">
+        <div className="mt-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border-t border-gold/15 pt-8">
           <div>
             <p className="font-editorial text-[1.7rem] md:text-[2.1rem] text-cream leading-tight">
               Career outcomes you can <span className="italic text-gold">show</span>, not just claim.

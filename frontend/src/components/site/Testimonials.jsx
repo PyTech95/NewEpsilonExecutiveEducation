@@ -23,7 +23,7 @@ export default function Testimonials() {
   return (
     <section
       data-testid="testimonials-section"
-      className="relative bg-navy-deep text-cream py-20 md:py-28 overflow-hidden"
+      className="relative bg-navy-deep text-cream py-14 md:py-20 overflow-hidden"
     >
       <div className="absolute inset-0 starfield opacity-50" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full glow-gold pointer-events-none" />
@@ -38,12 +38,12 @@ export default function Testimonials() {
           align="center"
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mt-14 md:mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-7 mt-10 md:mt-12">
           {TESTIMONIALS.map((t, i) => (
             <figure
               key={i}
               data-testid={`testimonial-${i}`}
-              className="border border-gold/20 p-7 md:p-9 bg-navy/40 lift-card hover:border-gold/60"
+              className="border border-gold/20 p-6 md:p-8 bg-navy/40 lift-card hover:border-gold/60"
             >
               <Quote size={22} className="text-gold mb-4" />
               <blockquote className="font-editorial italic text-cream/90 text-[1.1rem] md:text-[1.2rem] leading-[1.7]">

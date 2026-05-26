@@ -5,10 +5,10 @@ export default function Footer() {
   return (
     <footer data-testid="site-footer" className="bg-navy-deep text-cream border-t border-gold/15 relative overflow-hidden">
       <div className="absolute inset-0 starfield opacity-25" />
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
-        <div className="grid lg:grid-cols-12 gap-10">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
+        <div className="grid lg:grid-cols-12 gap-8">
           <div className="lg:col-span-5">
-            <img src="/assets/logo.png" alt="Epsilon Executive Education" className="h-16 md:h-20 w-auto object-contain" />
+            <img src="/assets/logo.png" alt="Epsilon Executive Education" className="h-14 md:h-16 w-auto object-contain" />
             <p className="font-editorial mt-5 text-cream/65 max-w-md text-[1.05rem] leading-[1.7]">
               A live executive school for decision-makers in the AI era —
               <span className="italic text-gold"> turning technical fluency into strategic value.</span>
@@ -66,7 +66,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 pt-8 border-t border-cream/10 flex flex-col md:flex-row gap-3 justify-between font-mono text-[10.5px] uppercase tracking-[0.18em] text-cream/45">
+        <div className="mt-10 pt-6 border-t border-cream/10 flex flex-col md:flex-row gap-3 justify-between font-mono text-[10.5px] uppercase tracking-[0.18em] text-cream/45">
           <span>© {new Date().getFullYear()} Epsilon Executive Education. All rights reserved.</span>
           <div className="flex gap-6">
             <a href="#" className="hover:text-gold transition-colors">Privacy</a>

@@ -19,7 +19,7 @@ export default function Stats() {
           <div
             key={i}
             data-testid={`stat-card-${i}`}
-            className={`py-16 md:py-24 ${i === 0 ? "md:border-r md:border-gold/15 md:pr-12" : "md:pl-12"} ${i === 1 ? "border-t border-gold/15 md:border-t-0" : ""}`}
+            className={`py-12 md:py-16 ${i === 0 ? "md:border-r md:border-gold/15 md:pr-12" : "md:pl-12"} ${i === 1 ? "border-t border-gold/15 md:border-t-0" : ""}`}
           >
             <p className="eyebrow mb-6">The shift, in numbers</p>
             <span className="gold-rule-lg block mb-6" />

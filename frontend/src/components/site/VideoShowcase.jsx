@@ -8,8 +8,8 @@ export default function VideoShowcase() {
   const [open, setOpen] = useState(false);
   return (
     <section data-testid="video-showcase-section" className="bg-bone text-navy-deep">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           <div className="lg:col-span-5">
             <p className="eyebrow mb-3">Program Preview</p>
             <span className="gold-rule-lg block mb-6" />

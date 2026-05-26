@@ -39,7 +39,7 @@ export default function Hero() {
     <section
       id="top"
       data-testid="hero-section"
-      className="relative isolate overflow-hidden bg-navy-deep text-cream pt-44 pb-16 md:pt-52 md:pb-28 min-h-[100vh]"
+      className="relative isolate overflow-hidden bg-navy-deep text-cream pt-28 pb-12 md:pt-36 md:pb-20"
     >
       {/* Background image with deep navy overlay */}
       <div className="absolute inset-0 -z-10">
@@ -55,25 +55,25 @@ export default function Hero() {
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1100px] h-[1100px] rounded-full glow-gold pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Left content */}
           <div className="lg:col-span-7">
-            <p className="eyebrow mb-6 fade-up inline-flex items-center gap-2">
+            <p className="eyebrow mb-4 fade-up inline-flex items-center gap-2">
               <Sparkles size={12} className="text-gold" /> The AI Era of Executive Education
             </p>
 
-            <h1 className="font-editorial text-cream text-[2.6rem] sm:text-[3.4rem] md:text-[4.6rem] lg:text-[5.4rem] leading-[1.04] tracking-[-0.01em] max-w-5xl fade-up">
+            <h1 className="font-editorial text-cream text-[2.25rem] sm:text-[3rem] md:text-[4rem] lg:text-[4.8rem] leading-[1.05] tracking-[-0.01em] max-w-5xl fade-up">
               Turning technical fluency
             </h1>
-            <h2 className="font-editorial italic text-gold text-[2.4rem] md:text-[4rem] lg:text-[4.8rem] leading-[1.05] mt-1 fade-up-delay-1">
+            <h2 className="font-editorial italic text-gold text-[2rem] sm:text-[2.6rem] md:text-[3.4rem] lg:text-[4.2rem] leading-[1.05] mt-1 fade-up-delay-1">
               into strategic value.
             </h2>
 
-            <p className="font-editorial text-[1.15rem] md:text-[1.4rem] leading-relaxed text-cream/85 mt-5 md:mt-8 max-w-2xl fade-up-delay-2">
+            <p className="font-editorial text-[1.02rem] md:text-[1.2rem] leading-relaxed text-cream/85 mt-4 md:mt-6 max-w-2xl fade-up-delay-2">
               The Professional Certificate in Applied AI &amp; Machine Learning — a live, 12-week executive program for professionals who want stronger judgement, sharper evidence discipline and the confidence to translate technical possibility into credible business action.
             </p>
 
-            <div className="mt-7 md:mt-10 flex flex-wrap items-center gap-4 fade-up-delay-3">
+            <div className="mt-6 md:mt-8 flex flex-wrap items-center gap-3 fade-up-delay-3">
               <a href="/apply" data-testid="hero-apply-btn" className="btn-gold">
                 Apply Now <ArrowRight size={14} />
               </a>
@@ -83,7 +83,7 @@ export default function Hero() {
             </div>
 
             {/* Stat blocks */}
-            <div className="mt-10 md:mt-14 grid grid-cols-2 md:grid-cols-4 gap-5 fade-up-delay-3">
+            <div className="mt-8 md:mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5 fade-up-delay-3">
               {[
                 ["12 weeks", "Cohort duration"],
                 ["Live online", "Executive-friendly"],
@@ -102,7 +102,7 @@ export default function Hero() {
           <div className="lg:col-span-5 fade-up-delay-2">
             <div
               data-testid="hero-brochure-form-card"
-              className="relative bg-cream text-navy-deep p-7 sm:p-8 md:p-10 corner-brackets"
+              className="relative bg-cream text-navy-deep p-6 sm:p-7 md:p-9 corner-brackets"
               style={{ boxShadow: "0 30px 80px rgba(0,0,0,0.55)" }}
             >
               <p className="eyebrow !text-gold-dark mb-2">Download the Brochure</p>
