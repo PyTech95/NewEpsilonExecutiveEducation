@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { toast } from "sonner";
-import { ChevronDown, Loader2, ArrowRight, Sparkles } from "lucide-react";
+import { ChevronDown, Loader2, ArrowRight, Sparkles, Calendar, Radio, Video, Award } from "lucide-react";
 import { COURSE } from "@/lib/constants";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
@@ -83,62 +83,66 @@ export default function Hero() {
             </div>
 
             {/* Stat blocks */}
-            <div className="mt-8 md:mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5 fade-up-delay-3">
+            <div className="mt-8 md:mt-12 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 fade-up-delay-3">
               {[
-                ["12 weeks", "Cohort duration"],
-                ["Live online", "Executive-friendly"],
-                ["3 live classes", "Per week"],
-                ["Capstone", "Portfolio outcome"],
-              ].map(([primary, secondary]) => (
-                <div key={primary} className="border-l border-gold/40 pl-4">
-                  <p className="font-editorial text-cream text-xl md:text-2xl leading-tight">{primary}</p>
-                  <p className="font-editorial text-[12.5px] text-cream/60 mt-1.5 italic">{secondary}</p>
+                { Icon: Calendar, primary: "12 weeks",      secondary: "Cohort duration" },
+                { Icon: Radio,    primary: "Live online",   secondary: "Executive-friendly" },
+                { Icon: Video,    primary: "3 live classes", secondary: "Per week" },
+                { Icon: Award,    primary: "Capstone",      secondary: "Portfolio outcome" },
+              ].map(({ Icon, primary, secondary }) => (
+                <div key={primary} className="group relative bg-cream/[0.04] hover:bg-cream/[0.09] border border-gold/20 hover:border-gold/50 transition-all duration-300 p-4 hover:-translate-y-0.5">
+                  <Icon size={18} className="text-gold mb-2.5" strokeWidth={1.5} />
+                  <p className="font-editorial text-cream text-[1.15rem] md:text-[1.3rem] leading-tight">{primary}</p>
+                  <p className="font-editorial text-[12px] text-cream/55 mt-1 italic">{secondary}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Right - Brochure form card */}
+          {/* Right - Brochure form card (compact) */}
           <div className="lg:col-span-5 fade-up-delay-2">
             <div
               data-testid="hero-brochure-form-card"
-              className="relative bg-cream text-navy-deep p-6 sm:p-7 md:p-9 corner-brackets"
-              style={{ boxShadow: "0 30px 80px rgba(0,0,0,0.55)" }}
+              className="relative bg-cream text-navy-deep p-5 sm:p-6 md:p-7"
+              style={{ boxShadow: "0 30px 80px rgba(0,0,0,0.55), 0 0 0 1px rgba(212,175,55,0.25)" }}
             >
-              <p className="eyebrow !text-gold-dark mb-2">Download the Brochure</p>
-              <h3 className="font-editorial text-navy-deep text-[1.9rem] md:text-[2.3rem] leading-[1.1] mb-1">
-                The whole program, <span className="italic text-gold">on a single PDF.</span>
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gold-dark via-gold to-gold-dark" />
+
+              <p className="eyebrow !text-gold-dark mb-2">Download the brochure</p>
+              <h3 className="font-editorial text-navy-deep text-[1.55rem] md:text-[1.75rem] leading-[1.1]">
+                The whole program <span className="italic text-gold">on one PDF.</span>
               </h3>
-              <p className="font-editorial text-navy-deep/65 text-sm md:text-base mb-5">
-                Curriculum, fees, faculty, capstone &amp; admissions.
+              <p className="font-editorial text-navy-deep/60 text-[13.5px] md:text-sm mt-1 mb-4">
+                Curriculum · Fees · Faculty · Capstone · Admissions
               </p>
 
-              <form onSubmit={submit} className="space-y-4" data-testid="brochure-form">
-                <Input testid="brochure-name" label="Full Name *" value={form.name} onChange={set("name")} />
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <Input testid="brochure-phone" label="Phone *" value={form.phone} onChange={set("phone")} type="tel" />
-                  <Input testid="brochure-email" label="Email *" value={form.email} onChange={set("email")} type="email" />
+              <form onSubmit={submit} className="space-y-3" data-testid="brochure-form">
+                <CompactInput testid="brochure-name"  placeholder="Full name *"     value={form.name}  onChange={set("name")} />
+                <div className="grid grid-cols-2 gap-3">
+                  <CompactInput testid="brochure-phone" placeholder="Phone *"        value={form.phone} onChange={set("phone")} type="tel" />
+                  <CompactInput testid="brochure-email" placeholder="Email *"        value={form.email} onChange={set("email")} type="email" />
                 </div>
-                <Input testid="brochure-job" label="Job Title" value={form.job_title} onChange={set("job_title")} />
-                <Select
+                <CompactSelect
                   testid="brochure-experience"
-                  label="Work Experience"
                   value={form.experience}
                   onChange={set("experience")}
-                  options={["Select range", "0 – 2 years", "3 – 5 years", "5 – 10 years", "10 – 15 years", "15+ years"]}
+                  options={["Work experience", "0 – 2 years", "3 – 5 years", "5 – 10 years", "10 – 15 years", "15+ years"]}
                 />
-                <Input testid="brochure-city" label="City" value={form.city} onChange={set("city")} />
 
                 <button
                   type="submit"
                   disabled={loading}
                   data-testid="brochure-submit-btn"
-                  className="w-full mt-2 inline-flex items-center justify-center gap-2 bg-navy-deep text-cream hover:bg-gold hover:text-navy-deep py-4 font-editorial text-[16px] font-medium transition-colors duration-200 disabled:opacity-60"
+                  className="group relative w-full mt-1 inline-flex items-center justify-center gap-2 bg-navy-deep text-cream py-3.5 font-editorial text-[15px] font-medium transition-all duration-300 disabled:opacity-60 overflow-hidden"
                 >
-                  {loading ? <Loader2 size={14} className="animate-spin" /> : null}
-                  {loading ? "Sending..." : "Download brochure"}
+                  <span className="absolute inset-0 bg-gold translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+                  <span className="relative inline-flex items-center gap-2 group-hover:text-navy-deep transition-colors duration-300">
+                    {loading ? <Loader2 size={14} className="animate-spin" /> : null}
+                    {loading ? "Sending…" : "Download brochure"}
+                    {!loading && <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform duration-300" />}
+                  </span>
                 </button>
-                <p className="font-editorial italic text-[13px] text-navy-deep/55 text-center pt-1">
+                <p className="font-editorial italic text-[12px] text-navy-deep/50 text-center pt-0.5">
                   No spam · We respect your time.
                 </p>
               </form>
@@ -150,27 +154,31 @@ export default function Hero() {
   );
 }
 
-function Input({ label, testid, ...rest }) {
+function CompactInput({ testid, placeholder, ...rest }) {
   return (
-    <div>
-      <label className="fld-label">{label}</label>
-      <input data-testid={testid} className="fld-input" {...rest} />
-    </div>
+    <input
+      data-testid={testid}
+      placeholder={placeholder}
+      className="w-full px-4 py-3 bg-white border border-navy-deep/12 hover:border-navy-deep/30 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20 font-editorial text-[14px] text-navy-deep placeholder:text-navy-deep/40 transition-all duration-200"
+      {...rest}
+    />
   );
 }
 
-function Select({ label, testid, value, onChange, options }) {
+function CompactSelect({ testid, value, onChange, options }) {
   return (
-    <div>
-      <label className="fld-label">{label}</label>
-      <div className="relative">
-        <select data-testid={testid} value={value} onChange={onChange} className="fld-input appearance-none pr-10">
-          {options.map((o, i) => (
-            <option key={i} value={i === 0 ? "" : o}>{o}</option>
-          ))}
-        </select>
-        <ChevronDown size={16} className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-navy-deep/50" />
-      </div>
+    <div className="relative">
+      <select
+        data-testid={testid}
+        value={value}
+        onChange={onChange}
+        className="w-full appearance-none px-4 py-3 pr-10 bg-white border border-navy-deep/12 hover:border-navy-deep/30 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20 font-editorial text-[14px] text-navy-deep transition-all duration-200"
+      >
+        {options.map((o, i) => (
+          <option key={i} value={i === 0 ? "" : o}>{o}</option>
+        ))}
+      </select>
+      <ChevronDown size={16} className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-navy-deep/50" />
     </div>
   );
 }

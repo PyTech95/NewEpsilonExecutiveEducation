@@ -1,11 +1,15 @@
+import { TrendingUp, Briefcase } from "lucide-react";
+
 export default function Stats() {
   const stats = [
     {
+      Icon: TrendingUp,
       figure: "91%",
       text: "of Indian leaders believe they need to adopt AI to stay competitive.",
       source: "Microsoft Work Trend Index",
     },
     {
+      Icon: Briefcase,
       figure: "69%",
       text: "of skills used in most jobs in India are projected to change by 2030.",
       source: "NDTV Profit Tech",
@@ -21,7 +25,12 @@ export default function Stats() {
             data-testid={`stat-card-${i}`}
             className={`py-12 md:py-16 ${i === 0 ? "md:border-r md:border-gold/15 md:pr-12" : "md:pl-12"} ${i === 1 ? "border-t border-gold/15 md:border-t-0" : ""}`}
           >
-            <p className="eyebrow mb-6">The shift, in numbers</p>
+            <div className="flex items-center gap-3 mb-5">
+              <span className="inline-flex items-center justify-center h-10 w-10 bg-gold/10 border border-gold/40">
+                <s.Icon size={18} className="text-gold" strokeWidth={1.6} />
+              </span>
+              <p className="eyebrow !mb-0">The shift, in numbers</p>
+            </div>
             <span className="gold-rule-lg block mb-6" />
             <div className="font-editorial text-6xl md:text-8xl leading-none text-cream">
               {s.figure}

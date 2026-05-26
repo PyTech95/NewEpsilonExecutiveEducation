@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Calendar, Radio, Moon, ClipboardCheck, FileText, Award, IndianRupee, MessageSquare } from "lucide-react";
 
 const MODULES = [
   {
@@ -74,20 +74,24 @@ export default function Curriculum() {
           real body of work, not just course completion.
         </p>
 
-        <div className="mt-10 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-y-6 gap-x-6 sm:gap-x-12 border-t border-navy-deep/10 pt-8">
+        <div className="mt-10 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 border-t border-navy-deep/10 pt-8">
           {[
-            ["Duration", "12 weeks · 3 classes / wk"],
-            ["Format", "Live online, cohort-based"],
-            ["Session", "Executive-friendly evenings"],
-            ["Assessment", "Graded, capstone defence"],
-            ["Final output", "Executive Decision Dossier"],
-            ["Credential", "Certificate + scorecard"],
-            ["Program fee", "₹89,000"],
-            ["Experience", "High-touch, feedback-driven"],
-          ].map(([k, v]) => (
-            <div key={k}>
-              <div className="font-mono uppercase text-[10px] tracking-[0.22em] text-navy-deep/45 mb-1.5">{k}</div>
-              <div className="font-editorial text-[1.2rem] text-navy-deep">{v}</div>
+            { Icon: Calendar,       k: "Duration",     v: "12 weeks · 3 classes / wk" },
+            { Icon: Radio,          k: "Format",       v: "Live online, cohort-based" },
+            { Icon: Moon,           k: "Session",      v: "Executive-friendly evenings" },
+            { Icon: ClipboardCheck, k: "Assessment",   v: "Graded, capstone defence" },
+            { Icon: FileText,       k: "Final output", v: "Executive Decision Dossier" },
+            { Icon: Award,          k: "Credential",   v: "Certificate + scorecard" },
+            { Icon: IndianRupee,    k: "Program fee",  v: "₹89,000" },
+            { Icon: MessageSquare,  k: "Experience",   v: "High-touch, feedback-driven" },
+          ].map(({ Icon, k, v }) => (
+            <div
+              key={k}
+              className="group bg-white/60 hover:bg-white border border-navy-deep/10 hover:border-gold/50 transition-all duration-300 p-4 hover:-translate-y-0.5"
+            >
+              <Icon size={16} className="text-gold-dark mb-2.5" strokeWidth={1.6} />
+              <div className="font-mono uppercase text-[10px] tracking-[0.22em] text-navy-deep/45 mb-1">{k}</div>
+              <div className="font-editorial text-[1rem] md:text-[1.05rem] text-navy-deep leading-snug">{v}</div>
             </div>
           ))}
         </div>

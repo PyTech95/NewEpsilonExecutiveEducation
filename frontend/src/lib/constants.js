@@ -24,3 +24,8 @@ export const COURSE = {
   format: "Live online",
   fee: "₹89,000",
 };
+
+// logo.dev public token — used to render official brand logos sitewide
+export const LOGO_TOKEN = "pk_X-1ZO13GSgeOoUrIuJ6GMQ";
+export const logoUrl = (domain, size = 256) =>
+  `https://img.logo.dev/${domain}?token=${LOGO_TOKEN}&size=${size}&format=png`;

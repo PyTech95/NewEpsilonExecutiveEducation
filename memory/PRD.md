@@ -36,6 +36,15 @@ Requirements:
   - FacultyLogos: 2-col grid on mobile, cards trimmed `h-[120px]` → `h-[96px]/110px`
   - Apply page: trimmed top padding to `pt-20 md:pt-28`, headline scaled
   - QA: verified at 390 / 768 / 1440 viewports — all sections stack cleanly, no overflow
+- **2026-02-27 — Major redesign: forms, logos, content rebalance**:
+  - **Real brand logos via logo.dev CDN** (`https://img.logo.dev/{domain}?token=...&size=...`). Added `LOGO_TOKEN` + `logoUrl()` helper in `constants.js`. Replaced all text-wordmarks in `FacultyLogos.jsx` (NYU, Columbia, Berkeley Law, UT Austin, Fordham, JPMorgan, LinkedIn, KPMG, Interpublic, Publicis, Horizon Media, NRP) and all `ToolsMarquee.jsx` icons (Python, R, ChatGPT, Claude, Gemini, Jupyter, Tableau, Power BI, GitHub, TensorFlow, PyTorch, Hugging Face, MongoDB, Google Cloud) with official PNGs.
+  - **PopupForm.jsx** rewritten compact (400px, single column, 3 fields, gold accent bar, gold phone-icon medallion, animated entrance + exit, slide-up dialog with cubic-bezier overshoot, hover-fill CTA).
+  - **Hero brochure form** redesigned compact (4 fields: name + phone/email grid + experience), same gold-accent bar + hover-fill CTA pattern.
+  - **Overview.jsx** rebalanced — full-width headline on top, then 5/7 split with executive portrait + caption on left and copy + 2×2 bullet checkmarks + pull-quote on right.
+  - **Stats.jsx (91% / 69%)** — added gold-icon medallions (TrendingUp, Briefcase) next to eyebrow.
+  - **Curriculum stats grid** — replaced flat key/value rows with iconified cream-card grid (Calendar, Radio, Moon, ClipboardCheck, FileText, Award, IndianRupee, MessageSquare) with hover-lift.
+  - **JobPlacement.jsx → Career Trajectory** — removed fake placement statistics (program not yet launched). Rebuilt as a 6-card "what you walk away with" outcomes grid (capstone, peer network, faculty mentorship, career launchpad, verified credential, clear next step) + sticky sidebar image. Anchor `#placements` preserved.
+  - **Hero stat blocks** now use icons (Calendar / Radio / Video / Award) on cream/[0.04] hover cards instead of left-border-only.
 
 ## Pending / Backlog
 - **P0** Provide real video URL for `VideoShowcase.jsx` (currently placeholder)

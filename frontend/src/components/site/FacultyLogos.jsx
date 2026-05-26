@@ -1,69 +1,67 @@
-// Faculty & advisors with experience at — uniform grid
-// For each brand we use a real wordmark / brand icon where available,
-// otherwise a clean italic typographic treatment so every tile feels intentional.
+// Faculty & advisors with experience at — real brand wordmarks via logo.dev CDN
+import { logoUrl } from "@/lib/constants";
+
 const BRANDS = [
-  { name: "NYU",                wordmark: "NYU",      sub: "New York University",        kind: "text-bold" },
-  { name: "Columbia",           wordmark: "COLUMBIA", sub: "Columbia University",        kind: "text-bold" },
-  { name: "UC Berkeley Law",    wordmark: "Berkeley", sub: "UC Berkeley Law",            kind: "text-bold" },
-  { name: "UT Austin",          wordmark: "UT",       sub: "The University of Texas",    kind: "text-bold" },
-  { name: "Fordham",            wordmark: "FORDHAM",  sub: "Fordham University",         kind: "text-bold" },
-  { name: "JPMorgan Chase",    wordmark: "JPMORGAN", sub: "JPMorgan Chase",             kind: "text-bold" },
-  { name: "LinkedIn",           wordmark: "in",       sub: "LinkedIn",                   kind: "text-brand", brandColor: "#0A66C2" },
-  { name: "KPMG",               wordmark: "KPMG",     sub: "KPMG",                       kind: "text-brand", brandColor: "#00338D" },
-  { name: "Interpublic Group",  wordmark: "IPG",      sub: "Interpublic Group",          kind: "text-bold" },
-  { name: "Publicis Groupe",    wordmark: "PUBLICIS", sub: "Publicis Groupe",            kind: "text-bold" },
-  { name: "Horizon Media",      wordmark: "HORIZON",  sub: "Horizon Media",              kind: "text-bold" },
-  { name: "NRP Group",          wordmark: "NRP",      sub: "The NRP Group",              kind: "text-bold" },
+  { name: "NYU",                domain: "nyu.edu",            sub: "New York University" },
+  { name: "Columbia",           domain: "columbia.edu",       sub: "Columbia University" },
+  { name: "UC Berkeley Law",    domain: "law.berkeley.edu",   sub: "UC Berkeley Law" },
+  { name: "UT Austin",          domain: "utexas.edu",         sub: "The University of Texas" },
+  { name: "Fordham",            domain: "fordham.edu",        sub: "Fordham University" },
+  { name: "JPMorgan Chase",     domain: "jpmorganchase.com",  sub: "JPMorgan Chase" },
+  { name: "LinkedIn",           domain: "linkedin.com",       sub: "LinkedIn" },
+  { name: "KPMG",               domain: "kpmg.com",           sub: "KPMG" },
+  { name: "Interpublic Group",  domain: "interpublic.com",    sub: "Interpublic Group" },
+  { name: "Publicis Groupe",    domain: "publicisgroupe.com", sub: "Publicis Groupe" },
+  { name: "Horizon Media",      domain: "horizonmedia.com",   sub: "Horizon Media" },
+  { name: "NRP Group",          domain: "nrpgroup.com",       sub: "The NRP Group" },
 ];
 
 export default function FacultyLogos() {
   return (
     <section
       data-testid="faculty-experience-strip"
-      className="bg-navy-deep text-cream pt-10 pb-10 md:pt-12 md:pb-14 border-t border-gold/15 relative overflow-hidden"
+      className="bg-navy-deep text-cream pt-12 pb-12 md:pt-16 md:pb-16 border-t border-gold/15 relative overflow-hidden"
     >
       <div className="absolute inset-0 starfield opacity-25 pointer-events-none" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center gap-4 mb-8">
+        <div className="flex items-center gap-4 mb-10">
           <div className="h-px flex-1 bg-gold/20" />
-          <p className="font-editorial italic text-gold text-center px-2 whitespace-nowrap text-sm md:text-base">
+          <p className="font-editorial italic text-gold text-center px-3 whitespace-nowrap text-sm md:text-base">
             Faculty &amp; advisors with experience at
           </p>
           <div className="h-px flex-1 bg-gold/20" />
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2.5 sm:gap-3">
-          {BRANDS.map((b) => (
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
+          {BRANDS.map((b, i) => (
             <div
               key={b.name}
               data-testid={`faculty-logo-${b.name.toLowerCase().replace(/\s+/g, "-")}`}
-              className="group bg-cream hover:bg-gold transition-all border border-gold/20 hover:border-gold h-[96px] sm:h-[110px] flex flex-col items-center justify-center px-3 py-3 gap-1.5"
+              className="group relative bg-cream hover:bg-white border border-gold/20 hover:border-gold transition-all duration-300 h-[110px] sm:h-[120px] flex flex-col items-center justify-center px-3 py-4 gap-2 will-change-transform hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(212,175,55,0.18)]"
+              style={{ animation: `logoFade 0.6s ease-out ${i * 0.04}s both` }}
             >
-              <div className="h-8 sm:h-10 w-full flex items-center justify-center">
-                {b.icon ? (
-                  <img
-                    src={b.icon}
-                    alt={b.name}
-                    loading="lazy"
-                    className="max-h-10 max-w-[70%] object-contain"
-                    onError={(e) => { e.currentTarget.style.display = "none"; }}
-                  />
-                ) : (
-                  <span
-                    className="font-display font-extrabold text-[clamp(15px,1.5vw,22px)] tracking-[0.04em] leading-none"
-                    style={{ color: b.brandColor || "#040914" }}
-                  >
-                    {b.wordmark}
-                  </span>
-                )}
+              <div className="flex-1 w-full flex items-center justify-center">
+                <img
+                  src={logoUrl(b.domain, 256)}
+                  alt={b.name}
+                  loading="lazy"
+                  className="max-h-[52px] max-w-[80%] object-contain transition-transform duration-300 group-hover:scale-105"
+                />
               </div>
-              <span className="font-editorial italic text-[12px] sm:text-[13px] text-navy-deep/65 group-hover:text-navy-deep text-center leading-tight transition-colors">
+              <span className="font-editorial italic text-[11.5px] sm:text-[12.5px] text-navy-deep/55 group-hover:text-navy-deep text-center leading-tight transition-colors">
                 {b.sub}
               </span>
             </div>
           ))}
         </div>
       </div>
+
+      <style>{`
+        @keyframes logoFade {
+          from { opacity: 0; transform: translateY(8px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+      `}</style>
     </section>
   );
 }

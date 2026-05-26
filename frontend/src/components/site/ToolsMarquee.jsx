@@ -1,18 +1,21 @@
-// Tools you'll work with — MOVING marquee with real brand logos (simpleicons CDN)
-const COLOR = "D4AF37";
+// Tools you'll work with — moving marquee with REAL brand logos via logo.dev CDN
+import { logoUrl } from "@/lib/constants";
+
 const TOOLS = [
-  { name: "Python",    logo: `https://cdn.simpleicons.org/python/${COLOR}` },
-  { name: "R",         logo: `https://cdn.simpleicons.org/r/${COLOR}` },
-  { name: "ChatGPT",   logo: `https://cdn.simpleicons.org/openai/${COLOR}` },
-  { name: "Claude",    logo: `https://cdn.simpleicons.org/anthropic/${COLOR}` },
-  { name: "Jupyter",   logo: `https://cdn.simpleicons.org/jupyter/${COLOR}` },
-  { name: "Zapier",    logo: `https://cdn.simpleicons.org/zapier/${COLOR}` },
-  { name: "Tableau",   logo: `https://cdn.simpleicons.org/tableau/${COLOR}` },
-  { name: "Power BI",  logo: `https://cdn.simpleicons.org/powerbi/${COLOR}` },
-  { name: "GitHub",    logo: `https://cdn.simpleicons.org/github/${COLOR}` },
-  { name: "Pandas",    logo: `https://cdn.simpleicons.org/pandas/${COLOR}` },
-  { name: "Posit",     logo: `https://cdn.simpleicons.org/posit/${COLOR}` },
-  { name: "Streamlit", logo: `https://cdn.simpleicons.org/streamlit/${COLOR}` },
+  { name: "Python",     domain: "python.org" },
+  { name: "R",          domain: "r-project.org" },
+  { name: "ChatGPT",    domain: "openai.com" },
+  { name: "Claude",     domain: "anthropic.com" },
+  { name: "Gemini",     domain: "gemini.google.com" },
+  { name: "Jupyter",    domain: "jupyter.org" },
+  { name: "Tableau",    domain: "tableau.com" },
+  { name: "Power BI",   domain: "powerbi.microsoft.com" },
+  { name: "GitHub",     domain: "github.com" },
+  { name: "TensorFlow", domain: "tensorflow.org" },
+  { name: "PyTorch",    domain: "pytorch.org" },
+  { name: "Hugging Face", domain: "huggingface.co" },
+  { name: "MongoDB",    domain: "mongodb.com" },
+  { name: "Google Cloud", domain: "cloud.google.com" },
 ];
 
 export default function ToolsMarquee() {
@@ -23,7 +26,7 @@ export default function ToolsMarquee() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-4 mb-8">
           <div className="h-px flex-1 bg-gold/20" />
-          <p className="eyebrow text-center px-2 whitespace-nowrap !text-gold">Tools you'll work with</p>
+          <p className="eyebrow text-center px-3 whitespace-nowrap !text-gold">Tools you'll work with</p>
           <div className="h-px flex-1 bg-gold/20" />
         </div>
       </div>
@@ -35,22 +38,21 @@ export default function ToolsMarquee() {
           WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)",
         }}
       >
-        <div className="tools-track flex items-center gap-10 sm:gap-16 whitespace-nowrap will-change-transform py-2">
+        <div className="tools-track flex items-center gap-8 sm:gap-12 whitespace-nowrap will-change-transform py-3">
           {loop.map((t, i) => (
             <div
               key={`${t.name}-${i}`}
               data-testid={i < TOOLS.length ? `tool-${t.name.toLowerCase().replace(/\s+/g, "-")}` : undefined}
-              className="inline-flex items-center gap-3 flex-shrink-0"
+              className="inline-flex items-center gap-3 flex-shrink-0 bg-cream/[0.04] hover:bg-cream/[0.09] border border-gold/15 hover:border-gold/40 transition-colors duration-300 px-4 sm:px-5 py-2.5"
             >
               <img
-                src={t.logo}
+                src={logoUrl(t.domain, 128)}
                 alt={t.name}
                 loading="lazy"
-                className="h-7 w-7 sm:h-9 sm:w-9 object-contain"
+                className="h-7 w-7 sm:h-8 sm:w-8 object-contain"
                 onError={(e) => { e.currentTarget.style.display = 'none'; }}
               />
-              <span className="font-editorial text-xl sm:text-2xl text-cream/85">{t.name}</span>
-              <span className="inline-block h-1.5 w-1.5 rounded-full bg-gold/40 ml-5 sm:ml-9" />
+              <span className="font-editorial text-base sm:text-lg text-cream/90">{t.name}</span>
             </div>
           ))}
         </div>
@@ -60,7 +62,7 @@ export default function ToolsMarquee() {
         @keyframes toolsScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
         .tools-track { animation: toolsScroll 22s linear infinite; }
         @media (min-width: 768px) {
-          .tools-track { animation-duration: 45s; }
+          .tools-track { animation-duration: 50s; }
         }
         .tools-track:hover { animation-play-state: paused; }
         @media (prefers-reduced-motion: reduce) { .tools-track { animation: none; } }

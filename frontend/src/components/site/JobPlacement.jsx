@@ -1,17 +1,39 @@
-import { TrendingUp, IndianRupee, Briefcase, Building, Award, Users } from "lucide-react";
+import { Compass, Briefcase, Network, FileText, MessageCircle, Trophy } from "lucide-react";
 
-const HIRING_PARTNERS = [
-  "Microsoft", "JPMorgan", "Deloitte", "Accenture", "TCS", "Razorpay",
-  "Swiggy", "Flipkart", "Zomato", "PhonePe", "Paytm", "LinkedIn",
-];
+const OUTCOME_IMG =
+  "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG1lbnRvcnNoaXAlMjBjb25mZXJlbmNlfGVufDB8fHx8MTc3OTcwNjA0NHww&ixlib=rb-4.1.0&q=85";
 
-const ROLE_DISTRIBUTION = [
-  { role: "Product Manager", pct: 28 },
-  { role: "Growth / Marketing Manager", pct: 22 },
-  { role: "Director of Analytics", pct: 18 },
-  { role: "RevOps Manager", pct: 14 },
-  { role: "FP&A Manager", pct: 12 },
-  { role: "AI Support Technician", pct: 6 },
+const OUTCOMES = [
+  {
+    Icon: Briefcase,
+    title: "A capstone you can show",
+    body: "An executive decision dossier — a portfolio-ready artefact that proves real business judgement, not just course completion.",
+  },
+  {
+    Icon: Network,
+    title: "A senior peer network",
+    body: "Forty cohort members from product, growth, analytics, finance and operations across India's most ambitious teams.",
+  },
+  {
+    Icon: MessageCircle,
+    title: "Direct faculty mentorship",
+    body: "Office hours, written feedback and 1:1s with practitioners who have led work at JPMorgan, NYU, LinkedIn, KPMG and Berkeley Law.",
+  },
+  {
+    Icon: FileText,
+    title: "Career launchpad support",
+    body: "A guided resume refresh, LinkedIn rewrite and interview-prep sprint — built around the capstone you produce in the program.",
+  },
+  {
+    Icon: Trophy,
+    title: "A verified credential",
+    body: "A signed certificate of completion — issued only to participants who finish the capstone with faculty sign-off.",
+  },
+  {
+    Icon: Compass,
+    title: "A clear next step",
+    body: "Most participants move into roles that sit closer to decisions — product, strategy, AI ops, analytics leadership. We help you frame the move.",
+  },
 ];
 
 export default function JobPlacement() {
@@ -19,96 +41,68 @@ export default function JobPlacement() {
     <section id="placements" data-testid="placement-section" className="bg-navy-deep text-cream relative overflow-hidden">
       <div className="absolute inset-0 starfield opacity-40 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[700px] h-[700px] rounded-full glow-gold pointer-events-none" />
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
-        <p className="eyebrow mb-3">Placement Outcomes</p>
-        <span className="gold-rule-lg block mb-6" />
-        <h2 className="font-editorial text-cream text-[2.1rem] sm:text-[3rem] lg:text-[3.6rem] leading-[1.06] max-w-4xl">
-          Where graduates <span className="italic text-gold">go next.</span>
-        </h2>
-        <p className="mt-6 font-editorial text-cream/75 max-w-2xl text-[1.1rem] leading-relaxed">
-          A body of work that proves real professional growth — and opens the door to roles that sit
-          closer to the decisions. Verified outcomes from past learners.
-        </p>
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+          {/* Left: editorial copy + visual */}
+          <div className="lg:col-span-5 lg:sticky lg:top-32">
+            <p className="eyebrow mb-3">Career Trajectory</p>
+            <span className="gold-rule-lg block mb-6" />
+            <h2 className="font-editorial text-cream text-[2.1rem] sm:text-[2.8rem] lg:text-[3.2rem] leading-[1.05]">
+              What you walk away with <span className="italic text-gold">— and into.</span>
+            </h2>
+            <p className="mt-5 font-editorial text-cream/75 text-[1.05rem] leading-relaxed">
+              We're a new program built for senior professionals — so we don't pretend to publish
+              hiring statistics. Instead, we publish the work product, mentorship and credentials
+              you will actually leave with. Apply judgement to that — not someone else's percentages.
+            </p>
 
-        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-gold/15 border border-gold/15">
-          {[
-            { Icon: TrendingUp, value: "94%", label: "Placement assistance success rate" },
-            { Icon: IndianRupee, value: "62%", label: "Average salary hike post-program" },
-            { Icon: Briefcase, value: "₹28L", label: "Highest CTC offered to alumnus" },
-            { Icon: Users, value: "240+", label: "Hiring partners across sectors" },
-          ].map(({ Icon, value, label }, i) => (
-            <div
-              key={i}
-              data-testid={`placement-stat-${i}`}
-              className="bg-navy-deep hover:bg-navy transition-colors p-6 md:p-8"
-            >
-              <Icon size={20} className="text-gold mb-4" strokeWidth={1.4} />
-              <div className="font-editorial text-[2.5rem] md:text-[3.4rem] leading-none text-cream">{value}</div>
-              <p className="mt-3 font-mono uppercase text-[10px] tracking-[0.18em] text-cream/65 leading-relaxed">{label}</p>
+            <div className="mt-8 relative aspect-[4/5] overflow-hidden hidden lg:block">
+              <img src={OUTCOME_IMG} alt="Executive mentorship at Epsilon" className="w-full h-full object-cover" loading="lazy" />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/40 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <p className="font-editorial italic text-gold text-sm">A cohort of 40. Hand-selected.</p>
+                <p className="font-mono uppercase text-[10px] tracking-[0.18em] text-cream/65 mt-1">Spring 2026 — Now interviewing</p>
+              </div>
             </div>
-          ))}
-        </div>
+          </div>
 
-        <div className="mt-12 grid lg:grid-cols-12 gap-6">
-          <div data-testid="role-distribution" className="lg:col-span-7 bg-navy/60 border border-gold/15 p-6 md:p-9">
-            <div className="flex items-center gap-3 mb-2">
-              <Award size={16} className="text-gold" />
-              <p className="eyebrow">Role Distribution</p>
-            </div>
-            <h3 className="font-editorial text-[1.85rem] mb-8 text-cream">Roles our alumni step into.</h3>
-            <div className="space-y-5">
-              {ROLE_DISTRIBUTION.map((r) => (
-                <div key={r.role} data-testid={`role-bar-${r.role.toLowerCase().replace(/[^a-z]+/g, "-")}`}>
-                  <div className="flex items-center justify-between mb-2 text-sm">
-                    <span className="text-cream/85 font-editorial">{r.role}</span>
-                    <span className="font-editorial italic text-gold">{r.pct}%</span>
+          {/* Right: 6 outcome cards */}
+          <div className="lg:col-span-7">
+            <div className="grid sm:grid-cols-2 gap-px bg-gold/15 border border-gold/15">
+              {OUTCOMES.map(({ Icon, title, body }, i) => (
+                <div
+                  key={title}
+                  data-testid={`outcome-card-${i}`}
+                  className="group relative bg-navy-deep hover:bg-navy/80 transition-colors duration-300 p-6 md:p-7"
+                >
+                  <div className="inline-flex items-center justify-center h-10 w-10 bg-gold/10 border border-gold/40 mb-4 group-hover:bg-gold/20 transition-colors">
+                    <Icon size={16} className="text-gold" strokeWidth={1.6} />
                   </div>
-                  <div className="h-1 bg-cream/10 overflow-hidden">
-                    <div
-                      className="h-full bg-gradient-to-r from-gold-dark to-gold transition-all duration-1000"
-                      style={{ width: `${r.pct * 2.8}%` }}
-                    />
-                  </div>
+                  <h3 className="font-editorial text-cream text-[1.15rem] md:text-[1.25rem] leading-tight mb-2">
+                    {title}
+                  </h3>
+                  <p className="font-editorial text-cream/65 text-[14px] leading-relaxed">
+                    {body}
+                  </p>
                 </div>
               ))}
             </div>
-          </div>
 
-          <div data-testid="hiring-partners" className="lg:col-span-5 bg-navy/60 border border-gold/15 p-6 md:p-9">
-            <div className="flex items-center gap-3 mb-2">
-              <Building size={16} className="text-gold" />
-              <p className="eyebrow">Hiring Partners</p>
+            <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-t border-gold/15 pt-6">
+              <p className="font-editorial italic text-cream/70 text-[15px] max-w-md">
+                We measure what we can actually verify — your work, your written reflections and
+                the artefacts you leave Epsilon with.
+              </p>
+              <a
+                href="/apply"
+                data-testid="career-apply-btn"
+                className="btn-gold flex-shrink-0 whitespace-nowrap"
+              >
+                Apply for spring 2026
+              </a>
             </div>
-            <h3 className="font-editorial text-[1.85rem] mb-8 text-cream">
-              Where they're <span className="italic text-gold">working.</span>
-            </h3>
-            <div className="grid grid-cols-3 gap-px bg-gold/15">
-              {HIRING_PARTNERS.map((p) => (
-                <div key={p} className="bg-navy hover:bg-navy-deep transition-colors aspect-[3/2] flex items-center justify-center px-2">
-                  <span className="font-mono uppercase text-[9px] tracking-[0.15em] text-cream/70 text-center">{p}</span>
-                </div>
-              ))}
-            </div>
-            <p className="mt-6 font-editorial italic text-xs text-cream/50">
-              & 220+ partner organisations across product, growth, fintech, analytics and consulting.
-            </p>
           </div>
-        </div>
-
-        <div className="mt-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border-t border-gold/15 pt-8">
-          <div>
-            <p className="font-editorial text-[1.7rem] md:text-[2.1rem] text-cream leading-tight">
-              Career outcomes you can <span className="italic text-gold">show</span>, not just claim.
-            </p>
-            <p className="font-mono uppercase text-[10px] tracking-[0.18em] text-cream/55 mt-3">Verified placements · Real CTC data · Cohort transparency</p>
-          </div>
-          <a
-            href="#advisor"
-            data-testid="placement-talk-btn"
-            className="btn-gold flex-shrink-0"
-          >
-            Talk to placement team
-          </a>
         </div>
       </div>
     </section>
