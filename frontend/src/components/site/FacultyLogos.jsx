@@ -5,15 +5,15 @@ const BRANDS = [
   { name: "NYU",                domain: "nyu.edu",            sub: "New York University" },
   { name: "Columbia",           domain: "columbia.edu",       sub: "Columbia University" },
   { name: "UC Berkeley Law",    domain: "law.berkeley.edu",   sub: "UC Berkeley Law" },
-  { name: "UT Austin",          domain: "utexas.edu",         sub: "The University of Texas" },
+  { name: "UT Austin",          local: "/assets/brands/ut-austin.png",   sub: "The University of Texas" },
   { name: "Fordham",            domain: "fordham.edu",        sub: "Fordham University" },
   { name: "JPMorgan Chase",     domain: "jpmorganchase.com",  sub: "JPMorgan Chase" },
   { name: "LinkedIn",           domain: "linkedin.com",       sub: "LinkedIn" },
   { name: "KPMG",               domain: "kpmg.com",           sub: "KPMG" },
-  { name: "Interpublic Group",  domain: "interpublic.com",    sub: "Interpublic Group" },
-  { name: "Publicis Groupe",    local: "/assets/brands/publicis.png", sub: "Publicis Groupe" },
-  { name: "Horizon Media",      local: "/assets/brands/horizon.png",  sub: "Horizon Media" },
-  { name: "NRP Group",          local: "/assets/brands/nrp.png",      sub: "The NRP Group" },
+  { name: "Interpublic Group",  local: "/assets/brands/interpublic.png", sub: "Interpublic Group" },
+  { name: "Publicis Groupe",    local: "/assets/brands/publicis.png",    sub: "Publicis Groupe" },
+  { name: "Horizon Media",      local: "/assets/brands/horizon.png",     sub: "Horizon Media" },
+  { name: "NRP Group",          local: "/assets/brands/nrp.png",         sub: "The NRP Group" },
 ];
 
 export default function FacultyLogos() {
