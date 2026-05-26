@@ -5,12 +5,14 @@ export default function Stats() {
     {
       Icon: TrendingUp,
       figure: "91%",
+      eyebrow: "Leadership conviction",
       text: "of Indian leaders believe they need to adopt AI to stay competitive.",
       source: "Microsoft Work Trend Index",
     },
     {
       Icon: Briefcase,
       figure: "69%",
+      eyebrow: "Skill churn",
       text: "of skills used in most jobs in India are projected to change by 2030.",
       source: "NDTV Profit Tech",
     },
@@ -23,13 +25,15 @@ export default function Stats() {
           <div
             key={i}
             data-testid={`stat-card-${i}`}
+            data-reveal
+            data-reveal-delay={i === 0 ? "0" : "150"}
             className={`py-12 md:py-16 ${i === 0 ? "md:border-r md:border-gold/15 md:pr-12" : "md:pl-12"} ${i === 1 ? "border-t border-gold/15 md:border-t-0" : ""}`}
           >
             <div className="flex items-center gap-3 mb-5">
               <span className="inline-flex items-center justify-center h-10 w-10 bg-gold/10 border border-gold/40">
                 <s.Icon size={18} className="text-gold" strokeWidth={1.6} />
               </span>
-              <p className="eyebrow !mb-0">The shift, in numbers</p>
+              <p className="eyebrow !mb-0">{s.eyebrow}</p>
             </div>
             <span className="gold-rule-lg block mb-6" />
             <div className="font-editorial text-6xl md:text-8xl leading-none text-cream">

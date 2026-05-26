@@ -116,7 +116,9 @@ export default function Curriculum() {
             <article
               key={m.title}
               data-testid={`module-card-${i}`}
-              className="bg-bone p-6 md:p-9 relative hover:bg-cream transition-colors"
+              data-reveal
+              data-reveal-delay={`${(i % 2) * 150}`}
+              className="bg-bone p-6 md:p-9 relative hover:bg-cream transition-colors group"
             >
               <div className="flex items-baseline justify-between mb-5">
                 <span className="font-editorial italic text-[3.4rem] text-gold/40 leading-none">0{i + 1}</span>
