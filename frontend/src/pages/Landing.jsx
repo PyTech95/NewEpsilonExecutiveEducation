@@ -9,7 +9,6 @@ import Audience from "@/components/site/Audience";
 import Curriculum from "@/components/site/Curriculum";
 import VideoShowcase from "@/components/site/VideoShowcase";
 import Faculty from "@/components/site/Faculty";
-import JobPlacement from "@/components/site/JobPlacement";
 import Testimonials from "@/components/site/Testimonials";
 import Certificate from "@/components/site/Certificate";
 import EpsilonExperience from "@/components/site/EpsilonExperience";
@@ -37,7 +36,6 @@ export default function Landing() {
       <Curriculum />
       <VideoShowcase />
       <Faculty />
-      <JobPlacement />
       <Testimonials />
       <Certificate />
       <EpsilonExperience />

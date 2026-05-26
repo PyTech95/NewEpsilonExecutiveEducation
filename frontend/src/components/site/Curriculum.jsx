@@ -45,7 +45,7 @@ const MODULES = [
     title: "The Strategic Voice",
     sub: "Leadership, Authority & Defence",
     milestone:
-      "Executive Decision Dossier, presented in a live capstone review.",
+      "Executive Proof Pack, presented in a live capstone review.",
     items: [
       "Technical Storytelling",
       "Executive Communication",
@@ -80,7 +80,7 @@ export default function Curriculum() {
             { Icon: Radio,          k: "Format",       v: "Live online, cohort-based" },
             { Icon: Moon,           k: "Session",      v: "Executive-friendly evenings" },
             { Icon: ClipboardCheck, k: "Assessment",   v: "Graded, capstone defence" },
-            { Icon: FileText,       k: "Final output", v: "Executive Decision Dossier" },
+            { Icon: FileText,       k: "Final output", v: "Executive Proof Pack" },
             { Icon: Award,          k: "Credential",   v: "Certificate + scorecard" },
             { Icon: IndianRupee,    k: "Program fee",  v: "₹89,000" },
             { Icon: MessageSquare,  k: "Experience",   v: "High-touch, feedback-driven" },
@@ -154,7 +154,7 @@ export default function Curriculum() {
             <p className="eyebrow mb-3">Capstone</p>
             <span className="gold-rule-lg block mb-6" />
             <h2 className="font-editorial text-cream text-[2.1rem] sm:text-[3rem] lg:text-[3.6rem] leading-[1.06]">
-              The Executive <br /><span className="italic text-gold">Decision Dossier.</span>
+              The Executive <br /><span className="italic text-gold">Proof Pack.</span>
             </h2>
             <p className="mt-6 font-editorial text-cream/75 max-w-2xl text-[1.08rem] leading-relaxed">
               The capstone is where participants bring the full program together. It is designed to
@@ -189,7 +189,7 @@ export default function Curriculum() {
 
           <div className="lg:col-span-5 relative corner-brackets">
             <div className="relative aspect-[4/5] overflow-hidden">
-              <img src={CAPSTONE_IMG} alt="Capstone work — Executive Decision Dossier" className="w-full h-full object-cover" />
+              <img src={CAPSTONE_IMG} alt="Capstone work — Executive Proof Pack" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 text-cream">
                 <p className="font-mono uppercase text-[10px] tracking-[0.25em] text-gold mb-2">Week 12</p>

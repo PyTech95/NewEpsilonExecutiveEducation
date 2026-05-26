@@ -2,19 +2,19 @@
 import { logoUrl } from "@/lib/constants";
 
 const TOOLS = [
-  { name: "Python",     domain: "python.org" },
-  { name: "R",          domain: "r-project.org" },
-  { name: "ChatGPT",    domain: "openai.com" },
-  { name: "Claude",     domain: "anthropic.com" },
-  { name: "Gemini",     domain: "gemini.google.com" },
-  { name: "Jupyter",    domain: "jupyter.org" },
-  { name: "Tableau",    domain: "tableau.com" },
-  { name: "Power BI",   domain: "powerbi.microsoft.com" },
-  { name: "GitHub",     domain: "github.com" },
-  { name: "TensorFlow", domain: "tensorflow.org" },
-  { name: "PyTorch",    domain: "pytorch.org" },
+  { name: "Python",       domain: "python.org" },
+  { name: "R",            domain: "r-project.org" },
+  { name: "Posit",        domain: "posit.co" },
+  { name: "Positron",     domain: "positron.posit.co" },
+  { name: "ChatGPT",      domain: "chatgpt.com" },
+  { name: "Claude",       domain: "anthropic.com" },
+  { name: "Gemini",       domain: "gemini.google.com" },
+  { name: "Codex",        domain: "openai.com" },
+  { name: "h2o.ai",       domain: "h2o.ai" },
+  { name: "TensorFlow",   domain: "tensorflow.org" },
+  { name: "PyTorch",      domain: "pytorch.org" },
   { name: "Hugging Face", domain: "huggingface.co" },
-  { name: "MongoDB",    domain: "mongodb.com" },
+  { name: "MongoDB",      domain: "mongodb.com" },
   { name: "Google Cloud", domain: "cloud.google.com" },
 ];
 
