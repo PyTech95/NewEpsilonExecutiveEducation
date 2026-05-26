@@ -12,8 +12,8 @@ const BRANDS = [
   { name: "KPMG",               domain: "kpmg.com",           sub: "KPMG" },
   { name: "Interpublic Group",  local: "/assets/brands/interpublic.png", sub: "Interpublic Group" },
   { name: "Publicis Groupe",    local: "/assets/brands/publicis.png",    sub: "Publicis Groupe" },
-  { name: "Horizon Media",      local: "/assets/brands/horizon.png",     sub: "Horizon Media" },
-  { name: "NRP Group",          local: "/assets/brands/nrp.png",         sub: "The NRP Group" },
+  { name: "Horizon Media",      local: "/assets/brands/nrp.png",         sub: "Horizon Media" },
+  { name: "NRP Group",          local: "/assets/brands/horizon.png",     sub: "The NRP Group" },
 ];
 
 export default function FacultyLogos() {
