@@ -64,10 +64,10 @@ export default function Navbar() {
 
           {/* Right - CTAs */}
           <div className="hidden lg:flex items-center gap-3">
-            <a href="#advisor" data-testid="nav-advisor-btn" className="font-mono text-[11px] uppercase tracking-[0.18em] text-cream/85 hover:text-gold transition-colors font-semibold">
+            <a href="#advisor" data-testid="nav-advisor-btn" className="font-mono text-[12.5px] uppercase tracking-[0.16em] text-cream/85 hover:text-gold transition-colors font-semibold">
               Talk to Advisor
             </a>
-            <a href="/apply" data-testid="nav-apply-btn" className="btn-gold !py-2.5 !px-5 !text-[11px] !tracking-[0.18em]">
+            <a href="/apply" data-testid="nav-apply-btn" className="btn-gold !py-2.5 !px-6 !text-[14px] !tracking-[0.04em]">
               Apply Now
             </a>
           </div>
