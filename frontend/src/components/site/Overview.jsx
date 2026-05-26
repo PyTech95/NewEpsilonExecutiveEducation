@@ -38,7 +38,7 @@ export default function Overview() {
             </figcaption>
           </div>
 
-          <div className="lg:col-span-7 order-2 space-y-5 font-editorial text-navy-deep/75 text-[1.05rem] leading-[1.85]" data-reveal="right" data-reveal-delay="100">
+          <div className="lg:col-span-7 order-2 space-y-5 font-editorial text-navy-deep/90 text-[1.18rem] leading-[1.8] font-medium" data-reveal="right" data-reveal-delay="100">
             <p>
               Artificial intelligence is changing how work gets done, how value is created and how
               professionals are judged. In India, employers are moving toward skills-first hiring
@@ -47,7 +47,7 @@ export default function Overview() {
               with AI in real business settings.
             </p>
             <p>
-              <span className="italic text-navy-deep font-medium">Epsilon Executive Education</span> was built precisely
+              <span className="italic text-navy-deep font-semibold">Epsilon Executive Education</span> was built precisely
               for that shift. Named for the difference between what is expected and what is actually
               achieved — Epsilon is a live executive school for decision-makers in the AI era.
             </p>
@@ -58,12 +58,12 @@ export default function Overview() {
                   <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center bg-gold/10 border border-gold/50 transition-colors duration-300 group-hover:bg-gold/30">
                     <Check size={12} className="text-gold-dark" />
                   </span>
-                  <span className="font-editorial text-[15.5px] text-navy-deep/85 leading-snug">{b}</span>
+                  <span className="font-editorial text-[16.5px] text-navy-deep font-medium leading-snug">{b}</span>
                 </li>
               ))}
             </ul>
 
-            <blockquote className="mt-6 border-l-2 border-gold pl-5 italic font-editorial text-[1.25rem] text-navy-deep/80 leading-snug">
+            <blockquote className="mt-6 border-l-2 border-gold pl-5 italic font-editorial text-[1.32rem] text-navy-deep leading-snug font-medium">
               "Real professional value comes from judgement, adaptability, discipline and the
               ability to turn complex tools into credible business outcomes."
             </blockquote>
