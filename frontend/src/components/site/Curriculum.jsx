@@ -55,8 +55,7 @@ const MODULES = [
   },
 ];
 
-const CAPSTONE_IMG =
-  "https://images.unsplash.com/photo-1573164713988-8665fc963095?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200&auto=format";
+const CAPSTONE_IMG = "/assets/landing2.jpg";
 
 export default function Curriculum() {
   return (

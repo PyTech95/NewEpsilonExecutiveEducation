@@ -1,10 +1,6 @@
 import { Check } from "lucide-react";
 
-const OVERVIEW_IMG =
-  "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHRlY2hub2xvZ3klMjBhbmFseXRpY3MlMjBkYXNoYm9hcmR8ZW58MHx8fHwxNzc5NzAzMTc1fDA&ixlib=rb-4.1.0&q=85";
-
-const HUMAN_IMG =
-  "https://images.unsplash.com/photo-1573164713988-8665fc963095?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwxfHxleGVjdXRpdmUlMjB3b21hbiUyMG9mZmljZSUyMHByb2Zlc3Npb25hbHxlbnwwfHx8fDE3Nzk3MDMxNzV8MA&ixlib=rb-4.1.0&q=85";
+const OVERVIEW_IMG = "/assets/landing1.jpg";
 
 export default function Overview() {
   const bullets = [
@@ -30,7 +26,7 @@ export default function Overview() {
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 mt-12 items-start">
           <div className="lg:col-span-5 order-1" data-reveal="left">
             <div className="relative aspect-[4/5] overflow-hidden img-hover-tint">
-              <img src={HUMAN_IMG} alt="Executive making a decision" className="w-full h-full object-cover" loading="lazy" />
+              <img src={OVERVIEW_IMG} alt="Executives reviewing analytics — decision-making in the AI era" className="w-full h-full object-cover" loading="lazy" />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/30 to-transparent" />
             </div>
             <figcaption className="mt-3 font-editorial italic text-sm text-navy-deep/55">
