@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { FaInstagram, FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa";
-import { SOCIAL } from "@/lib/constants";
 
 const NAV = [
   { label: "Overview", href: "#overview", id: "overview" },
@@ -64,14 +62,11 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Right - social + CTA */}
-          <div className="hidden lg:flex items-center gap-5">
-            <div className="flex items-center gap-3 pr-4 border-r border-cream/15">
-              <a data-testid="nav-social-instagram" href={SOCIAL.instagram} target="_blank" rel="noreferrer" className="text-cream/55 hover:text-gold transition-colors"><FaInstagram size={13}/></a>
-              <a data-testid="nav-social-facebook" href={SOCIAL.facebook} target="_blank" rel="noreferrer" className="text-cream/55 hover:text-gold transition-colors"><FaFacebookF size={13}/></a>
-              <a data-testid="nav-social-linkedin" href={SOCIAL.linkedin} target="_blank" rel="noreferrer" className="text-cream/55 hover:text-gold transition-colors"><FaLinkedinIn size={13}/></a>
-              <a data-testid="nav-social-youtube" href={SOCIAL.youtube} target="_blank" rel="noreferrer" className="text-cream/55 hover:text-gold transition-colors"><FaYoutube size={13}/></a>
-            </div>
+          {/* Right - CTAs */}
+          <div className="hidden lg:flex items-center gap-3">
+            <a href="#advisor" data-testid="nav-advisor-btn" className="font-mono text-[11px] uppercase tracking-[0.18em] text-cream/85 hover:text-gold transition-colors font-semibold">
+              Talk to Advisor
+            </a>
             <a href="/apply" data-testid="nav-apply-btn" className="btn-gold !py-2.5 !px-5 !text-[11px] !tracking-[0.18em]">
               Apply Now
             </a>
@@ -104,12 +99,9 @@ export default function Navbar() {
             <a href="/apply" onClick={() => setOpen(false)} className="btn-gold w-full justify-center !text-[11px]">
               Apply Now
             </a>
-            <div className="flex items-center gap-5 pt-2">
-              <a href={SOCIAL.instagram} target="_blank" rel="noreferrer" className="text-cream/70"><FaInstagram size={16}/></a>
-              <a href={SOCIAL.facebook} target="_blank" rel="noreferrer" className="text-cream/70"><FaFacebookF size={16}/></a>
-              <a href={SOCIAL.linkedin} target="_blank" rel="noreferrer" className="text-cream/70"><FaLinkedinIn size={16}/></a>
-              <a href={SOCIAL.youtube} target="_blank" rel="noreferrer" className="text-cream/70"><FaYoutube size={16}/></a>
-            </div>
+            <a href="#advisor" onClick={() => setOpen(false)} className="block font-mono text-[12px] uppercase tracking-[0.2em] text-cream/85 hover:text-gold py-2 text-center font-semibold">
+              Talk to Advisor
+            </a>
           </div>
         )}
       </div>

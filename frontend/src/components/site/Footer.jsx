@@ -1,5 +1,4 @@
-import { FaInstagram, FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa";
-import { BRAND, SOCIAL } from "@/lib/constants";
+import { BRAND } from "@/lib/constants";
 
 export default function Footer() {
   return (
@@ -14,24 +13,13 @@ export default function Footer() {
               <span className="italic text-gold"> turning technical fluency into strategic value.</span>
             </p>
 
-            <div className="mt-7 flex items-center gap-3" data-testid="footer-social">
-              {[
-                { Icon: FaInstagram, href: SOCIAL.instagram, name: "instagram" },
-                { Icon: FaFacebookF, href: SOCIAL.facebook, name: "facebook" },
-                { Icon: FaLinkedinIn, href: SOCIAL.linkedin, name: "linkedin" },
-                { Icon: FaYoutube, href: SOCIAL.youtube, name: "youtube" },
-              ].map(({ Icon, href, name }) => (
-                <a
-                  key={name}
-                  data-testid={`footer-social-${name}`}
-                  href={href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="h-10 w-10 border border-gold/30 flex items-center justify-center text-cream/70 hover:text-navy-deep hover:bg-gold hover:border-gold transition-all"
-                >
-                  <Icon size={13} />
-                </a>
-              ))}
+            <div className="mt-7 flex flex-wrap gap-3" data-testid="footer-ctas">
+              <a href="/apply" className="btn-gold !py-2.5 !px-5 !text-[12px] !tracking-[0.18em]">
+                Apply Now
+              </a>
+              <a href="#advisor" className="btn-outline-gold !py-2.5 !px-5 !text-[12px] !tracking-[0.18em]">
+                Talk to an Advisor
+              </a>
             </div>
           </div>
 
@@ -41,7 +29,6 @@ export default function Footer() {
               <li><a href="#overview" className="hover:text-gold transition-colors">Overview</a></li>
               <li><a href="#curriculum" className="hover:text-gold transition-colors">Curriculum</a></li>
               <li><a href="#faculty" className="hover:text-gold transition-colors">Faculty</a></li>
-              <li><a href="#placements" className="hover:text-gold transition-colors">Placements</a></li>
               <li><a href="#faq" className="hover:text-gold transition-colors">FAQ</a></li>
             </ul>
           </div>

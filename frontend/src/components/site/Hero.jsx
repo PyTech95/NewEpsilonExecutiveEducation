@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { toast } from "sonner";
-import { ChevronDown, Loader2, ArrowRight, Sparkles, Calendar, Radio, Video, Award } from "lucide-react";
+import { ChevronDown, Loader2, ArrowRight, Sparkles, Calendar, Radio, Video, Award, CheckCircle } from "lucide-react";
 import { COURSE } from "@/lib/constants";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
@@ -62,23 +62,38 @@ export default function Hero() {
               <Sparkles size={12} className="text-gold" /> The AI Era of Executive Education
             </p>
 
-            <h1 className="font-editorial text-cream text-[2.25rem] sm:text-[3rem] md:text-[4rem] lg:text-[4.8rem] leading-[1.05] tracking-[-0.01em] max-w-5xl fade-up">
-              Turning technical fluency
+            <h1 className="font-editorial text-cream text-[2.25rem] sm:text-[3rem] md:text-[4rem] lg:text-[4.8rem] leading-[1.05] tracking-[-0.01em] max-w-5xl fade-up font-semibold">
+              Lead in the AI era —
             </h1>
             <h2 className="font-editorial italic text-gold text-[2rem] sm:text-[2.6rem] md:text-[3.4rem] lg:text-[4.2rem] leading-[1.05] mt-1 fade-up-delay-1">
-              into strategic value.
+              with judgement, not jargon.
             </h2>
 
             <p className="font-editorial text-[1.12rem] md:text-[1.32rem] leading-[1.6] text-cream/95 font-medium mt-4 md:mt-6 max-w-2xl fade-up-delay-2">
-              The Professional Certificate in Applied AI &amp; Machine Learning — a live, 12-week executive program for professionals who want stronger judgement, sharper evidence discipline and the confidence to translate technical possibility into credible business action.
+              A live, 12-week executive certificate in Applied AI &amp; Machine Learning — built for senior professionals who must turn technical possibility into credible business decisions.
             </p>
+
+            {/* Program benefits — quick scan */}
+            <ul className="mt-5 md:mt-7 grid sm:grid-cols-2 gap-x-6 gap-y-2.5 max-w-2xl fade-up-delay-2">
+              {[
+                "Live online · executive-friendly schedule",
+                "Faculty from NYU, Columbia & JPMorgan",
+                "Capstone judged by working practitioners",
+                "Industry-recognised professional certificate",
+              ].map((b) => (
+                <li key={b} className="flex items-start gap-2.5">
+                  <CheckCircle size={16} className="text-gold mt-[3px] flex-shrink-0" strokeWidth={2} />
+                  <span className="font-editorial text-[15.5px] md:text-[16.5px] text-cream/95 font-medium leading-snug">{b}</span>
+                </li>
+              ))}
+            </ul>
 
             <div className="mt-6 md:mt-8 flex flex-wrap items-center gap-3 fade-up-delay-3">
               <a href="/apply" data-testid="hero-apply-btn" className="btn-gold">
-                Apply Now <ArrowRight size={14} />
+                Apply Now <ArrowRight size={14} strokeWidth={2.6} />
               </a>
               <a href="#advisor" data-testid="hero-advisor-btn" className="btn-outline-gold">
-                Speak with an advisor
+                Talk to an Advisor
               </a>
             </div>
 
@@ -133,13 +148,13 @@ export default function Hero() {
                   type="submit"
                   disabled={loading}
                   data-testid="brochure-submit-btn"
-                  className="group relative w-full mt-1 inline-flex items-center justify-center gap-2 bg-navy-deep text-cream py-3.5 font-editorial text-[15px] font-medium transition-all duration-300 disabled:opacity-60 overflow-hidden"
+                  className="group relative w-full mt-1 inline-flex items-center justify-center gap-2 bg-navy-deep text-cream py-3.5 font-editorial text-[16px] font-bold tracking-[0.01em] transition-all duration-300 disabled:opacity-60 overflow-hidden"
                 >
                   <span className="absolute inset-0 bg-gold translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
                   <span className="relative inline-flex items-center gap-2 group-hover:text-navy-deep transition-colors duration-300">
                     {loading ? <Loader2 size={14} className="animate-spin" /> : null}
-                    {loading ? "Sending…" : "Download brochure"}
-                    {!loading && <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform duration-300" />}
+                    {loading ? "Sending…" : "Download Brochure"}
+                    {!loading && <ArrowRight size={14} strokeWidth={2.6} className="group-hover:translate-x-1 transition-transform duration-300" />}
                   </span>
                 </button>
                 <p className="font-editorial italic text-[12px] text-navy-deep/50 text-center pt-0.5">

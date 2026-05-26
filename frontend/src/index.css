@@ -205,10 +205,10 @@ body {
     background: #D4AF37;
     color: #040914;
     font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 17px;
-    letter-spacing: 0.01em;
+    font-size: 17.5px;
+    letter-spacing: 0.015em;
     text-transform: none;
-    font-weight: 500;
+    font-weight: 700;
     transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
     border: 1px solid #D4AF37;
     cursor: pointer;
@@ -229,10 +229,10 @@ body {
     color: #F9F6F0;
     border: 1px solid rgba(212,175,55,0.55);
     font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 17px;
-    letter-spacing: 0.01em;
+    font-size: 17.5px;
+    letter-spacing: 0.015em;
     text-transform: none;
-    font-weight: 500;
+    font-weight: 700;
     transition: all 0.25s ease;
     cursor: pointer;
 }
