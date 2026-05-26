@@ -69,7 +69,7 @@ export default function Hero() {
               into strategic value.
             </h2>
 
-            <p className="font-editorial text-[1.02rem] md:text-[1.2rem] leading-relaxed text-cream/85 mt-4 md:mt-6 max-w-2xl fade-up-delay-2">
+            <p className="font-editorial text-[1.12rem] md:text-[1.32rem] leading-[1.6] text-cream/95 font-medium mt-4 md:mt-6 max-w-2xl fade-up-delay-2">
               The Professional Certificate in Applied AI &amp; Machine Learning — a live, 12-week executive program for professionals who want stronger judgement, sharper evidence discipline and the confidence to translate technical possibility into credible business action.
             </p>
 
@@ -91,9 +91,9 @@ export default function Hero() {
                 { Icon: Award,    primary: "Capstone",      secondary: "Portfolio outcome" },
               ].map(({ Icon, primary, secondary }) => (
                 <div key={primary} className="group relative bg-cream/[0.04] hover:bg-cream/[0.09] border border-gold/20 hover:border-gold/50 transition-all duration-300 p-4 hover:-translate-y-0.5">
-                  <Icon size={18} className="text-gold mb-2.5" strokeWidth={1.5} />
-                  <p className="font-editorial text-cream text-[1.15rem] md:text-[1.3rem] leading-tight">{primary}</p>
-                  <p className="font-editorial text-[12px] text-cream/55 mt-1 italic">{secondary}</p>
+                  <Icon size={20} className="text-gold mb-2.5" strokeWidth={1.7} />
+                  <p className="font-editorial text-cream text-[1.25rem] md:text-[1.45rem] font-medium leading-tight">{primary}</p>
+                  <p className="font-editorial text-[13.5px] text-cream/75 mt-1 italic">{secondary}</p>
                 </div>
               ))}
             </div>
