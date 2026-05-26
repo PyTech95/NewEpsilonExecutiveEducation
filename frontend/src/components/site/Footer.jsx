@@ -8,9 +8,8 @@ export default function Footer() {
         <div className="grid lg:grid-cols-12 gap-8">
           <div className="lg:col-span-5">
             <img src="/assets/logo.png" alt="Epsilon Executive Education" className="h-14 md:h-16 w-auto object-contain" />
-            <p className="font-editorial mt-5 text-cream/65 max-w-md text-[1.05rem] leading-[1.7]">
-              A live executive school for decision-makers in the AI era —
-              <span className="italic text-gold"> turning technical fluency into strategic value.</span>
+            <p className="font-editorial mt-5 text-cream/75 max-w-md text-[1.15rem] leading-[1.65]">
+              A live, 12-week online program in <span className="italic text-gold">Applied AI &amp; Machine Learning</span> — built for working professionals advancing their careers.
             </p>
 
             <div className="mt-7 flex flex-wrap gap-3" data-testid="footer-ctas">

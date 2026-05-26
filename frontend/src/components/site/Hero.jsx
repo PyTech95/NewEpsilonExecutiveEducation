@@ -58,23 +58,23 @@ export default function Hero() {
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Left content */}
           <div className="lg:col-span-7">
-            <p className="eyebrow mb-4 fade-up inline-flex items-center gap-2">
-              <Sparkles size={12} className="text-gold" /> The AI Era of Executive Education
+            <p className="eyebrow mb-4 fade-up inline-flex items-center gap-2 text-[12px]">
+              <Sparkles size={13} className="text-gold" /> For Working Professionals
             </p>
 
-            <h1 className="font-editorial text-cream text-[2.25rem] sm:text-[3rem] md:text-[4rem] lg:text-[4.8rem] leading-[1.05] tracking-[-0.01em] max-w-5xl fade-up font-semibold">
-              Lead in the AI era —
+            <h1 className="font-editorial text-cream text-[2.5rem] sm:text-[3.4rem] md:text-[4.4rem] lg:text-[5.2rem] leading-[1.04] tracking-[-0.01em] max-w-5xl fade-up font-semibold">
+              Applied AI &amp; ML Program
             </h1>
-            <h2 className="font-editorial italic text-gold text-[2rem] sm:text-[2.6rem] md:text-[3.4rem] lg:text-[4.2rem] leading-[1.05] mt-1 fade-up-delay-1">
-              with judgement, not jargon.
+            <h2 className="font-editorial italic text-gold text-[1.7rem] sm:text-[2.2rem] md:text-[2.8rem] lg:text-[3.4rem] leading-[1.1] mt-2 fade-up-delay-1">
+              for working professionals.
             </h2>
 
-            <p className="font-editorial text-[1.12rem] md:text-[1.32rem] leading-[1.6] text-cream/95 font-medium mt-4 md:mt-6 max-w-2xl fade-up-delay-2">
-              A live, 12-week executive certificate in Applied AI &amp; Machine Learning — built for senior professionals who must turn technical possibility into credible business decisions.
+            <p className="font-editorial text-[1.18rem] md:text-[1.42rem] leading-[1.55] text-cream font-medium mt-5 md:mt-7 max-w-2xl fade-up-delay-2">
+              Advance your career with <span className="text-gold">live online classes</span> in Applied AI &amp; Machine Learning — a 12-week certificate built for executives, managers and senior individual contributors.
             </p>
 
             {/* Program benefits — quick scan */}
-            <ul className="mt-5 md:mt-7 grid sm:grid-cols-2 gap-x-6 gap-y-2.5 max-w-2xl fade-up-delay-2">
+            <ul className="mt-6 md:mt-8 grid sm:grid-cols-2 gap-x-7 gap-y-3 max-w-2xl fade-up-delay-2">
               {[
                 "Live online · executive-friendly schedule",
                 "Faculty from NYU, Columbia & JPMorgan",
@@ -82,8 +82,8 @@ export default function Hero() {
                 "Industry-recognised professional certificate",
               ].map((b) => (
                 <li key={b} className="flex items-start gap-2.5">
-                  <CheckCircle size={16} className="text-gold mt-[3px] flex-shrink-0" strokeWidth={2} />
-                  <span className="font-editorial text-[15.5px] md:text-[16.5px] text-cream/95 font-medium leading-snug">{b}</span>
+                  <CheckCircle size={18} className="text-gold mt-[3px] flex-shrink-0" strokeWidth={2.2} />
+                  <span className="font-editorial text-[16.5px] md:text-[17.5px] text-cream font-medium leading-snug">{b}</span>
                 </li>
               ))}
             </ul>

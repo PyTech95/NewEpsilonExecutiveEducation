@@ -68,7 +68,7 @@ export default function Curriculum() {
         <h2 className="font-editorial text-navy-deep text-[2.1rem] sm:text-[3rem] lg:text-[3.6rem] leading-[1.06] max-w-4xl">
           12 weeks. Live. Graded. <span className="italic text-gold">Professionally serious.</span>
         </h2>
-        <p className="mt-6 font-editorial text-navy-deep/70 max-w-2xl text-[1.1rem] leading-relaxed">
+        <p className="mt-6 font-editorial text-navy-deep/85 max-w-2xl text-[1.2rem] md:text-[1.3rem] font-medium leading-[1.65]">
           Live online cohort, three classes a week, on an executive-friendly evening schedule.
           Graded submissions, expert feedback and a final capstone defence — designed to produce a
           real body of work, not just course completion.
@@ -89,9 +89,9 @@ export default function Curriculum() {
               key={k}
               className="group bg-white/60 hover:bg-white border border-navy-deep/10 hover:border-gold/50 transition-all duration-300 p-4 hover:-translate-y-0.5"
             >
-              <Icon size={16} className="text-gold-dark mb-2.5" strokeWidth={1.6} />
-              <div className="font-mono uppercase text-[10px] tracking-[0.22em] text-navy-deep/45 mb-1">{k}</div>
-              <div className="font-editorial text-[1rem] md:text-[1.05rem] text-navy-deep leading-snug">{v}</div>
+              <Icon size={18} className="text-gold-dark mb-2.5" strokeWidth={1.8} />
+              <div className="font-mono uppercase text-[11px] tracking-[0.22em] text-navy-deep/55 mb-1 font-semibold">{k}</div>
+              <div className="font-editorial text-[1.1rem] md:text-[1.18rem] font-medium text-navy-deep leading-snug">{v}</div>
             </div>
           ))}
         </div>
@@ -105,7 +105,7 @@ export default function Curriculum() {
           <h2 className="font-editorial text-navy-deep text-[2rem] sm:text-[3rem] leading-[1.08]">
             Four modules. <span className="italic text-gold">One trajectory.</span>
           </h2>
-          <p className="font-editorial text-navy-deep/65 max-w-md text-sm md:text-base">
+          <p className="font-editorial text-navy-deep/80 max-w-md text-[1.05rem] md:text-[1.12rem] font-medium leading-snug">
             From data foundations to executive defence — every module ends with a tangible artefact
             you can show to peers, managers and hiring committees.
           </p>
@@ -124,18 +124,18 @@ export default function Curriculum() {
                 <span className="font-editorial italic text-[3.4rem] text-gold/40 leading-none">0{i + 1}</span>
                 <span className="font-mono uppercase text-[10px] tracking-[0.22em] text-navy-deep/45">{m.weeks}</span>
               </div>
-              <h3 className="font-editorial text-[1.85rem] mb-1 text-navy-deep">{m.title}</h3>
-              <p className="font-editorial text-navy-deep/55 italic text-sm mb-6">{m.sub}</p>
+              <h3 className="font-editorial text-[2rem] md:text-[2.15rem] mb-1 text-navy-deep font-semibold">{m.title}</h3>
+              <p className="font-editorial text-navy-deep/65 italic text-[1rem] md:text-[1.05rem] mb-6">{m.sub}</p>
 
               <div className="bg-navy-deep/[0.04] border-l-2 border-gold pl-4 py-3 mb-6">
-                <span className="font-mono uppercase text-[10px] tracking-[0.18em] text-gold-dark font-semibold">Milestone</span>
-                <p className="font-editorial text-[0.95rem] text-navy-deep/80 mt-1.5">{m.milestone}</p>
+                <span className="font-mono uppercase text-[11px] tracking-[0.18em] text-gold-dark font-semibold">Milestone</span>
+                <p className="font-editorial text-[1.08rem] md:text-[1.12rem] text-navy-deep font-medium mt-1.5 leading-snug">{m.milestone}</p>
               </div>
 
               <ul className="space-y-2.5">
                 {m.items.map((it) => (
-                  <li key={it} className="font-editorial text-[0.98rem] text-navy-deep/75 flex items-start gap-2">
-                    <span className="mt-2.5 inline-block h-1 w-1 bg-gold-dark flex-shrink-0" />
+                  <li key={it} className="font-editorial text-[1.08rem] md:text-[1.12rem] text-navy-deep font-medium flex items-start gap-2.5">
+                    <span className="mt-2.5 inline-block h-1.5 w-1.5 bg-gold-dark flex-shrink-0" />
                     {it}
                   </li>
                 ))}
@@ -156,13 +156,13 @@ export default function Curriculum() {
             <h2 className="font-editorial text-cream text-[2.1rem] sm:text-[3rem] lg:text-[3.6rem] leading-[1.06]">
               The Executive <br /><span className="italic text-gold">Proof Pack.</span>
             </h2>
-            <p className="mt-6 font-editorial text-cream/75 max-w-2xl text-[1.08rem] leading-relaxed">
+            <p className="mt-6 font-editorial text-cream/90 max-w-2xl text-[1.18rem] md:text-[1.28rem] font-medium leading-[1.6]">
               The capstone is where participants bring the full program together. It is designed to
               show they can do more than understand AI tools — they must use data, machine learning
               and applied AI to frame a real business problem, evaluate evidence, design a practical
               solution and explain it clearly to decision-makers.
             </p>
-            <p className="mt-4 font-editorial text-cream/65 max-w-2xl text-[1rem] leading-relaxed italic">
+            <p className="mt-4 font-editorial text-cream/75 max-w-2xl text-[1.08rem] md:text-[1.14rem] leading-relaxed italic">
               The final project becomes part of your Executive Proof Pack — a credible output that
               shows how you think, build and decide in an AI-enabled workplace.
             </p>
@@ -170,7 +170,7 @@ export default function Curriculum() {
             <div className="flex flex-wrap gap-2 mt-6">
               {["Data interpretation", "Model & prompt thinking", "Workflow & deployment", "Live defence"].map(
                 (t) => (
-                  <span key={t} className="font-mono uppercase text-[10px] tracking-[0.2em] text-cream/75 border border-gold/30 px-3 py-1.5">
+                  <span key={t} className="font-mono uppercase text-[11.5px] tracking-[0.2em] text-cream/85 border border-gold/35 px-3 py-1.5 font-semibold">
                     {t}
                   </span>
                 )

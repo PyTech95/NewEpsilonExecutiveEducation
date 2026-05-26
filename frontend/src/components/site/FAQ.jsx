@@ -58,7 +58,7 @@ export default function FAQ() {
                   onClick={() => setOpen(isOpen ? -1 : i)}
                   className="w-full flex items-center justify-between py-5 md:py-6 text-left group"
                 >
-                  <span className="font-editorial text-[1.25rem] md:text-[1.55rem] pr-6 group-hover:text-gold-dark transition-colors">
+                  <span className="font-editorial text-[1.35rem] md:text-[1.7rem] font-semibold pr-6 group-hover:text-gold-dark transition-colors">
                     {f.q}
                   </span>
                   <span className={`flex-shrink-0 h-9 w-9 border flex items-center justify-center transition-colors ${isOpen ? "bg-gold border-gold text-navy-deep" : "border-navy-deep/15 text-navy-deep/50"}`}>
@@ -69,7 +69,7 @@ export default function FAQ() {
                   className={`grid transition-all duration-500 ${isOpen ? "grid-rows-[1fr] opacity-100 pb-5" : "grid-rows-[0fr] opacity-0"}`}
                 >
                   <div className="overflow-hidden">
-                    <p className="font-editorial text-navy-deep/75 text-[1.05rem] leading-[1.75] max-w-3xl">{f.a}</p>
+                    <p className="font-editorial text-navy-deep text-[1.15rem] md:text-[1.22rem] leading-[1.7] font-medium max-w-3xl">{f.a}</p>
                   </div>
                 </div>
               </div>
