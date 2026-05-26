@@ -18,10 +18,14 @@ import ApplyCTA from "@/components/site/ApplyCTA";
 import Footer from "@/components/site/Footer";
 import StickyMobileCTA from "@/components/site/StickyMobileCTA";
 import PopupForm from "@/components/site/PopupForm";
+import ScrollProgress from "@/components/site/ScrollProgress";
+import RevealOnScroll from "@/components/site/RevealOnScroll";
 
 export default function Landing() {
   return (
     <main data-testid="landing-page" className="bg-navy-deep">
+      <ScrollProgress />
+      <RevealOnScroll />
       <MarqueeBanner />
       <Navbar />
       <Hero />

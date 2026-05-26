@@ -18,7 +18,7 @@ export default function Overview() {
     <section id="overview" data-testid="overview-section" className="bg-bone text-navy-deep relative">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
         {/* Header band — centered, balanced */}
-        <div className="max-w-4xl">
+        <div className="max-w-4xl" data-reveal>
           <p className="eyebrow mb-3">Overview</p>
           <span className="gold-rule-lg block mb-6" />
           <h2 className="font-editorial text-navy-deep text-[2.1rem] sm:text-[2.8rem] lg:text-[3.4rem] leading-[1.05]">
@@ -28,8 +28,8 @@ export default function Overview() {
 
         {/* Body — image left, text right (balanced 5/7) */}
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 mt-12 items-start">
-          <div className="lg:col-span-5 order-1">
-            <div className="relative aspect-[4/5] overflow-hidden">
+          <div className="lg:col-span-5 order-1" data-reveal="left">
+            <div className="relative aspect-[4/5] overflow-hidden img-hover-tint">
               <img src={HUMAN_IMG} alt="Executive making a decision" className="w-full h-full object-cover" loading="lazy" />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/30 to-transparent" />
             </div>
@@ -38,7 +38,7 @@ export default function Overview() {
             </figcaption>
           </div>
 
-          <div className="lg:col-span-7 order-2 space-y-5 font-editorial text-navy-deep/75 text-[1.05rem] leading-[1.85]">
+          <div className="lg:col-span-7 order-2 space-y-5 font-editorial text-navy-deep/75 text-[1.05rem] leading-[1.85]" data-reveal="right" data-reveal-delay="100">
             <p>
               Artificial intelligence is changing how work gets done, how value is created and how
               professionals are judged. In India, employers are moving toward skills-first hiring
