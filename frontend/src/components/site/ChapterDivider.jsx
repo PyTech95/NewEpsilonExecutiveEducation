@@ -7,13 +7,6 @@ export default function ChapterDivider({ chapter, eyebrow, title, accent, subtit
 
   return (
     <div className={isCenter ? "text-center" : ""}>
-      {chapter && (
-        <p
-          className={`font-mono italic ${textColor} text-[10.5px] sm:text-[11.5px] md:text-[12px] tracking-[0.28em] md:tracking-[0.32em] leading-none uppercase mb-3 md:mb-4`}
-        >
-          — Chapter {chapter} —
-        </p>
-      )}
       {eyebrow && <p className="eyebrow mb-3 md:mb-4">{eyebrow}</p>}
       <div className={isCenter ? "flex justify-center" : ""}>
         <span className={`block h-px w-24 ${ruleColor}`} />
