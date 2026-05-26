@@ -3,28 +3,28 @@ import { Plus, Minus } from "lucide-react";
 
 const FAQS = [
   {
-    q: "Who is this program designed for?",
-    a: "Working professionals with 5–15 years of experience who want to combine analytical and AI fluency with sharper business judgement — particularly product, marketing, growth, ops, analytics and research roles.",
+    q: "Who is this program for?",
+    a: "Designed for professionals 5 to 15 years into their careers who are responsible for leading, assessing, or backing AI work and need stronger judgment before the stakes rise.",
   },
   {
-    q: "How is the program delivered?",
-    a: "Live online, cohort-based. Three sessions per week on executive-friendly evenings, supplemented with graded assignments, faculty feedback and a final capstone defence.",
+    q: "How much time per week should I budget?",
+    a: "Expect 15 to 20 hours each week, including three live evening sessions, assigned reading, exercises, and capstone work.",
   },
   {
-    q: "What is the time commitment?",
-    a: "Plan for 15–20 hours per week across live sessions, assignments and capstone work over the 12-week duration.",
+    q: "Do I need to code?",
+    a: "No, you do not need to already know coding. Coding is definitely part of this program, but the program is built for participants with different levels of experience and starts from the fundamentals. Prior coding experience can help, but it is not required. All coding-based modules make use of free / open source languages.",
   },
   {
-    q: "Do I need a technical background?",
-    a: "No — but comfort with numbers and a willingness to learn light coding (Python / R) helps. We meet learners where they are and ramp them up methodically.",
+    q: "What does the capstone look like?",
+    a: "The program culminates in a portfolio Proof Pack, inclusive of a live-reviewed project that turns evidence, AI oversight, and business judgment into a clear plan of action.",
   },
   {
-    q: "What is the fee, and are payment plans available?",
-    a: "Program fee is ₹89,000. Flexible payment plans (2 or 3 instalments) and select scholarships are available. Speak with an advisor for details.",
+    q: "Are there payment plans?",
+    a: "Payment plans are available based on need. To discuss installment options, include the request in your application and speak with an admissions counselor.",
   },
   {
-    q: "What do I receive on completion?",
-    a: "A verified digital certificate, a mailed physical certificate, and a transcript-style performance scorecard — issued only after the capstone defence is cleared at 80%+ across all modules.",
+    q: "Will I get a certificate?",
+    a: "Yes. Participants who successfully complete the coursework and defend their capstone receive a faculty-signed Professional Certificate in Applied AI and Machine Learning.",
   },
 ];
 
