@@ -29,6 +29,13 @@ Requirements:
   - Global utilities: `eyebrow`, `gold-rule`, `starfield`, `glow-gold`, `corner-brackets`, `btn-gold`, `btn-outline-gold`, `fld-input`, `fade-up`, `link-gold`
   - New shared component: `ChapterDivider.jsx` for editorial chapter labelling
   - Refactored: `Hero.jsx` (cinematic editorial hero with starfield + glow + cream brochure card on right), `Faculty.jsx` (Kent showcase with gold caption tab + round-avatar guest grid with grayscale→color hover + click-to-open bio modal), `Testimonials.jsx`, `EpsilonExperience.jsx`, `ApplyCTA.jsx`, `PopupForm.jsx` (centered modal, sharp corners, navy header band with starfield), `Navbar.jsx`, `MarqueeBanner.jsx` (LIVE pulsing dot prefix), `Footer.jsx`, `StickyMobileCTA.jsx` (mobile bottom bar + desktop WhatsApp float with pulse), `ToolsMarquee.jsx`, `FacultyLogos.jsx`, `Stats.jsx`, `Overview.jsx`, `Audience.jsx`, `Curriculum.jsx` (modules + capstone), `FAQ.jsx`, `JobPlacement.jsx`, `Certificate.jsx`, `VideoShowcase.jsx`
+- **2026-02-26 — Density + responsive pass**:
+  - Reduced excessive section padding sitewide: `py-20 md:py-32` → `py-14 md:py-20`
+  - Hero: removed `min-h-[100vh]`, tightened to `pt-28 md:pt-36 pb-12 md:pb-20`; scaled headline/stat blocks for small screens
+  - Navbar: shrunk from `h-24/28/32` to `h-20/24`; logo from `h-16/24/28` to `h-12/16/20`
+  - FacultyLogos: 2-col grid on mobile, cards trimmed `h-[120px]` → `h-[96px]/110px`
+  - Apply page: trimmed top padding to `pt-20 md:pt-28`, headline scaled
+  - QA: verified at 390 / 768 / 1440 viewports — all sections stack cleanly, no overflow
 
 ## Pending / Backlog
 - **P0** Provide real video URL for `VideoShowcase.jsx` (currently placeholder)
