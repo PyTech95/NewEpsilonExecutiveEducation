@@ -11,9 +11,9 @@ const BRANDS = [
   { name: "LinkedIn",           domain: "linkedin.com",       sub: "LinkedIn" },
   { name: "KPMG",               domain: "kpmg.com",           sub: "KPMG" },
   { name: "Interpublic Group",  domain: "interpublic.com",    sub: "Interpublic Group" },
-  { name: "Publicis Groupe",    domain: "publicisgroupe.com", sub: "Publicis Groupe" },
-  { name: "Horizon Media",      domain: "horizonmedia.com",   sub: "Horizon Media" },
-  { name: "NRP Group",          domain: "nrpgroup.com",       sub: "The NRP Group" },
+  { name: "Publicis Groupe",    local: "/assets/brands/publicis.png", sub: "Publicis Groupe" },
+  { name: "Horizon Media",      local: "/assets/brands/horizon.png",  sub: "Horizon Media" },
+  { name: "NRP Group",          local: "/assets/brands/nrp.png",      sub: "The NRP Group" },
 ];
 
 export default function FacultyLogos() {
@@ -42,7 +42,7 @@ export default function FacultyLogos() {
             >
               <div className="flex-1 w-full flex items-center justify-center">
                 <img
-                  src={logoUrl(b.domain, 256)}
+                  src={b.local || logoUrl(b.domain, 256)}
                   alt={b.name}
                   loading="lazy"
                   className="max-h-[52px] max-w-[80%] object-contain transition-transform duration-300 group-hover:scale-105"
