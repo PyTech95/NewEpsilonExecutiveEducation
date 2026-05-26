@@ -33,28 +33,25 @@ export default function Certificate() {
         </div>
 
         <div className="lg:col-span-6">
-          <div className="relative bg-gradient-to-br from-navy to-navy-deep p-1 shadow-2xl shadow-black/40">
-            <div className="bg-bone text-navy-deep p-8 md:p-12 relative overflow-hidden">
-              <div className="absolute inset-3 border-2 border-gold/60 pointer-events-none" />
-              <div className="absolute inset-5 border border-gold/30 pointer-events-none" />
-              <div className="relative text-center">
-                <p className="font-mono uppercase text-[10px] tracking-[0.4em] text-gold-dark mb-1">Epsilon Executive Education</p>
-                <p className="font-mono uppercase text-[10px] tracking-[0.3em] text-navy-deep/50 mb-8">Certificate of Achievement</p>
-                <p className="font-editorial text-xl text-navy-deep/60 mb-3">This certifies that</p>
-                <p className="font-editorial text-4xl md:text-5xl italic text-navy-deep mb-3 leading-tight">[ Your Name ]</p>
-                <p className="font-editorial text-base text-navy-deep/70 mb-8">has successfully completed</p>
-                <p className="font-editorial text-2xl text-navy-deep leading-snug">
-                  Applied AI &amp; Machine Learning <br /> for Decision-Makers
-                </p>
-                <div className="mt-10 flex items-center justify-between font-mono uppercase text-[10px] tracking-[0.25em] text-navy-deep/55">
-                  <span>12-Week Program</span>
-                  <span>Cohort · 2026</span>
-                </div>
-                <div className="mt-8 inline-flex h-12 w-12 items-center justify-center bg-gold text-navy-deep">
-                  <span className="font-editorial italic text-2xl leading-none">ε</span>
-                </div>
+          <div className="relative group">
+            {/* Outer frame */}
+            <div className="absolute -inset-3 bg-gradient-to-br from-gold/30 via-gold/10 to-transparent blur-xl opacity-60 group-hover:opacity-90 transition-opacity duration-500 pointer-events-none" />
+            <div className="relative bg-gradient-to-br from-gold/60 to-gold/20 p-[2px] shadow-2xl shadow-black/50">
+              <div className="relative aspect-square overflow-hidden bg-navy-deep">
+                <img
+                  src="/assets/certificate-sample.png"
+                  alt="Sample Epsilon Executive Education Certificate of Achievement"
+                  data-testid="certificate-sample-img"
+                  className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-[1.02]"
+                  loading="lazy"
+                />
+                {/* Subtle vignette */}
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/20 via-transparent to-transparent pointer-events-none" />
               </div>
             </div>
+            <p className="mt-4 font-mono uppercase text-[10px] tracking-[0.28em] text-cream/55 text-center">
+              Sample certificate · Official issue mailed on completion
+            </p>
           </div>
         </div>
       </div>
