@@ -91,9 +91,9 @@ export default function Placement() {
 
         {/* Career Pathways — Current → Future */}
         <div className="mt-12 md:mt-16" data-reveal="up">
-          <div className="grid md:grid-cols-[1fr_auto_1fr] gap-3 md:gap-4 items-center mb-6">
+          <div className="hidden md:grid md:grid-cols-[1fr_auto_1fr] gap-3 md:gap-4 items-center mb-6">
             <p className="font-mono uppercase text-[11px] tracking-[0.22em] text-navy-deep/55 font-semibold">Current Role</p>
-            <p className="font-mono uppercase text-[11px] tracking-[0.22em] text-gold-dark font-semibold text-center hidden md:block">Avg. salary uplift</p>
+            <p className="font-mono uppercase text-[11px] tracking-[0.22em] text-gold-dark font-semibold text-center">Avg. salary uplift</p>
             <p className="font-mono uppercase text-[11px] tracking-[0.22em] text-navy-deep/55 font-semibold md:text-right">Future Role</p>
           </div>
 
