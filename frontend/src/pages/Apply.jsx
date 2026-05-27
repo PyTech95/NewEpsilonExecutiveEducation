@@ -87,9 +87,7 @@ export default function Apply() {
       return ok;
     }
     if (step === 3) {
-      const ok = form.motivation && form.motivation.length >= 40;
-      if (!ok) toast.error("Tell us a bit more about your motivation (at least 40 characters).");
-      return ok;
+      return true;
     }
     return true;
   };
@@ -327,7 +325,7 @@ function StepFit({ form, set, setRaw }) {
     <div className="grid gap-5 animate-fade-up">
       <FieldTextarea
         testid="apply-motivation"
-        label="Why this program? *"
+        label="Why this program?"
         hint="A few honest lines. We read every one."
         value={form.motivation}
         onChange={set("motivation")}
