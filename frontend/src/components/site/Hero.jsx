@@ -3,7 +3,6 @@ import axios from "axios";
 import { toast } from "sonner";
 import { ChevronDown, Loader2, ArrowRight, Sparkles, Calendar, Radio, Video, Award, CheckCircle } from "lucide-react";
 import { COURSE } from "@/lib/constants";
-import { showThankYou } from "@/components/site/ThankYouOverlay";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
@@ -28,7 +27,7 @@ export default function Hero() {
     try {
       await axios.post(`${API}/leads/brochure`, form);
       setForm({ name: "", phone: "", email: "", job_title: "", experience: "", city: "" });
-      showThankYou();
+      window.location.href = "/thankyou/";
     } catch (err) {
       toast.error(err?.response?.data?.detail || "Something went wrong. Please try again.");
     } finally {

@@ -7,7 +7,6 @@ import {
 } from "lucide-react";
 import { FaInstagram, FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { SOCIAL } from "@/lib/constants";
-import { showThankYou } from "@/components/site/ThankYouOverlay";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
@@ -112,7 +111,7 @@ export default function Apply() {
     setLoading(true);
     try {
       await axios.post(`${API}/applications`, form);
-      showThankYou();
+      window.location.href = "/thankyou/";
     } catch (err) {
       toast.error(err?.response?.data?.detail || "Something went wrong. Try again.");
     } finally {
@@ -120,7 +119,7 @@ export default function Apply() {
     }
   };
 
-  // ThankYou screen handled globally — redirects to https://epsilonexec.com/ after 5s
+  // ThankYou screen handled at /thankyou/ — see App.js route
 
   return (
     <main data-testid="apply-page" className="min-h-screen bg-ink text-white">

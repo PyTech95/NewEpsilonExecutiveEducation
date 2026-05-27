@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "@/components/ui/sonner";
 import Landing from "@/pages/Landing";
 import Apply from "@/pages/Apply";
-import ThankYouOverlay from "@/components/site/ThankYouOverlay";
+import ThankYou from "@/pages/ThankYou";
 
 function App() {
   return (
@@ -13,10 +13,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/apply" element={<Apply />} />
+          <Route path="/thankyou" element={<ThankYou />} />
+          <Route path="/thankyou/" element={<ThankYou />} />
         </Routes>
       </BrowserRouter>
       <Toaster position="top-center" richColors />
-      <ThankYouOverlay />
     </div>
   );
 }

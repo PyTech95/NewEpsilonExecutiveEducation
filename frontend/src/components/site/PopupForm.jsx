@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "sonner";
 import { X, Loader2, ArrowRight, CheckCircle, ChevronDown } from "lucide-react";
-import { showThankYou } from "@/components/site/ThankYouOverlay";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 const STORAGE_KEY = "epsilon_popup_shown_v1";
@@ -78,7 +77,7 @@ export default function PopupForm() {
         course: form.course,
       });
       close();
-      showThankYou();
+      window.location.href = "/thankyou/";
     } catch (err) {
       toast.error(err?.response?.data?.detail || "Something went wrong. Please try again.");
     } finally {
