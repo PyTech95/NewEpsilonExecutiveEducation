@@ -5,8 +5,14 @@ import { Loader2, ArrowRight } from "lucide-react";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
+const COURSE_OPTIONS = [
+  "Applied AI & Machine Learning",
+  "Corporate Program",
+  "Student Program",
+];
+
 export default function ApplyCTA() {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", course: "Applied AI & ML for Decision-Makers" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", course: COURSE_OPTIONS[0] });
   const [loading, setLoading] = useState(false);
 
   const submit = async (e) => {
@@ -61,7 +67,13 @@ export default function ApplyCTA() {
             <Field testid="apply-name" label="Name" value={form.name} onChange={(v) => setForm({ ...form, name: v })} />
             <Field testid="apply-phone" label="Phone" value={form.phone} onChange={(v) => setForm({ ...form, phone: v })} type="tel" />
             <Field testid="apply-email" label="Email" value={form.email} onChange={(v) => setForm({ ...form, email: v })} type="email" />
-            <Field testid="apply-course" label="Course" value={form.course} onChange={(v) => setForm({ ...form, course: v })} />
+            <SelectField
+              testid="apply-course"
+              label="Course"
+              value={form.course}
+              onChange={(v) => setForm({ ...form, course: v })}
+              options={COURSE_OPTIONS}
+            />
           </div>
           <button
             type="submit"
@@ -92,6 +104,33 @@ function Field({ label, testid, value, onChange, type = "text" }) {
     <div>
       <label className="fld-label">{label}</label>
       <input data-testid={testid} type={type} value={value} onChange={(e) => onChange(e.target.value)} className="fld-input" />
+    </div>
+  );
+}
+
+function SelectField({ label, testid, value, onChange, options }) {
+  return (
+    <div>
+      <label className="fld-label">{label}</label>
+      <select
+        data-testid={testid}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        className="fld-input appearance-none cursor-pointer bg-cream pr-9"
+        style={{
+          backgroundImage:
+            "url(\"data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23040914' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e\")",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "right 10px center",
+          backgroundSize: "16px 16px",
+        }}
+      >
+        {options.map((opt) => (
+          <option key={opt} value={opt}>
+            {opt}
+          </option>
+        ))}
+      </select>
     </div>
   );
 }
