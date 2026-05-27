@@ -3,9 +3,9 @@ export const BRAND = {
   name: "Epsilon",
   full: "Epsilon Executive Education",
   tagline: "Applied AI & Machine Learning, for decision-makers.",
-  phone: "+91 90000 12345",
-  phoneDigits: "919000012345",
-  whatsapp: "919000012345",
+  phone: "+91 87963 39323",
+  phoneDigits: "918796339323",
+  whatsapp: "918796339323",
   email: "hello@epsiloned.com",
 };
 
