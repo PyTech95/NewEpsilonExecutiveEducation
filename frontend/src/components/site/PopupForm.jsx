@@ -8,11 +8,9 @@ const STORAGE_KEY = "epsilon_popup_shown_v1";
 const DELAY_MS = 15000;
 
 const COURSE_OPTIONS = [
-  "Professional Certificate in Applied AI & Machine Learning",
-  "Advanced Program in Strategic Leadership",
-  "Finance for Non-Finance Executives",
-  "Program in Digital Transformation",
-  "Not sure yet",
+  "Applied AI & Machine Learning",
+  "Corporate Program",
+  "Student Program",
 ];
 
 const BULLETS = [

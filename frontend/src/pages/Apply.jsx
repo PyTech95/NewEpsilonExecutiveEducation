@@ -18,10 +18,9 @@ const STEPS = [
 ];
 
 const COURSES = [
-  "Applied AI & Machine Learning for Decision-Makers",
-  "AI for Product Managers",
-  "Data Storytelling for Executives",
-  "Strategic Leadership in the AI Era",
+  "Applied AI & Machine Learning",
+  "Corporate Program",
+  "Student Program",
 ];
 
 const EXPERIENCE = [
