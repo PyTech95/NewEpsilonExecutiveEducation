@@ -6,7 +6,7 @@ export const BRAND = {
   phone: "+91 87963 39323",
   phoneDigits: "918796339323",
   whatsapp: "918796339323",
-  email: "hello@epsiloned.com",
+  email: "admissions@epsilonexec.in",
 };
 
 export const SOCIAL = {

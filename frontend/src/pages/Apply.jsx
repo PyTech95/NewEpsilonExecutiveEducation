@@ -230,7 +230,7 @@ export default function Apply() {
               <div className="mt-6 flex flex-wrap items-center gap-4 text-xs text-white/45">
                 <span className="inline-flex items-center gap-2"><ShieldCheck size={14} className="text-gold" /> Your data is never sold or shared</span>
                 <span className="hidden sm:inline">•</span>
-                <span>Need help? <a href="mailto:admissions@epsiloned.com" className="text-gold hover:text-gold-light">admissions@epsiloned.com</a></span>
+                <span>Need help? <a href="mailto:admissions@epsilonexec.in" className="text-gold hover:text-gold-light">admissions@epsilonexec.in</a></span>
               </div>
             </section>
           </div>
