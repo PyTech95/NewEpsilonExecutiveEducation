@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { X } from "lucide-react";
 
 const ITEMS = [
-  "Admissions closing soon — Spring 2026 cohort",
+  "Admissions closing soon — Fall 2026 cohort",
   "Limited seats · Live cohort",
   "Live online · 12-week program",
   "Program fee · ₹89,000 · EMI available",

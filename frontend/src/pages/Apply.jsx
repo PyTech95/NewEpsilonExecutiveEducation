@@ -44,8 +44,8 @@ const QUALIFICATION = [
 ];
 
 const COHORT = [
-  "Next intake — Spring 2026 (March)",
-  "Following intake — Summer 2026 (June)",
+  "Next intake — Fall 2026 (September)",
+  "Following intake — Winter 2027 (January)",
   "Flexible / Any",
 ];
 
@@ -131,7 +131,7 @@ export default function Apply() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Heading */}
           <div className="max-w-3xl mb-8 md:mb-10 animate-fade-up">
-            <p className="text-[11px] uppercase tracking-[0.3em] text-gold mb-3">Applications · Spring 2026</p>
+            <p className="text-[11px] uppercase tracking-[0.3em] text-gold mb-3">Applications · Fall 2026</p>
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight">
               Apply to <em className="text-gold">Epsilon.</em>
             </h1>

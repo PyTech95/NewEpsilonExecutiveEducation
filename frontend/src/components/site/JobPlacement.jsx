@@ -61,7 +61,7 @@ export default function JobPlacement() {
               <img src={OUTCOME_IMG} alt="Executive mentorship at Epsilon" className="w-full h-full object-cover" loading="lazy" />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/40 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <p className="font-mono uppercase text-[10px] tracking-[0.18em] text-cream/65 mt-1">Spring 2026 — Now interviewing</p>
+                <p className="font-mono uppercase text-[10px] tracking-[0.18em] text-cream/65 mt-1">Fall 2026 — Now interviewing</p>
               </div>
             </div>
           </div>
@@ -98,7 +98,7 @@ export default function JobPlacement() {
                 data-testid="career-apply-btn"
                 className="btn-gold flex-shrink-0 whitespace-nowrap"
               >
-                Apply for spring 2026
+                Apply for Fall 2026
               </a>
             </div>
           </div>
