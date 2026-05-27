@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Play, X } from "lucide-react";
 
 const THUMB = "/assets/founder-video-thumb.jpg";
-const VIMEO_EMBED = "https://player.vimeo.com/video/1195967029?autoplay=1&title=0&byline=0&portrait=0";
+const VIDEO_EMBED = "https://www.youtube.com/embed/E_UGOqQjelg?autoplay=1&rel=0&modestbranding=1";
 
 export default function VideoShowcase() {
   const [open, setOpen] = useState(false);
@@ -75,10 +75,10 @@ export default function VideoShowcase() {
           >
             <iframe
               className="w-full h-full"
-              src={VIMEO_EMBED}
+              src={VIDEO_EMBED}
               title="Hear from our Founder"
               frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             />
           </div>
