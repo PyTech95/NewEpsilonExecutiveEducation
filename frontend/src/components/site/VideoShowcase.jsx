@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Play, X } from "lucide-react";
 
-const THUMB =
-  "https://images.pexels.com/photos/577210/pexels-photo-577210.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
+const THUMB = "/assets/founder-video-thumb.jpg";
+const VIMEO_EMBED = "https://player.vimeo.com/video/1195967029?autoplay=1&title=0&byline=0&portrait=0";
 
 export default function VideoShowcase() {
   const [open, setOpen] = useState(false);
@@ -14,17 +14,14 @@ export default function VideoShowcase() {
             <p className="eyebrow mb-3">Program Preview</p>
             <span className="gold-rule-lg block mb-6" />
             <h2 className="font-editorial text-navy-deep text-[2.1rem] sm:text-[3rem] lg:text-[3.4rem] leading-[1.06]">
-              See what a <span className="italic text-gold">live session</span> feels like.
+              Hear from our <span className="italic text-gold">Founder</span>.
             </h2>
             <p className="mt-6 font-editorial text-navy-deep/75 max-w-md text-[1.05rem] leading-relaxed">
-              A 90-second look inside the Epsilon classroom — live teaching, structured critique
-              and the rhythm of an executive cohort.
+              A 60-second video of Kent Bhupathi, that introduces Epsilon&rsquo;s Professional
+              Certificate in Applied AI &amp; Machine Learning &mdash; a live online program built
+              for professionals seeking practical AI skills, expert guidance and stronger career
+              outcomes.
             </p>
-            <ul className="mt-7 space-y-3 font-editorial text-[1rem] text-navy-deep/75">
-              <li>· Live faculty interaction</li>
-              <li>· Real graded submissions and feedback</li>
-              <li>· Capstone defence walkthrough</li>
-            </ul>
           </div>
 
           <div className="lg:col-span-7 relative corner-brackets">
@@ -33,7 +30,11 @@ export default function VideoShowcase() {
               onClick={() => setOpen(true)}
               className="group relative w-full aspect-video overflow-hidden shadow-2xl shadow-navy-deep/30 block"
             >
-              <img src={THUMB} alt="Program preview" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <img
+                src={THUMB}
+                alt="Hear from our Founder, Kent Bhupathi"
+                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+              />
               <div className="absolute inset-0 bg-gradient-to-tr from-navy-deep/80 via-navy-deep/30 to-transparent" />
               <span className="absolute inset-0 flex items-center justify-center">
                 <span className="relative">
@@ -45,8 +46,8 @@ export default function VideoShowcase() {
               </span>
               <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between text-cream">
                 <div>
-                  <p className="font-mono uppercase text-[10px] tracking-[0.25em] text-gold mb-2">90 sec</p>
-                  <p className="font-editorial italic text-xl md:text-2xl">Inside the Epsilon classroom</p>
+                  <p className="font-mono uppercase text-[10px] tracking-[0.25em] text-gold mb-2">60 sec</p>
+                  <p className="font-editorial italic text-xl md:text-2xl">A note from Kent Bhupathi</p>
                 </div>
                 <span className="font-mono uppercase text-[10px] tracking-[0.2em] text-cream/70 hidden sm:block">Watch preview</span>
               </div>
@@ -68,13 +69,16 @@ export default function VideoShowcase() {
           >
             <X size={28} />
           </button>
-          <div className="w-full max-w-4xl aspect-video" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="w-full max-w-[420px] sm:max-w-[480px] aspect-[9/16] max-h-[88vh]"
+            onClick={(e) => e.stopPropagation()}
+          >
             <iframe
               className="w-full h-full"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
-              title="Program preview"
+              src={VIMEO_EMBED}
+              title="Hear from our Founder"
               frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
               allowFullScreen
             />
           </div>
