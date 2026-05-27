@@ -26,8 +26,19 @@ export default function Hero() {
     setLoading(true);
     try {
       await axios.post(`${API}/leads/brochure`, form);
+      // Trigger brochure PDF download before navigating to thank-you page
+      const link = document.createElement("a");
+      link.href = "/assets/epsilon-brochure-2026.pdf";
+      link.download = "Epsilon-Executive-Brochure-2026.pdf";
+      link.rel = "noopener";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
       setForm({ name: "", phone: "", email: "", job_title: "", experience: "", city: "" });
-      window.location.href = "/thankyou/";
+      // Small delay so the browser commits the download before navigation
+      setTimeout(() => {
+        window.location.href = "/thankyou/";
+      }, 600);
     } catch (err) {
       toast.error(err?.response?.data?.detail || "Something went wrong. Please try again.");
     } finally {
