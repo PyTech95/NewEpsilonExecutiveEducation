@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "sonner";
 import { X, Loader2, ArrowRight, CheckCircle, ChevronDown } from "lucide-react";
+import { showThankYou } from "@/components/site/ThankYouOverlay";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 const STORAGE_KEY = "epsilon_popup_shown_v1";
@@ -70,14 +71,14 @@ export default function PopupForm() {
     }
     setLoading(true);
     try {
-      const { data } = await axios.post(`${API}/leads/callback`, {
+      await axios.post(`${API}/leads/callback`, {
         name: form.name,
         email: form.email,
         phone: form.phone,
         course: form.course,
       });
-      toast.success(data.message || "Thanks! We'll be in touch within one working day.");
       close();
+      showThankYou();
     } catch (err) {
       toast.error(err?.response?.data?.detail || "Something went wrong. Please try again.");
     } finally {

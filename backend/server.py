@@ -10,6 +10,8 @@ from typing import List, Optional
 import uuid
 from datetime import datetime, timezone
 
+from email_sender import send_notification
+
 
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
@@ -153,6 +155,20 @@ async def get_status_checks():
 async def create_brochure_lead(payload: BrochureLeadCreate):
     lead = BrochureLead(**payload.model_dump())
     await db.brochure_leads.insert_one(lead.model_dump())
+    send_notification(
+        subject=f"[Epsilon] Brochure request — {lead.name}",
+        title="Brochure Request",
+        rows={
+            "Name": lead.name,
+            "Email": lead.email,
+            "Phone": lead.phone,
+            "Job Title": lead.job_title,
+            "Experience": lead.experience,
+            "City": lead.city,
+            "Submitted": lead.created_at,
+            "Source": "Hero — Download Brochure",
+        },
+    )
     return {"success": True, "id": lead.id, "message": "Brochure request received. Check your email."}
 
 
@@ -166,6 +182,18 @@ async def list_brochure_leads():
 async def create_callback_lead(payload: CallbackLeadCreate):
     lead = CallbackLead(**payload.model_dump())
     await db.callback_leads.insert_one(lead.model_dump())
+    send_notification(
+        subject=f"[Epsilon] Callback request — {lead.name}",
+        title="Callback Request",
+        rows={
+            "Name": lead.name,
+            "Email": lead.email,
+            "Phone": lead.phone,
+            "Course Interest": lead.course,
+            "Submitted": lead.created_at,
+            "Source": "15-second pop-up",
+        },
+    )
     return {"success": True, "id": lead.id, "message": "Callback request received. Our advisor will reach out within 24 hours."}
 
 
@@ -179,6 +207,30 @@ async def list_callback_leads():
 async def create_application(payload: ApplicationCreate):
     app_doc = Application(**payload.model_dump())
     await db.applications.insert_one(app_doc.model_dump())
+    send_notification(
+        subject=f"[Epsilon] Application — {app_doc.first_name} {app_doc.last_name}",
+        title="Programme Application",
+        rows={
+            "Name": f"{app_doc.first_name} {app_doc.last_name}",
+            "Email": app_doc.email,
+            "Phone": app_doc.phone,
+            "City": app_doc.city,
+            "Country": app_doc.country,
+            "LinkedIn": app_doc.linkedin,
+            "Current Role": app_doc.current_role,
+            "Company": app_doc.company,
+            "Experience (years)": app_doc.experience_years,
+            "Industry": app_doc.industry,
+            "Highest Qualification": app_doc.highest_qualification,
+            "Course": app_doc.course,
+            "Cohort Preference": app_doc.cohort_preference,
+            "Motivation": app_doc.motivation,
+            "Goals": app_doc.goals,
+            "Referral Source": app_doc.referral_source,
+            "Application ID": app_doc.id,
+            "Submitted": app_doc.created_at,
+        },
+    )
     return {
         "success": True,
         "id": app_doc.id,

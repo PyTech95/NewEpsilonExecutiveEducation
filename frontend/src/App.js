@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "@/components/ui/sonner";
 import Landing from "@/pages/Landing";
 import Apply from "@/pages/Apply";
+import ThankYouOverlay from "@/components/site/ThankYouOverlay";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         </Routes>
       </BrowserRouter>
       <Toaster position="top-center" richColors />
+      <ThankYouOverlay />
     </div>
   );
 }

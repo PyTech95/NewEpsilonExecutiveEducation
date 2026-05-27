@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import { FaInstagram, FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { SOCIAL } from "@/lib/constants";
+import { showThankYou } from "@/components/site/ThankYouOverlay";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
@@ -67,7 +68,6 @@ export default function Apply() {
   const [step, setStep] = useState(0);
   const [form, setForm] = useState(INITIAL);
   const [loading, setLoading] = useState(false);
-  const [done, setDone] = useState(null);
 
   const set = (k) => (e) => setForm({ ...form, [k]: e.target.value });
   const setRaw = (k, v) => setForm({ ...form, [k]: v });
@@ -111,9 +111,8 @@ export default function Apply() {
     if (!validateStep()) return;
     setLoading(true);
     try {
-      const { data } = await axios.post(`${API}/applications`, form);
-      setDone(data);
-      toast.success("Application received.");
+      await axios.post(`${API}/applications`, form);
+      showThankYou();
     } catch (err) {
       toast.error(err?.response?.data?.detail || "Something went wrong. Try again.");
     } finally {
@@ -121,7 +120,7 @@ export default function Apply() {
     }
   };
 
-  if (done) return <ThankYou applicationId={done.id} />;
+  // ThankYou screen handled globally — redirects to https://epsilonexec.com/ after 5s
 
   return (
     <main data-testid="apply-page" className="min-h-screen bg-ink text-white">
@@ -447,46 +446,5 @@ function ApplyFooter() {
         </div>
       </div>
     </footer>
-  );
-}
-
-// ===== Thank You =====
-
-function ThankYou({ applicationId }) {
-  return (
-    <main data-testid="apply-thankyou" className="min-h-screen bg-ink text-white">
-      <ApplyNav />
-      <div className="relative isolate pt-24 md:pt-32 pb-14 md:pb-20">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,rgba(197,160,89,0.18),transparent_55%)]" />
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-up">
-          <div className="inline-flex h-20 w-20 items-center justify-center rounded-full bg-gold/15 border border-gold mb-8">
-            <Sparkles size={32} className="text-gold" />
-          </div>
-          <p className="text-[11px] uppercase tracking-[0.3em] text-gold mb-4">Application Received</p>
-          <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl leading-[1.05] tracking-tight">
-            Thank you. We've got <em className="text-gold">your application.</em>
-          </h1>
-          <p className="mt-7 text-white/70 max-w-xl mx-auto text-lg font-light">
-            An admissions lead will personally review your application and reach out within
-            <span className="text-white"> 48 working hours</span> to schedule a conversation.
-          </p>
-
-          <div className="mt-10 inline-block border border-white/15 rounded-sm px-6 py-4 text-left">
-            <p className="text-[10px] uppercase tracking-[0.22em] text-white/45 mb-1">Application Reference</p>
-            <p className="font-mono text-sm text-gold-light">{applicationId}</p>
-          </div>
-
-          <div className="mt-12 flex flex-col sm:flex-row gap-3 justify-center">
-            <Link to="/" data-testid="thankyou-home-btn" className="inline-flex justify-center items-center bg-gold hover:bg-gold-hover text-white px-7 py-4 rounded-sm text-sm font-semibold tracking-wider uppercase transition-colors">
-              Back to home
-            </Link>
-            <a href="mailto:admissions@epsiloned.com" className="inline-flex justify-center items-center border border-white/20 hover:border-gold hover:text-gold text-white/90 px-7 py-4 rounded-sm text-sm font-medium tracking-wide transition-colors">
-              Email admissions
-            </a>
-          </div>
-        </div>
-      </div>
-      <ApplyFooter />
-    </main>
   );
 }
