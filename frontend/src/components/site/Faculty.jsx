@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ArrowRight, X, Linkedin } from "lucide-react";
+import { X } from "lucide-react";
 import ChapterDivider from "./ChapterDivider";
 
 const KENT_IMG = "/assets/kent.png";
@@ -98,10 +98,6 @@ export default function Faculty() {
                 <p className="font-mono uppercase text-[10px] tracking-[0.22em] text-cream/65 mt-2">Former Faculty</p>
               </div>
             </div>
-
-            <a data-testid="lead-faculty-linkedin" href="#" className="btn-outline-gold mt-8 !text-cream hover:!text-gold inline-flex">
-              <Linkedin size={14} /> View Profile <ArrowRight size={14} />
-            </a>
           </div>
         </div>
 
