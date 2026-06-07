@@ -108,6 +108,14 @@ export default function Hero() {
               </a>
             </div>
 
+            {/* Program fee chip */}
+            <div data-testid="hero-fee-chip" className="mt-5 inline-flex items-center gap-3 border border-gold/30 bg-cream/[0.04] px-4 py-2.5 fade-up-delay-3">
+              <span className="font-mono uppercase text-[10px] tracking-[0.24em] text-gold">Programme Fee</span>
+              <span className="h-3 w-px bg-gold/40" />
+              <span className="font-editorial text-cream text-[1.1rem] md:text-[1.2rem] font-semibold">&#8377;89,000</span>
+              <span className="font-editorial italic text-cream/65 text-[13.5px] hidden sm:inline">· EMI available</span>
+            </div>
+
             {/* Stat blocks */}
             <div className="mt-8 md:mt-12 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 fade-up-delay-3">
               {[
