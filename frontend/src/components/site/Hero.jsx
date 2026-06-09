@@ -81,7 +81,7 @@ export default function Hero() {
             </h2>
 
             <p className="font-editorial text-[1.18rem] md:text-[1.42rem] leading-[1.55] text-cream font-medium mt-5 md:mt-7 max-w-2xl fade-up-delay-2">
-              Advance your career with <span className="text-gold">live online classes</span> in Applied AI &amp; Machine Learning — a 12-week certificate built for executives, managers and senior individual contributors.
+              Advance your career with <span className="text-gold">live online classes</span> in Applied AI &amp; Machine Learning &mdash; a 12-week certificate built for busy learners and working professionals, priced at <span className="text-gold">&#8377;89,000</span>.
             </p>
 
             {/* Program benefits — quick scan */}
@@ -98,13 +98,6 @@ export default function Hero() {
                 </li>
               ))}
             </ul>
-
-            {/* Program fee chip */}
-            <div data-testid="hero-fee-chip" className="mt-2.5 md:mt-3 inline-flex items-center gap-3 border border-gold/30 bg-cream/[0.04] px-4 py-1 fade-up-delay-2">
-              <span className="font-mono uppercase text-[10px] tracking-[0.24em] text-gold">Programme Fee</span>
-              <span className="h-3 w-px bg-gold/40" />
-              <span className="font-editorial text-cream text-[1.1rem] md:text-[1.2rem] font-semibold">&#8377;89,000</span>
-            </div>
 
             <div className="mt-6 md:mt-8 flex flex-wrap items-center gap-3 fade-up-delay-3">
               <a href="/apply" data-testid="hero-apply-btn" className="btn-gold">
