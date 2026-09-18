@@ -43,7 +43,7 @@ const QUALIFICATION = [
 ];
 
 const COHORT = [
-  "Next intake — Fall 2026 (September)",
+  "Next intake — Fall 2026 (October)",
   "Following intake — Winter 2027 (January)",
   "Flexible / Any",
 ];
